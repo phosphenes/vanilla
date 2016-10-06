@@ -103,6 +103,7 @@ header
 	text-align: center
 	z-index: 1000
 	background: $deep-blue
+	padding: 0 20px
 
 	main
 		padding: 0
@@ -115,12 +116,13 @@ header
 	height: 100%
 	position: absolute
 	top: 0
-	left: 10px
+	left: 0
 	color: #fff
 	text-align: left
-	font-weight: 800
-	text-transform: uppercase
-	line-height: 1.2em
+	font-family: 'Georgia', serif
+	text-transform: lowercase
+	font-size: 30px
+	font-style: italic
 
 	img
 		height: calc(100% - 10px)
@@ -184,7 +186,7 @@ header
 	float: left
 	text-transform: uppercase
 	position: absolute
-	right: 0
+	right: -20px
 	top: 0
 	cursor: pointer
 
@@ -228,6 +230,12 @@ header
 		bottom: -10px
 
 body.openMenu
+	overflow: hidden
+
+	header
+		position: fixed
+		top: 0
+		left: 0
 
 	#menuButton
 		opacity: 1 !important

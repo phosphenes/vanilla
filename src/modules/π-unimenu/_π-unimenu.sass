@@ -1,0 +1,82 @@
+nav.pi-unimenu
+	position: relative
+	opacity: 1
+
+	ul
+		margin: 0
+		padding: 0
+		height: 0
+		overflow: hidden
+
+	li > ul
+		padding-left: 20px
+
+	a
+		display: inline-block
+		padding: 10px
+		width: 100%
+		background-color: #ffdddd
+
+	& > ul
+		display: flex
+		justify-content: space-between
+		margin: 0
+		padding: 0
+		height: auto
+
+	& > ul > li + li
+		margin-left: 30px
+
+	& > ul > li:hover ul
+		height: auto
+
+
+.pi-burger-button
+	display: none
+
+@media screen and (max-width: 1024px)
+	.pi-burger-button
+		display: block
+		position: fixed
+		top: 20px
+		right: 20px
+		width: 40px
+		height: 40px
+		background: none
+		border: 1px solid #eeeeee
+		color: #eeeeee
+
+		&:after
+			content: '+'
+
+	nav.pi-unimenu
+		display: none
+		opacity: 0
+		transition: opacity 0.5s
+
+		ul
+			height: auto
+
+	body.open-nav
+		overflow: hidden
+
+		.pi-burger-button:after
+				content: 'X'
+
+		& nav.pi-unimenu
+			display: block
+			position: fixed
+			margin: 0 !important
+			top: 0
+			left: 0
+			width: 100vw
+			height: 100vh
+			background-color: rgba(0, 0, 0, 0.8)
+
+			& > ul
+				display: block
+				@include pureCenter()
+
+
+			& > ul > li + li
+				margin-left: 0

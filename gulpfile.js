@@ -60,7 +60,7 @@ gulp.task('imagemin', function() {
 
 // minify html
 gulp.task('htmlpage', function() {
-	var htmlSrc = ['src/*.html', 'src/**/*.html', 'src/*.php', 'src/**/*.php'];
+	var htmlSrc = ['src/*.html', 'src/**/*.html'];
 
 	gulp.src(htmlSrc)
 		.pipe(changed(buildFolder))
@@ -73,6 +73,19 @@ gulp.task('htmlpage', function() {
 		.pipe(minifyHTML({collapseWhitespace: true}))
 		.pipe(replace('scripts/script.js', './script.js'))
 		.pipe(replace('styles/styles.sass', './styles.css'))
+		.pipe(gulp.dest(distFolder));
+});
+
+// pass php files unmolested
+gulp.task('phppage', function() {
+	var phpSrc = ['src/*.php', 'src/**/*.php'];
+
+	gulp.src(phpSrc)
+		.pipe(changed(buildFolder))
+		.pipe(gulp.dest(buildFolder));
+
+	gulp.src(phpSrc)
+		.pipe(changed(distFolder))
 		.pipe(gulp.dest(distFolder));
 });
 
@@ -139,12 +152,15 @@ gulp.task('sass', function () {
 });
 
 // default gulp task
-gulp.task('default', ['jshint', 'workerHint', 'imagemin', 'htmlpage', 'scripts', 'workers', 'sass'], function() {
+gulp.task('default', ['jshint', 'workerHint', 'imagemin', 'htmlpage', 'phppage', 'scripts', 'workers', 'sass'], function() {
 	// watch for image changes
 	gulp.watch(['src/**/*.jpg', 'src/**/*.png', 'src/**/*.gif','src/**/*.svg'], ['imagemin']);
 
 	// watch for HTML changes
-	gulp.watch(['src/**/*.html', 'src/**/*.php'], ['htmlpage']);
+	gulp.watch(['src/**/*.html'], ['htmlpage']);
+
+	// watch for HTML changes
+	gulp.watch(['src/**/*.php'], ['phppage']);
 
 	// watch for JS changes
 	gulp.watch(buildScripts, ['jshint', 'scripts']);

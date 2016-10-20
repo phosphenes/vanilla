@@ -9,4 +9,12 @@ UPDATE wp_posts SET guid = replace(guid, 'OLD_URL','NEW_URL')
 UPDATE wp_posts SET post_content = REPLACE(post_content, 'OLD_URL','NEW_URL')
 UPDATE wp_postmeta SET meta_value = REPLACE(meta_value, 'OLD_URL','NEW_URL')
 ```
+
+
+tunnel to use [my_subdomain].unitedcreations.xyz database:
+```
+ssh -L 127.0.0.1:3306:127.0.0.1:3306 uc_ftp@unitedcreations.xyz -N
+```
+
+
 TODO: API REF goes here!!!

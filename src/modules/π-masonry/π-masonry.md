@@ -19,7 +19,7 @@ would create a 4-column layout.
 
 #####SASS:
 For "space-around"-style layouts, add `.space-around` to the `.pi-masonry` container.
-Then include `equalHeightSpaceAround($gutter, $numberOfColumns)` in each of your media queries:
+Then include `masonrySpaceAround($gutter, $numberOfColumns)` in each of your media queries:
 
 ```sass
 .pi-masonry.space-around
@@ -27,19 +27,19 @@ Then include `equalHeightSpaceAround($gutter, $numberOfColumns)` in each of your
 		padding: 0 20px
 
 	@media screen and (min-width: 750px) and (max-width: 1024px)
-		@include equalHeightSpaceAround(20, 2)
+		@include masonrySpaceAround(20, 2)
 
 	@media screen and (min-width: 1025px) and (max-width: 1299px)
-		@include equalHeightSpaceAround(20, 3)
+		@include masonrySpaceAround(20, 3)
 
 	@media screen and (min-width: 1300px) and (max-width: 1599px)
-		@include equalHeightSpaceAround(20, 4)
+		@include masonrySpaceAround(20, 4)
 
 	@media screen and (min-width: 1600px) and (max-width: 2099px)
-		@include equalHeightSpaceAround(20, 5)
+		@include masonrySpaceAround(20, 5)
 
 	@media screen and (min-width: 2100px)
-		@include equalHeightSpaceAround(20, 6)
+		@include masonrySpaceAround(20, 6)
 ```
 
 In the example above, the desired gutters are 20px wide at all breakpoints,

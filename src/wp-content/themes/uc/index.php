@@ -12,6 +12,12 @@ get_header();
 
 	</main></section>
 
+<div class="pi-rotator">
+	<div class="item"><h1>foo</h1></div>
+	<div class="item"><h1>bar</h1></div>
+	<div class="item"><h1>gronk</h1></div>
+</div>
+
 <?php
 get_footer(); 
 ?>

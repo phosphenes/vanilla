@@ -1,9 +1,10 @@
-// TODO: need to figure ou the best z-indexing strategy
+// TODO: need to figure out the best z-indexing strategy
 // so that inline rotators don't "snap out"
 
 .pi-rotator
 	display: none
 	user-select: none
+	color: white
 	z-index: 1
 	opacity: 0
 	transition: opacity 0.3s
@@ -25,6 +26,9 @@
 	.sled
 		z-index: 1
 		left: 100%
+
+	.pi-prev-button, .pi-next-button
+		z-index: 5
 
 	.item
 		position: absolute

@@ -8,6 +8,8 @@ carousel        : wraps around prev/next to lastItem/firstItem
 counter         : displays "11 of 704"  
 blips           : shows the nav dots  
 externalTrigger : won't create a closeButton
+prevNext        : create prev/next buttons
+autoPlay        : milliseconds for delay between auto-playing slides
 
 ##API
 ```

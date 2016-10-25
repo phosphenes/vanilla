@@ -16,7 +16,7 @@
 		
 		var options = JSON.parse(el.dataset.options ? el.dataset.options : '{}')
 		delete el.dataset.options
-
+		
 		var currentIdx = 0
 		var stage = π.div('stage'), sled = π.div('sled')
 		var items = []
@@ -54,31 +54,17 @@
 			closeButton.setAttribute('pi-rotator-trigger', el.id)
 			container.appendChild(closeButton)
 		}
+		
+		if (options.prevNext) {
+			prevButton = π.button('pi-prev-button')
+			if (!carousel) prevButton.addClass('off')
 
-		prevButton = π.button('pi-prev-button')
-		if (!carousel) prevButton.addClass('off')
+			nextButton = π.button('pi-next-button')
+			prevButton.onclick = prev
+			nextButton.onclick = next
 
-		nextButton = π.button('pi-next-button')
-
-		prevButton.onclick = function () {
-			if (!moving && !prevButton.hasClass('off')) {
-				if (currentIdx <= 0) {
-					currentIdx = numberOfItems
-				}
-				slide(-1)
-			}
+			container.add([prevButton, nextButton])
 		}
-
-		nextButton.onclick = function () {
-			if (!moving && !nextButton.hasClass('off')) {
-				if (currentIdx >= numberOfItems - 1) {
-					currentIdx = -1
-				}
-				slide(1)
-			}
-		}
-
-		container.add([prevButton, nextButton])
 
 		if (counter) {
 			counter.add([π.span(), π.span(0,0,numberOfItems)])
@@ -105,8 +91,26 @@
 			stage.fill(items[0])
 			updateTheView()
 		}
+		
+		if (options.autoPlay) {
+			var delay = parseInt(options.autoPlay)
+			setTimeout(function () {
+				autoPlay(delay)
+			}, delay)
+		}
+		
+		function autoPlay(delay) {
+			if (!options.autoPlay) return
+			
+			next()
+			setTimeout(function () {
+				autoPlay(delay)
+			}, delay)
+		}
 
 		function jumpToItem() {
+			options.autoPlay = false
+			
 			var idx = parseInt(this.dataset.idx)
 			if (currentIdx !== idx) {
 				var delta = idx > currentIdx ? 1 : -1
@@ -122,7 +126,7 @@
 			)
 			var incomingIdx = jumpTo ? jumpTo.idx : currentIdx + delta
 			sled.fill(items[incomingIdx])
-			container.insertBefore(sled, prevButton)
+			container.appendChild(sled)
 
 			showIncomingItem(delta, jumpTo)
 		}
@@ -180,6 +184,7 @@
 
 		function updatePrevNext() {
 			if (carousel) return
+			if (!options.prevNext) return
 
 			if (currentIdx === 0) {
 				showHideButtons(nextButton, prevButton)
@@ -228,6 +233,27 @@
 			}
 			
 			return el
+		}
+
+		function prev() {
+			if (!moving) {
+				if (prevButton && prevButton.hasClass('off')) return
+
+				if (currentIdx <= 0) {
+					currentIdx = numberOfItems
+				}
+				slide(-1)
+			}
+		}
+
+		function next() {
+			if (this === nextButton) options.autoPlay = false
+			if (!moving) {
+				if (currentIdx >= numberOfItems - 1) {
+					currentIdx = -1
+				}
+				slide(1)
+			}
 		}
 
 		thisRotator.show = function (e) {

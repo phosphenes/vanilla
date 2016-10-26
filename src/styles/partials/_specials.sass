@@ -207,4 +207,47 @@
 
 //@media (min-width: 1024px)
 
-//@media (min-width: 1100px)
+@media (min-width: 1100px)
+
+
+	// HOLLYWOOD STYLES
+	.animate
+		opacity: 0
+		transition: opacity 0.7s cubic-bezier(0, 0, 0.2, 1), transform 0.7s cubic-bezier(0, 0, 0.2, 1)
+
+	.fromLeft
+		transform: translate(-50px,0)
+
+	.fromRight
+		transform: translate(50px,0)
+
+	.fromBottom
+		transform: translate(0,50px)
+
+	.fromTop
+		transform: translate(0,-50px)
+
+	.inRange
+		.animate
+			opacity: 1
+
+		& .fromLeft, & .fromRight, & .fromBottom, & .fromTop
+			transform: translate(0,0)
+
+	// SCROLL IN AND OUT OF FIXED CENTER STYLES
+		// scrollInAndOutOfFixedCenter STYLES
+	.fixToTop, .fixToBottom
+		position: absolute
+		top: 0
+		left: 50%
+		transform: translateX(-50%)
+
+	.fixToBottom
+		top: auto
+		bottom: 0
+
+	.fixToCenter
+		position: fixed
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)

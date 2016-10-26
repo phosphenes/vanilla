@@ -13,25 +13,15 @@ get_header();
 		        "carousel": true,
 		        "autoPlay": 6000
 		    }'>
-			<div class="item"></div>
+			<div class="item"><main><h1>foo</h1></main></div>
+			<div class="item"><main><h1>bar</h1></main></div>
+			<div class="item"><main><h1>gronk</h1></main></div>
 		</div>
 	</section>
 
 	<section class="mainContent"><main>
 		<?php the_content(); ?>
 	</main></section>
-
-<div class="pi-rotator" id="myRotator"
-     data-options='{
-		"blips" : true,
-		"prevNext": true,
-		"carousel": true
-	}'>
-	<div class="item"><h1>foo</h1></div>
-	<div class="item"><h1>bar</h1></div>
-	<div class="item"><h1>gronk</h1></div>
-</div>
-<button pi-rotator-trigger="myRotator">show my rotator</button>
 
 <?php
 get_footer(); 

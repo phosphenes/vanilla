@@ -1,0 +1,167 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900';
+
+$deep-blue: #035a9d
+$pale-translucent-blue: rgba(216, 242, 251, 0.9)
+$dark-gray: #262f35
+$light-grey: #dddddd
+
+$baseFont: 'Roboto', Arial, Helvetica, sans-serif
+$heading: 'Roboto', Arial, Helvetica, sans-serif
+$main-nav-font: 'Roboto', Arial, Helvetica, sans-serif
+
+$center-transform: translate(-50%, -50%)
+$hot-spot-border: 2px solid $deep-blue
+
+*
+	box-sizing: border-box
+
+body
+	padding: 0
+	margin: 0
+	font-family: $baseFont
+	font-size: 16px
+	line-height: 1.5em
+	color: #666
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+	-webkit-text-size-adjust: none
+	-ms-text-size-adjust: none
+	text-size-adjust: none
+
+a
+	text-decoration: none
+	color: inherit
+
+	&:hover
+		text-decoration: underline
+
+	img
+		border:	0
+
+h1, h2, h3, h4, h5
+	margin: 0 0 10px 0
+	font-family: $heading
+	line-height: 1.3em
+
+h1
+	font-size: 2.5em
+	margin-bottom: 20px
+
+h2
+	font-size: 2em
+
+h3
+	font-size: 1.5em
+
+h4
+	font-size: 1.3em
+	margin-bottom: 20px
+
+h5
+	font-size: 1.2em
+
+p
+	margin: 0 0 20px 0
+
+strong, b
+	font-weight: bold
+
+blockquote
+	padding: 0 0 0 20px
+	border-left: 5px solid
+	font-style: italic
+	font-size: 20px
+	line-height: 1.5em
+	font-family: 'Georgia', serif
+
+hr
+	clear: both
+	height: 0
+	border: solid #ccc
+	border-width: 0 0 1px 0
+	padding: 20px 0 0 0
+	margin: 0 0 20px 0
+
+	& + p
+		padding-top: 10px
+
+table, th, tbody, tr, td
+	border:	0
+
+table
+	margin-bottom: 20px
+	clear: both
+	border-spacing: 0
+	line-height: 1.2em
+
+	tr
+		td
+			padding: 10px 10px 10px 0
+			border: solid #ccc
+			border-width: 1px 0 0 0
+
+		&:last-child
+			td
+				border-width: 1px 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//////////////////////////////////////
+// RESPONSIVE
+//////////////////////////////////////
+
+//@media (min-width: 550px)
+
+@media (min-width: 768px)
+
+	body
+		padding-top: 60px
+
+	h1
+		font-size: 3em
+
+	h2
+		font-size: 2.5em
+
+	h3
+		font-size: 2em
+
+	h4
+		font-size: 1.6em
+
+	h5
+		font-size: 1.2em
+
+//@media (min-width: 900px)
+
+//@media (min-width: 1024px)
+
+@media (min-width: 1100px)
+
+	h1
+		font-size: 3.5em
+
+	h2
+		font-size: 2.8em
+
+	h3
+		font-size: 2em
+
+	h4
+		font-size: 1.6em
+
+	h5
+		font-size: 1em

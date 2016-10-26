@@ -120,6 +120,8 @@
 		}
 
 		function slide(delta, jumpTo) {
+			if (moving) return
+			
 			moving = true
 			sled.css(options.crossfade ? 
 				{opacity: 0} : 

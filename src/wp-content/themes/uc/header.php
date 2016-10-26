@@ -48,11 +48,11 @@ $extraClasses = implode(' ', $extraClasses);
 
 		<main>
 
-			<nav id="menu">
+			<nav id="menu"><main>
 				<ul class="menu">
 					<?php wp_list_pages('sort_column=menu_order&title_li=&depth=2&exclude='.$navExclusions); ?>
 				</ul>
-			</nav>
+			</main></nav>
 
 			<a id="logo" href="/">
 				LOGO

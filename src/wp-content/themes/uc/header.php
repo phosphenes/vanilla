@@ -42,27 +42,21 @@ $extraClasses = implode(' ', $extraClasses);
 <body <?php body_class($extraClasses); ?> id="top">
 
 
-
-
 	<header>
-
 		<main>
-
-			<nav id="menu"><main>
-				<ul class="menu">
-					<?php wp_list_pages('sort_column=menu_order&title_li=&depth=2&exclude='.$navExclusions); ?>
-				</ul>
-			</main></nav>
-
+			<nav class="pi-unimenu">
+				<main>
+					<ul>
+						<?php wp_list_pages('sort_column=menu_order&title_li=&depth=2&exclude='.$navExclusions); ?>
+					</ul>
+				</main>
+			</nav>
 			<a id="logo" href="/">
-				LOGO
-			</a>
-
-			<a href="javascript:;" id="menuButton" class="menuButton" title="Open/Close Menu">
-				<div class="hamburger"><span></span></div>
+				<img src="/wp-content/themes/uc/images/logo.svg">
 			</a>
 		</main>
 	</header>
+
 
 
 

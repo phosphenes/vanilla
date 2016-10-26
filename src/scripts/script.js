@@ -5,7 +5,6 @@
 
 		initStickyHeader();
 		initAnchorScrolling();
-		initMobileMenu();
 		initExhibits();
 		initCenterImages();
 
@@ -26,16 +25,7 @@
 			}
 		}, 10);
 	}
-
-	function initMobileMenu() {
-		var button = π1('#menuButton');
-		var menu = π1('#menu');
-		var body = π1('body');
-		button.onclick = function() {
-			(body.hasClass('openMenu')) ? body.killClass('openMenu'): body.addClass('openMenu');
-		};
-	}
-
+	
 	////////////////////////////////////
 	// EXHIBIT SECTION ANIMATIONS
 	////////////////////////////////////

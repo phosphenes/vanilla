@@ -5,6 +5,18 @@
 
 get_header();
 ?>
+	<section id="hero">
+		<div class="pi-rotator" id="heroRotator"
+			data-options='{
+		        "inline": true,
+		        "blips": true,
+		        "carousel": true,
+		        "autoPlay": 6000
+		    }'>
+			<div class="item"></div>
+		</div>
+	</section>
+
 	<section class="mainContent"><main>
 		<h1>Home 2</h1>
 		<?php the_content(); ?>

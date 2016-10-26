@@ -11,16 +11,17 @@ get_header();
 
 	</main></section>
 
-<div class="pi-rotator" data-options='{
-	"inline": true,
-	"blips" : true,
-	"prevNext": true,
-	"carousel": true
-}'>
+<div class="pi-rotator" id="myRotator"
+     data-options='{
+		"blips" : true,
+		"prevNext": true,
+		"carousel": true
+	}'>
 	<div class="item"><h1>foo</h1></div>
 	<div class="item"><h1>bar</h1></div>
 	<div class="item"><h1>gronk</h1></div>
 </div>
+<button pi-rotator-trigger="myRotator">show my rotator</button>
 
 <?php
 get_footer(); 

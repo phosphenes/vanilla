@@ -470,16 +470,7 @@
 
 	π.mods = []
 
-	π.setTriggers = function(selector, object){
-		selector = 'pi-' + selector + '-trigger'
-		π('[' + selector + ']').forEach(function(trigger){
-			trigger.onclick = function(){
-				object.show(trigger.getAttribute(selector))
-			}
-		})
-	}
-
-	π.setNewTriggers = function(selector){
+	π.setTriggers = function (selector){
 		var fullSelector = 'pi-' + selector + '-trigger'
 		π('[' + fullSelector + ']').forEach(function(trigger){
 			trigger.onclick = function(e){
@@ -501,6 +492,15 @@
 	}
 
 	;(function(){
+		/*
+		
+		Vnode and hyperscript are borrowed from the Mithril.js rewrite branch:
+
+		https://github.com/lhorie/mithril.js/blob/rewrite/render/vnode.js
+		https://github.com/lhorie/mithril.js/blob/rewrite/render/hyperscript.js
+		
+		*/
+		
 		var Vnode = function(tag, key, attrs, children, text, dom) {
 			return {tag: tag, key: key, attrs: attrs, children: children, text: text, dom: dom, domSize: undefined, state: {}, events: undefined, instance: undefined, skip: false}
 		}
@@ -603,6 +603,10 @@
 
 			return(el)
 		}
+		
+		/*
+			Thanks to Leo Horie and all the contributors at Mithril.js 
+		 */
 	})()
 
 	window.π = π

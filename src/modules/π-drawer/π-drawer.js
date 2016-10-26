@@ -70,7 +70,7 @@
 			allDrawers[el.id] = aDrawer
 		});
 
-		π.setNewTriggers('drawer');
+		π.setTriggers('drawer');
 	}
 
 	π.mods.push(init);

@@ -290,7 +290,7 @@
 		π('.pi-rotator').forEach(function (el) {
 			AllRotators[el.id] = new Rotator(el)
 		})
-		π.setNewTriggers('rotator')
+		π.setTriggers('rotator')
 	}
 
 	π.mods.push(init)

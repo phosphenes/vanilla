@@ -23,9 +23,10 @@
 		
 		NAV = el
 		
-		BURGER_BUTTON = π.dom('button.pi-burger-button')
+		BURGER_BUTTON = π.dom('button.pi-burger-button' , π.dom('div.hamburger'))
 		BURGER_BUTTON.onclick = toggleMenu
-		πbody.add(BURGER_BUTTON)
+
+		NAV.parentElement.add(BURGER_BUTTON)
 		
 		setMenuStyles()
 	}
@@ -60,8 +61,8 @@
 	function doTheThing() {
 		setTimeout(function () {
 			NAV.css({opacity: OPEN_NAV ? 1 : 0})
+			if (!OPEN_NAV) πbody.killClass('open-nav')
 			doAfterTransition(NAV, 'opacity', function () {
-				if (!OPEN_NAV) πbody.killClass('open-nav')
 				MOVING = false
 			})
 		}, 10)

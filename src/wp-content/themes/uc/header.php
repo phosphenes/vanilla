@@ -63,6 +63,8 @@ $extraClasses = implode(' ', $extraClasses);
 					</ul>
 				</main>
 			</nav>
+
+
 			<a id="logo" href="/">
 				<img src="/wp-content/themes/uc/images/logo.svg">
 			</a>

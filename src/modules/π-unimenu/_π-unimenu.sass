@@ -42,20 +42,47 @@ nav.pi-unimenu
 	display: none
 	z-index: 10000
 
-@media screen and (max-width: 1024px)
-	.pi-burger-button
+	.hamburger
 		display: block
-		position: fixed
-		top: 20px
-		right: 20px
-		width: 40px
-		height: 40px
-		background: none
-		border: 1px solid #eeeeee
-		color: #eeeeee
+		height: 4px
+		width: 30px
+		background-color: #fff
+		vertical-align: middle
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+		transition: all 0.15s ease-out
+
+		&:before, &:after
+			content: ''
+			display: block
+			position: absolute
+			height: 4px
+			width: 100%
+			background-color: #fff
+			right: 0
+			top: -10px
+			transition: all 0.15s ease-out
 
 		&:after
-			content: '+'
+			top: auto
+			bottom: -10px
+
+@media screen and (max-width: 1024px)
+
+	.pi-burger-button
+		display: block
+		position: absolute
+		top: 50%
+		right: -10px
+		transform: translateY(-50%)
+		width: 50px
+		height: 50px
+		background: transparent
+		outline: none
+		border: none
+		cursor: pointer
 
 	nav.pi-unimenu
 		display: none
@@ -68,8 +95,22 @@ nav.pi-unimenu
 	body.open-nav
 		overflow: hidden
 
-		.pi-burger-button:after
-				content: 'X'
+		.hamburger
+			background-color: transparent !important
+
+			&:before, &:after
+				width: 100%
+				top: 0
+				right: 0
+				transform: rotate(45deg)
+				background-color: #fff !important
+
+			&:after
+				width: 100%
+				bottom: 0
+				right: 0
+				transform: rotate(-45deg)
+				background-color: #fff !important
 
 		& nav.pi-unimenu
 			display: block

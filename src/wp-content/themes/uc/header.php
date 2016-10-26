@@ -8,6 +8,12 @@ if(!$isBlog) {
 }
 
 $navExclusions = (get_field('nav_exclusions','options')) ? implode(',',get_field('nav_exclusions','options')): '';
+
+
+
+
+
+
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -44,9 +50,15 @@ $extraClasses = implode(' ', $extraClasses);
 
 	<header>
 		<main>
-			<nav class="pi-unimenu">
+			<nav id="menu" class="pi-unimenu">
 				<main>
-					<ul>
+
+					<div class="actionButtons">
+						<a href="/">Make an appointment online</a>
+						<a href="/">Call us: 360.754.5363</a>
+					</div>
+
+					<ul id="topNav">
 						<?php wp_list_pages('sort_column=menu_order&title_li=&depth=2&exclude='.$navExclusions); ?>
 					</ul>
 				</main>

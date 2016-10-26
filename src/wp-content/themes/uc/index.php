@@ -6,12 +6,12 @@
 get_header();
 ?>
 	<section id="hero">
-		<img src="/wp-content/themes/uc/images/hero.jpg" id="heroImage">
 		<div class="pi-rotator" id="heroRotator"
 			data-options='{
 		        "inline": true,
 		        "blips": true,
 		        "carousel": true,
+		        "autoPlay": 20000
 		        "crossfade": true,
 		        "autoPlay": 6000
 		    }'>

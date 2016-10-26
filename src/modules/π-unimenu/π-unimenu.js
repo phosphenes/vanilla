@@ -23,7 +23,7 @@
 		
 		NAV = el
 		
-		BURGER_BUTTON = π.button('pi-burger-button')
+		BURGER_BUTTON = π.dom('button.pi-burger-button')
 		BURGER_BUTTON.onclick = toggleMenu
 		πbody.add(BURGER_BUTTON)
 		
@@ -33,7 +33,6 @@
 	function setMenuStyles() {
 		if (window.innerWidth !== WINDOW_WIDTH) {
 			WINDOW_WIDTH = window.innerWidth
-			console.log("shit just changed")
 		}
 		
 		if (WINDOW_WIDTH > HAMBURGER_THRESHHOLD) {
@@ -52,7 +51,6 @@
 		var showing = show && !πbody.hasClass('open-nav')
 		var hiding = !show && πbody.hasClass('open-nav')
 		if (showing || hiding) {
-			console.log("toggling")
 			MOVING = true
 			if(showing) πbody.addClass('open-nav') 
 			doTheThing(showing)

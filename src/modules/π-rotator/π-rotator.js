@@ -18,14 +18,14 @@
 		delete el.dataset.options
 		
 		var currentIdx = 0
-		var stage = π.div('stage'), sled = π.div('sled')
+		var stage = π.dom('.stage'), sled = π.dom('.sled')
 		var items = []
 		var numberOfItems
 		var container
 		var prevButton, nextButton, closeButton
 		var carousel = options.carousel
-		var counter = options.counter ? π.div('counter') : null
-		var blips = options.blips ? π.div('blips') : null
+		var counter = options.counter ? π.dom('.counter') : null
+		var blips = options.blips ? π.dom('.blips') : null
 		var moving = false
 
 		// TODO: show a spinner if loadCount < numberOfItems
@@ -43,23 +43,23 @@
 			el.addClass('inline')
 			el.fill(stage)
 		} else {
-			overlay = π.div('pi-overlay')
+			overlay = π.dom('.pi-overlay')
 			overlay.fill(stage)
 			el.fill(overlay)
 			container = overlay
 		}
 
 		if (!options.externalTrigger && !options.inline) {
-			closeButton = π.button('pi-modal-close-button')
+			closeButton = π.dom('button.pi-modal-close-button')
 			closeButton.setAttribute('pi-rotator-trigger', el.id)
 			container.appendChild(closeButton)
 		}
 		
 		if (options.prevNext) {
-			prevButton = π.button('pi-prev-button')
+			prevButton = π.dom('button.pi-prev-button')
 			if (!carousel) prevButton.addClass('off')
 
-			nextButton = π.button('pi-next-button')
+			nextButton = π.dom('button.pi-next-button')
 			prevButton.onclick = prev
 			nextButton.onclick = next
 
@@ -67,13 +67,13 @@
 		}
 
 		if (counter) {
-			counter.add([π.span(), π.span(0,0,numberOfItems)])
+			counter.add([π.dom('span'), π.dom('span', numberOfItems.toString())])
 			container.add(counter)
 		}
 
 		if (blips) {
 			var dots = items.map(function (item, idx) {
-				var dot = π.button()
+				var dot = π.dom('button')
 				dot.dataset.idx = idx
 				dot.onclick = jumpToItem
 				return dot

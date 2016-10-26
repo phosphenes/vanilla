@@ -36,8 +36,8 @@
 		}
 
 		function wrapperForItem(item) {
-			var wrapper = π.div('wrapper');
-			wrapper.fill(π.div('content', 0, item.innerHTML));
+			var wrapper = π.dom('.wrapper');
+			wrapper.fill(π.dom('.content', item.innerHTML));
 			item.fill(wrapper);
 			return wrapper;
 		}

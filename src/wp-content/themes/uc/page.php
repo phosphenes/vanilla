@@ -32,7 +32,7 @@ echo '<section class="mainContent"><main>';
 
 echo '<clear></clear></main></section>';
 
-
+echo '<div class="pi-drawer" id="myDrawer">HI, Imma drawer</div><button pi-drawer-trigger="myDrawer">yo. Go!</button>';
 
 
 get_footer(); 

@@ -26,7 +26,7 @@
 				var thisColumn = el.π('.column')[idx % numberOfColumns];
 
 				if (!thisColumn) {
-					thisColumn = π.div('column');
+					thisColumn = π.dom('.column');
 					el.add(thisColumn);
 					allColumns.push(thisColumn)
 					

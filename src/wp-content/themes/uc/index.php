@@ -23,6 +23,8 @@ get_header();
 </div>
 <button pi-rotator-trigger="myRotator">show my rotator</button>
 
+
+
 <?php
 get_footer(); 
 ?>

@@ -1,4 +1,4 @@
-(function(){
+;(function(){
 	π.listen(init);
 
 	function init() {

@@ -172,6 +172,5 @@ gulp.task('default', ['jshint', 'workerHint', 'imagemin', 'htmlpage', 'phppage',
 	gulp.watch('src/baseComponents/*/*.sass', ['sass']);
 	gulp.watch('src/modules/*/*.sass', ['sass']);
 	gulp.watch('src/styles/partials/*.sass', ['sass']);
-	gulp.watch('src/styles/mediaQueries/*.sass', ['sass']);
 	gulp.watch('src/styles/*.sass', ['sass']);
 });

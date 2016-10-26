@@ -65,8 +65,6 @@ function remove_size_attributes_from_images($content) {
 }
 add_filter('the_content', 'remove_size_attributes_from_images');
 
-// STRIP <p> TAGS FROM <img> TAGS IN CONTENT
-
 
 // REMOVE DEFAULT IMAGE LINKING IN WYSIWYG
 function wpb_imagelink_setup() {
@@ -112,33 +110,19 @@ if(function_exists('acf_add_options_page')) {
 	));
 }
 
-
-
-
-
-
-////////////////////////////////////
-// GRAB THE LOCATION OF THE LATEST
-// PDF OF THE ROWIM MANUAL
-////////////////////////////////////
-function getLatestPDF() {
-	$path = $_SERVER['DOCUMENT_ROOT'].'/pdf';
-
-	$latest_ctime = 0;
-	$latest_filename = '';
-
-	$d = dir($path);
-	while (false !== ($entry = $d->read())) {
-		$filepath = "{$path}/{$entry}";
-
-		if(is_file($filepath) && filectime($filepath) > $latest_ctime) {
-			$latest_ctime = filectime($filepath);
-			$latest_filename = $entry;
-		}
-	}
-
-	echo get_site_url().'/pdf/'.$latest_filename;
+/////////////////////////////////////////////////
+// ACF - CSS OVERWRITES
+/////////////////////////////////////////////////
+function custom_admin_styles() { ?>
+	<style type="text/css">
+		@import '<?php echo get_template_directory_uri(); ?>/admin.css';
+	</style>
+	<?php
 }
+add_action('admin_head', 'custom_admin_styles');
+
+
+
 
 
 

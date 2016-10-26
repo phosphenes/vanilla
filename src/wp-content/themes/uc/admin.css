@@ -1,0 +1,65 @@
+
+
+/* ACF */
+.acf-flexible-content .layout .acf-fc-layout-handle {
+	background: #0073aa !important;
+	color: #fff;
+}
+.acf-flexible-content .layout {
+	margin: 0 0 20px 0;
+	border-width: 0;
+}
+
+
+
+
+#sections > .acf-input > .acf-repeater > table > tbody > tr > td {
+	/*padding-top: 50px;*/
+}
+
+
+.contentColumns .acf-table {
+	border: none;
+	background: #fff;
+	margin-bottom: 0;
+}
+.contentColumns .acf-table .acf-row {
+	display: flex;
+	justify-content: space-between;
+	float: left;
+	width: calc(50% - 1);
+	margin-bottom: 20px;
+}
+.contentColumns .acf-table .acf-row:nth-child(odd) {
+	clear: both;
+	border-right: 1px solid #e5e5e5;
+}
+.contentColumns .acf-table .acf-row td {
+	display: block;
+}
+.contentColumns .acf-table .acf-row td.acf-fields {
+	width: calc(100% - 60px) !important;
+}
+.contentColumns .acf-field-wysiwyg {
+	padding: 10px 0 0 0;
+	width: 100% !important;
+}
+
+.contentColumns .acf-repeater .acf-row-handle.order, .contentColumns .acf-repeater .acf-row-handle.remove {
+	background: #fff;
+	width: 30px !important;
+}
+.contentColumns .acf-repeater .acf-row-handle.order:hover, .contentColumns .acf-repeater .acf-row-handle.order:hover {
+	background: #f4f4f4;
+}
+
+.contentColumns .acf-repeater.-row > table > tbody > tr > td, .contentColumns .acf-repeater.-block > table > tbody > tr > td {
+	border-width: 0;
+}
+.contentColumns .acf-actions {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #e5e5e5;
+}
+.contentColumns .acf-actions li {
+	float:left;
+}

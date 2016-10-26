@@ -11,9 +11,8 @@ get_header();
 		        "inline": true,
 		        "blips": true,
 		        "carousel": true,
-		        "autoPlay": 20000
-		        "crossfade": true,
-		        "autoPlay": 6000
+		        "autoPlay": 20000,
+		        "crossfade": true
 		    }'>
 			<div class="item"><main><h1>foo</h1></main></div>
 			<div class="item"><main><h1>bar</h1></main></div>

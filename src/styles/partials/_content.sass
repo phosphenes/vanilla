@@ -1,0 +1,119 @@
+
+
+// SECTIONS
+section
+	position: relative
+	padding: 0 20px
+
+main
+	width: 100%
+	max-width: 1200px
+	text-align: left
+	margin: 0 auto
+	padding: 20px 0
+	position: relative
+
+
+// MAIN CONTENT
+.mainContent
+	position: relative
+	word-wrap: break-word
+
+	main
+
+		.pageTitle
+			border-bottom: 1px solid #ccc
+			padding-bottom: 10px
+
+	ul
+		margin: 0 0 20px 0
+
+		& > li
+			//padding-left: 25px
+			margin: 0 0 10px 0
+			position: relative
+			line-height: 1.5em
+
+	ol
+
+		& > li
+			margin: 0 0 10px 0
+			position: relative
+			line-height: 1.5em
+
+
+// BREADCRUMB
+#breadcrumb
+
+	a
+		margin-right: 20px
+		position: relative
+		display: inline-block
+
+
+		&:after
+			content: ''
+			display: block
+			width: 6px
+			height: 6px
+			border: solid #888
+			border-width: 1px 1px 0 0
+			position: absolute
+			right: -10px
+			top: 45%
+			transform: rotate(45deg) translateY(-50%)
+
+	b, strong
+		display: none
+
+// COLUMNS
+.columns
+	display: flex
+	justify-content: space-around
+	flex-wrap: wrap
+	padding: 0
+	margin: 0
+
+	& > *
+		display: block
+		list-style: none
+		margin: 0 0 20px 0
+		width: 100%
+
+.verticalCenter
+	display: flex
+	justify-content: center
+	flex-direction: column
+
+
+
+
+//////////////////////////////////////
+// RESPONSIVE
+//////////////////////////////////////
+
+//@media (min-width: 550px)
+
+@media (min-width: 768px)
+
+	section
+		padding: 0 30px
+
+	main
+		padding: 30px 0
+
+	#breadcrumb
+		b, strong
+			display: inline-block
+
+	.columns > *
+		width: calc(50% - 40px)
+
+//@media (min-width: 900px)
+
+@media (min-width: 1024px)
+
+	.columns.col-3 > *
+		width: calc(33.33333% - 20px) !important
+
+//@media (min-width: 1100px)

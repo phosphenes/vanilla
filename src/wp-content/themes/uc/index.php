@@ -6,9 +6,7 @@
 get_header();
 ?>
 	<section class="mainContent"><main>
-		<h1>Home 2</h1>
 		<?php the_content(); ?>
-
 	</main></section>
 
 <div class="pi-rotator" id="myRotator"
@@ -22,8 +20,6 @@ get_header();
 	<div class="item"><h1>gronk</h1></div>
 </div>
 <button pi-rotator-trigger="myRotator">show my rotator</button>
-
-
 
 <?php
 get_footer(); 

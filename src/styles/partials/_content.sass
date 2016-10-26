@@ -57,6 +57,24 @@ main
 	p
 		max-width: 50%
 		font-weight: 700
+		
+	.blips
+		top: auto
+		bottom: 20px
+		left: auto
+		right: 20px
+		transform: none
+		
+		button
+			border-width: 2px
+			border-color: $beige
+			border-radius: 50%
+		
+			&.on, &:hover
+				background-color: $beige
+				
+		button + button
+			margin-left: 10px
 
 // MAIN CONTENT
 .mainContent

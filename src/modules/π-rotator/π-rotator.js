@@ -81,6 +81,7 @@
 
 			blips.add(dots)
 			container.add(blips)
+			updateBlips()
 		}
 		
 		if (options.crossfade) {
@@ -146,6 +147,7 @@
 				sled.css(sledStyle)
 
 				currentIdx = jumpTo ? jumpTo.idx : currentIdx + delta
+				updateBlips()
 
 				doAfterTransition(stage, transitionProperty, function () {
 					container.removeChild(stage)
@@ -165,7 +167,6 @@
 		function updateTheView() {
 			updatePrevNext()
 			updateCounter()
-			updateBlips()
 		}
 
 		function updateBlips() {

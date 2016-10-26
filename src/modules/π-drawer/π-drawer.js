@@ -54,11 +54,11 @@
 		var options = JSON.parse(el.dataset.options ? el.dataset.options : '{}')
 		delete el.dataset.options
 
-		var wrapper = π.div("drawer-wrapper", null, el.innerHTML);
+		var wrapper = π.dom(".drawer-wrapper", el.innerHTML);
 		el.fill(wrapper);
 
 		if (!options.externalTrigger) {
-			var closeButton = π.button('pi-modal-close-button');
+			var closeButton = π.dom('button.pi-modal-close-button');
 			closeButton.setAttribute('pi-drawer-trigger', el.id)
 			el.appendChild(closeButton)
 		}

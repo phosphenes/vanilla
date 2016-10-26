@@ -27,8 +27,8 @@ var minifyCSS = require('gulp-cssnano');
 var uglify = require('gulp-uglify');
 var chmod = require('gulp-chmod');
 
-var buildScripts = ['src/scripts/alf.js', 'src/scripts/π.js', 'src/debug/*.js', 'src/scripts/globals.js', 'src/components/*.js', 'src/modules/**/*.js', 'src/scripts/script.js'];
-var distScripts = ['src/scripts/alf.js', 'src/scripts/π.js', 'src/scripts/globals.js', 'src/components/*.js', 'src/modules/**/*.js', 'src/scripts/script.js'];
+var buildScripts = ['src/scripts/alf.js', 'src/scripts/π.js', 'src/scripts/π-dom.js', 'src/debug/*.js', 'src/scripts/globals.js', 'src/components/*.js', 'src/modules/**/*.js', 'src/scripts/script.js'];
+var distScripts = ['src/scripts/alf.js', 'src/scripts/π.js', 'src/scripts/π-dom.js', 'src/scripts/globals.js', 'src/components/*.js', 'src/modules/**/*.js', 'src/scripts/script.js'];
 
 var buildFolder = './build/';
 var distFolder = './dist/';

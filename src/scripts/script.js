@@ -1,9 +1,6 @@
 ;(function(){
 	π.mods.push(function () {
 		console.log("π loaded. poo.")
-
-
-		initStickyHeader();
 		initAnchorScrolling();
 		initExhibits();
 		initCenterImages();
@@ -13,18 +10,6 @@
 	})
 
 
-
-	function initStickyHeader() {
-		var header = π1('header');
-		setInterval(function() {
-			if(window.scrollY >= 200 && !header.hasClass('sticky')) {
-				header.addClass('sticky');
-			}
-			else if(window.scrollY < 200 && header.hasClass('sticky')) {
-				header.killClass('sticky');
-			}
-		}, 10);
-	}
 	
 	////////////////////////////////////
 	// EXHIBIT SECTION ANIMATIONS
@@ -112,21 +97,6 @@
 	////////////////////////////////////
 	// UTILITIES
 	////////////////////////////////////
-	function elementOverlappingAnother(box, win) {
-		box = $(box);
-		win = $(win);
-
-		var boxPos = scrollPosition(box);
-		var winPos = scrollPosition(win);
-
-		return (boxPos.bottom > winPos.top && boxPos.top < winPos.bottom);
-	}
-
-	function elementInView(box) {
-		box = $(box);
-		var boxPos = scrollPosition(box);
-		return (boxPos.bottom > 0 && boxPos.top < $(window).height())
-	}
 
 	function elementInRange(box, margin) {
 

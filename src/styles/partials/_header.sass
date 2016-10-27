@@ -175,6 +175,17 @@ header
 				transition: all 0.15s ease-out
 
 		li
+			position: relative
+
+			&:hover
+				.children
+					&:before
+						width: 100%
+					&:after
+						height: calc(100% - 8px)
+					li
+						opacity: 1
+						transition-delay: 0.3s
 
 			a
 				background: none
@@ -189,11 +200,52 @@ header
 				&:hover
 					text-decoration: none
 
-	ul
-		display: none
+		// DROPDOWNS
+		.children
+			display: block
+			padding: 8px 0 0 0
+			margin: 0
+			position: absolute
+			top: 100%
+			left: 50%
+			transform: translateX(-50%)
 
-	#topNav > li > a:hover:after
-		width: 100%
+			&:before
+				content: ''
+				display: block
+				position: absolute
+				top: 3px
+				left: 50%
+				transform: translateX(-50%)
+				width: 0
+				height: 3px
+				background: $green
+				transition: all 0.15s ease-out
+
+			&:after
+				content: ''
+				display: block
+				position: absolute
+				bottom: 0
+				left: 0
+				width: 100%
+				height: 0
+				background: $green
+				transition: all 0.25s ease-out
+
+			li
+				white-space: nowrap
+				padding: 5px 10px
+				background: $green
+				opacity: 0
+				transition: all 0.15s ease-out
+				z-index: 1
+
+	#topNav > li
+		&:hover > a:after
+			width: 100%
+		&.page_item_has_children > a:after
+			display: none
 
 
 @media (max-width: 1024px) and (orientation: landscape)

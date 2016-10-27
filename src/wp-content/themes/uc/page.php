@@ -25,7 +25,11 @@ $childPages = ($parentPageID) ? get_pages(array('child_of' => $parentPageID, 'pa
 ?>
 
  <section id="hero">
+	 <main>
 
+		 <h1><?php the_title(); ?></h1>
+
+	 </main>
  </section>
 
 

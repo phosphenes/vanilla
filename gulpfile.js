@@ -27,8 +27,8 @@ var minifyCSS = require('gulp-cssnano');
 var uglify = require('gulp-uglify');
 var chmod = require('gulp-chmod');
 
-var buildScripts = ['src/scripts/alf.js', 'src/scripts/π.js', 'src/scripts/π-dom.js', 'src/debug/*.js', 'src/scripts/globals.js', 'src/components/*.js', 'src/modules/**/*.js', 'src/scripts/script.js'];
-var distScripts = ['src/scripts/alf.js', 'src/scripts/π.js', 'src/scripts/π-dom.js', 'src/scripts/globals.js', 'src/components/*.js', 'src/modules/**/*.js', 'src/scripts/script.js'];
+var buildScripts = ['src/scripts/alf.js', 'src/scripts/π.js', 'src/debug/*.js', 'src/scripts/globals.js', 'src/components/*.js', 'src/modules/**/*.js', 'src/scripts/script.js'];
+var distScripts = ['src/scripts/alf.js', 'src/scripts/π.js', 'src/scripts/globals.js', 'src/components/*.js', 'src/modules/**/*.js', 'src/scripts/script.js'];
 
 var buildFolder = './build/';
 var distFolder = './dist/';
@@ -76,15 +76,15 @@ gulp.task('htmlpage', function() {
 		.pipe(gulp.dest(distFolder));
 });
 
-// pass php files unmolested
-gulp.task('phppage', function() {
-	var phpSrc = ['src/*.php', 'src/**/*.php'];
+// unmolested passthrough files (php, css)
+gulp.task('passthrough', function() {
+	var passthroughSrc = ['src/*.php', 'src/**/*.php', 'src/*.css', 'src/**/*.css'];
 
-	gulp.src(phpSrc)
+	gulp.src(passthroughSrc)
 		.pipe(changed(buildFolder))
 		.pipe(gulp.dest(buildFolder));
 
-	gulp.src(phpSrc)
+	gulp.src(passthroughSrc)
 		.pipe(changed(distFolder))
 		.pipe(gulp.dest(distFolder));
 });
@@ -102,19 +102,19 @@ gulp.task('scripts', function() {
 		.pipe(stripDebug())
 		.pipe(uglify())
 		// .pipe(replace(ProjectOptions.CUSTOM_OBJECT.build, ProjectOptions.CUSTOM_OBJECT.dist))
-		.pipe(gulp.dest(WORDPRESS ? './build/wp-content/themes/uc/' : distFolder));
+		.pipe(gulp.dest(WORDPRESS ? './dist/wp-content/themes/uc/' : distFolder));
 });
 
 // do the same for workers
 gulp.task('workers', function() {
 	gulp.src('src/workers/*.js')
-		// .pipe(changed('src/workers/'))
+	// .pipe(changed('src/workers/'))
 		.pipe(sourcemaps.init())
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('./build/workers/'));
 
 	gulp.src('src/workers/*.js')
-		// .pipe(changed('src/workers/'))
+	// .pipe(changed('src/workers/'))
 		.pipe(stripDebug())
 		.pipe(uglify())
 		.pipe(gulp.dest('./dist/workers/'));
@@ -148,11 +148,11 @@ gulp.task('sass', function () {
 		.pipe(concat('styles.css'))
 		.pipe(minifyCSS())
 		.pipe(replace('../../images', './images'))
-		.pipe(gulp.dest(WORDPRESS ? './build/wp-content/themes/uc/' : distFolder));
+		.pipe(gulp.dest(WORDPRESS ? './dist/wp-content/themes/uc/' : distFolder));
 });
 
 // default gulp task
-gulp.task('default', ['jshint', 'workerHint', 'imagemin', 'htmlpage', 'phppage', 'scripts', 'workers', 'sass'], function() {
+gulp.task('default', ['jshint', 'workerHint', 'imagemin', 'htmlpage', 'passthrough', 'scripts', 'workers', 'sass'], function() {
 	// watch for image changes
 	gulp.watch(['src/**/*.jpg', 'src/**/*.png', 'src/**/*.gif','src/**/*.svg'], ['imagemin']);
 
@@ -160,7 +160,7 @@ gulp.task('default', ['jshint', 'workerHint', 'imagemin', 'htmlpage', 'phppage',
 	gulp.watch(['src/**/*.html'], ['htmlpage']);
 
 	// watch for HTML changes
-	gulp.watch(['src/**/*.php'], ['phppage']);
+	gulp.watch(['src/**/*.php', 'src/**/*.css'], ['passthrough']);
 
 	// watch for JS changes
 	gulp.watch(buildScripts, ['jshint', 'scripts']);
@@ -172,5 +172,6 @@ gulp.task('default', ['jshint', 'workerHint', 'imagemin', 'htmlpage', 'phppage',
 	gulp.watch('src/baseComponents/*/*.sass', ['sass']);
 	gulp.watch('src/modules/*/*.sass', ['sass']);
 	gulp.watch('src/styles/partials/*.sass', ['sass']);
+	gulp.watch('src/styles/mediaQueries/*.sass', ['sass']);
 	gulp.watch('src/styles/*.sass', ['sass']);
 });

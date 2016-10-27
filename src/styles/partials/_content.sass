@@ -16,7 +16,7 @@ main
 // HERO
 #hero
 	overflow: hidden
-	max-height: 600px
+	height: 400px
 	padding: 0
 	background-position: center
 	background-repeat: no-repeat
@@ -38,7 +38,6 @@ main
 		background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%)
 		background: linear-gradient(to bottom,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%)
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 )
-
 
 	.pi-rotator
 		position: relative
@@ -73,6 +72,9 @@ main
 		max-width: 50%
 		font-weight: 700
 
+	h1, h2, h3, h4, h5, p
+		color: #fff
+
 	.blips
 		top: auto
 		bottom: 20px
@@ -87,6 +89,12 @@ main
 				
 		button + button
 			margin-left: 10px
+
+
+body.home #hero
+	height: 600px
+
+
 
 // MAIN CONTENT
 .mainContent

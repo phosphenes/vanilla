@@ -22,18 +22,22 @@ $childPages = ($parentPageID) ? get_pages(array('child_of' => $parentPageID, 'pa
 //	echo "<section id='hero' style='background-image: url($url)'></section>";
 //}
 
+?>
+
+ <section id="hero">
+
+ </section>
 
 
 
+<section class="mainContent"><main>
 
-echo '<section class="mainContent"><main>';
+	<?php the_content(); ?>
 
-	the_content();
-
-echo '<clear></clear></main></section>';
-
-echo '<div class="pi-drawer" id="myDrawer">HI, Imma drawer</div><button pi-drawer-trigger="myDrawer">yo. Go!</button>';
+<clear></clear></main></section>
 
 
+
+<?php
 get_footer(); 
 ?>

@@ -1,10 +1,6 @@
 @import '//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic,900italic,300italic,900,300'
 
-$deep-blue: #035a9d
-$pale-translucent-blue: rgba(216, 242, 251, 0.9)
-$dark-gray: #262f35
-$light-grey: #dddddd
-
+$text-color: #433929
 $beige: #c7baa4
 $light-beige: #f5f3e9
 $green: #507e3a
@@ -25,7 +21,7 @@ body
 	font-family: $baseFont
 	font-size: 16px
 	line-height: 1.5em
-	color: #666
+	color: $text-color
 	-webkit-font-smoothing: antialiased
 	-moz-osx-font-smoothing: grayscale
 	-webkit-text-size-adjust: none
@@ -60,6 +56,7 @@ h1, h2, h3, h4, h5
 	margin: 0 0 10px 0
 	font-family: $heading
 	line-height: 1.3em
+	color: $text-color
 
 h1
 	font-size: 2.5em
@@ -79,7 +76,7 @@ h5
 	font-size: 1.2em
 	text-transform: uppercase
 	font-weight: 700
-	color: $light-grey
+	opacity: 0.5
 
 p
 	margin: 0 0 20px 0

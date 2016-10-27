@@ -54,7 +54,7 @@ $extraClasses = implode(' ', $extraClasses);
 				<main>
 
 					<div class="actionButtons">
-						<a href="/">Make an appointment online</a>
+						<a href="/">Request an appointment</a>
 						<a href="/">Call us: 360.754.5363</a>
 					</div>
 

@@ -72,5 +72,13 @@ $extraClasses = implode(' ', $extraClasses);
 	</header>
 
 
+	<?php if(!$isHome) { ?>
+	<section id="hero">
+		<main>
+			<h1><?php the_title(); ?></h1>
+		</main>
+	</section>
+
+	<?php } ?>
 
 

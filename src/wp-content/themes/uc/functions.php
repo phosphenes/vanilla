@@ -45,6 +45,14 @@ function remove_width_attribute( $html ) {
    return $html;
 }
 
+// ALLOW SVG'S IN MEDIA UPLOADER
+function cc_mime_types($mimes) {
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');
+
+// REMOVE SIZE ATTRIBUTES FROM IMAGES
 function remove_size_attributes_from_images($content) {
 	global $post;
 

@@ -6,7 +6,7 @@ $isHome = ($post->post_name == 'home') ? true: false;
 
 <footer>
     <main>
-        <div class="legal">&copy; <?php echo date('Y'); ?> Company Name</div>
+        <div class="legal">&copy; <?php echo date('Y'); ?> Smile Olympia John C. Walker, DDS.</div>
         <div class="links">
             <?php wp_nav_menu(array('menu' => 'Footer Menu', 'container_class' => 'footerMenu')); ?>
         </div>

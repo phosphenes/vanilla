@@ -52,9 +52,19 @@ header
 				font-size: 16px
 				font-weight: 800
 				white-space: nowrap
-				padding: 5px 10px
+				padding: 5px 10px 5px 30px
 				margin:  5px 0
 				width: auto
+				position: relative
+
+				&:before
+					position: absolute
+					top: 0
+					left: 0
+					width: 30px
+					height: 100%
+					line-height: 26px
+					text-align: center
 
 #topNav
 	overflow: visible
@@ -146,12 +156,7 @@ header
 
 				a
 					display: block
-					color: #fff
-					background: $green
-					font-size: 16px
-					font-weight: 800
 					white-space: nowrap
-					padding: 5px 10px
 					margin: 0
 
 	#topNav

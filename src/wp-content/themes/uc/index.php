@@ -41,21 +41,11 @@ get_header();
 		</div>
 	</section>
 
-	<section id="ourTechnologies">
-		<main>
-			<h5>Our Technologies</h5>
-			<h1>Invested in your care and comfort.</h1>
-			<p>We offer one of Olympia's most technologically advanced dental facilities because our patients deserve the best in comfort, safety and efficiency. We continuously evaluate the latest diagnostic and treatment equipment available to ensure you get the most out of your investment in long-term dental health and happiness.</p>
-			<a class="button" href="/technologies/">Learn more about our technologies</a>
-		</main>
-	</section>
-
-	<section id="ourServices">
-		<main>
-			
-		</main>
-	</section>
-
 <?php
+
+
+include 'flex-content.php';
+
+
 get_footer(); 
 ?>

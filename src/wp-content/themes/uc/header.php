@@ -31,6 +31,9 @@ $navExclusions = (get_field('nav_exclusions','options')) ? implode(',',get_field
 <script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
 <script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 
+<!-- FONT AWESOME -->
+<script src="https://use.fontawesome.com/70655ce7bc.js"></script>
+
 <!-- SITE STYLES/SCRIPTS -->
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/styles.css" />
 <script src="<?php echo get_template_directory_uri(); ?>/script.js"></script>
@@ -54,8 +57,8 @@ $extraClasses = implode(' ', $extraClasses);
 				<main>
 
 					<div class="actionButtons">
-						<a href="/">Request an appointment</a>
-						<a href="/">Call us: 360.754.5363</a>
+						<a class="fa fa-calendar" href="/">Request an appointment</a>
+						<a class="fa fa-phone" href="/">Call us: 360.754.5363</a>
 					</div>
 
 					<ul id="topNav">

@@ -1,6 +1,7 @@
 @import '//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic,900italic,300italic,900,300'
 
-$text-color: #433929
+$text-color: #736b5d
+$heading-color: #433929
 $beige: #c7baa4
 $light-beige: #f5f3e9
 $green: #507e3a
@@ -29,7 +30,8 @@ body
 
 a
 	text-decoration: none
-	color: inherit
+	color: $green
+	font-weight: 900
 
 	&:hover
 		text-decoration: underline
@@ -55,8 +57,8 @@ a.button
 h1, h2, h3, h4, h5
 	margin: 0 0 10px 0
 	font-family: $heading
-	line-height: 1.3em
-	color: $text-color
+	line-height: 1.2em
+	color: $heading-color
 
 h1
 	font-size: 2.5em
@@ -70,28 +72,48 @@ h3
 
 h4
 	font-size: 1.3em
+	line-height: 1.4em
 	margin-bottom: 20px
+	color: $green
 
 h5
 	font-size: 1.2em
 	text-transform: uppercase
-	font-weight: 700
-	opacity: 0.5
+	font-weight: 900
+	color: #b2afab
 
 p
 	margin: 0 0 20px 0
 
 strong, b
 	font-weight: bold
+	color: $heading-color
 
 blockquote
-	padding: 0 0 0 20px
+	padding: 0 0 0 70px
 	margin: 0 0 20px 0
-	border-left: 5px solid
 	font-style: italic
-	font-size: 20px
-	line-height: 1.5em
-	font-family: 'Georgia', serif
+	font-size: 30px
+	line-height: 1.3em
+	font-weight: 300
+	position: relative
+
+	b, strong
+		text-align: right
+		font-size: 18px
+		font-weight: 900
+
+	&:before
+		content: '';
+		display: block
+		position: absolute
+		left: 0
+		top: 10px
+		//transform: translateY(-50%)
+		width: 50px
+		height: 50px
+		background: url('/wp-content/themes/uc/images/quotes.png') center center no-repeat
+		background-size: contain
 
 hr
 	clear: both
@@ -130,14 +152,19 @@ table
 button
 	outline: none
 
+iframe
+	border: 1px solid #ccc
 
 
 
 
 
+// FONT AWESOME
+.fa
+	font-family: $baseFont
 
-
-
+	&:before
+		font-family: 'FontAwesome'
 
 
 
@@ -167,7 +194,7 @@ button
 		font-size: 2em
 
 	h4
-		font-size: 1.6em
+		font-size: 1.4em
 
 	h5
 		font-size: 1.2em
@@ -188,7 +215,7 @@ button
 		font-size: 2em
 
 	h4
-		font-size: 1.6em
+		font-size: 1.4em
 
 	h5
-		font-size: 1em
+		font-size: 1.2em

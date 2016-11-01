@@ -5,13 +5,32 @@ section
 	position: relative
 	padding: 0 20px
 
+	&:nth-of-type(odd)
+		background-color: #ffffff
+
+	&:nth-of-type(even)
+		background-color: $light-beige
+
 main
 	width: 100%
 	max-width: 1200px
 	text-align: left
 	margin: 0 auto
-	padding: 20px 0
+	padding: 40px 0
 	position: relative
+
+	*:last-child
+		margin-bottom: 0
+
+.content
+	//display: flex
+	//justify-content: center
+
+	*:last-child
+		margin-bottom: 0
+
+	& + .content
+		margin-top: 30px
 
 // HERO
 #hero
@@ -132,21 +151,7 @@ body.inside-page #hero h1
 			position: relative
 			line-height: 1.5em
 
-#ourTechnologies
-	border-top: 5px solid $green
-	background-color: $light-beige
-	
-	main
-		text-align: center
-		
-		*
-			margin-top: 40px
 
-	h5
-		font-size: 1.35em
-			
-	p
-		color: black
 
 // BREADCRUMB
 #breadcrumb
@@ -180,7 +185,7 @@ body.inside-page #hero h1
 /////////////////////////////
 .columns
 	display: flex
-	justify-content: space-between
+	justify-content: center
 	flex-wrap: wrap
 	padding: 0
 	margin: 0
@@ -201,10 +206,10 @@ body.inside-page #hero h1
 
 
 .columns-inline
-	column-count: 2
+	column-count: 1
 	column-gap: 40px
 
-	p
+	& > *
 		display: inline-block
 		break-inside: avoid
 
@@ -229,13 +234,16 @@ body.inside-page #hero h1
 			display: inline-block
 
 	.columns > *
-		width: calc(50% - 40px)
+		width: calc(50% - 20px)
+		margin: 0 10px 20px 10px
 
 //@media (min-width: 900px)
 
 @media (min-width: 1024px)
 
 	.columns
+		& > *
+			width: calc(50% - 20px)
 		&.col-3 > *
 			width: calc(33.33333% - 20px) !important
 		&.col-5 > *
@@ -243,7 +251,18 @@ body.inside-page #hero h1
 		&.col-6 > *
 			width: calc(33.33333% - 20px) !important
 
+	.columns-inline
+		column-count: 2
+		column-gap: 30px
+
 @media (min-width: 1100px)
+
+
+	section
+		padding: 0 30px
+
+	main
+		padding: 80px 0
 
 	.columns
 		&.col-2
@@ -260,6 +279,8 @@ body.inside-page #hero h1
 		&.col-4 > *
 			width: calc(25% - 20px) !important
 
+	.columns-inline
+		column-gap: 40px
 
 @media (min-width: 1200px)
 

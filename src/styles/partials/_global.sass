@@ -39,21 +39,6 @@ a
 	img
 		border:	0
 
-a.button
-	font-family: $baseFont
-	font-size: 1em
-	font-weight: 700
-	display: inline-block
-	padding: 8px 20px
-	background-color: $light-green
-	color: black
-	transition: 0.3s
-
-	&:hover
-		text-decoration: none
-		background-color: $green
-		color: white
-
 h1, h2, h3, h4, h5
 	margin: 0 0 10px 0
 	font-family: $heading
@@ -109,7 +94,6 @@ blockquote
 		position: absolute
 		left: 0
 		top: 10px
-		//transform: translateY(-50%)
 		width: 50px
 		height: 50px
 		background: url('/wp-content/themes/uc/images/quotes.png') center center no-repeat
@@ -118,7 +102,7 @@ blockquote
 hr
 	clear: both
 	height: 0
-	border: solid #ccc
+	border: solid $text-color
 	border-width: 0 0 1px 0
 	padding: 20px 0 0 0
 	margin: 0 0 20px 0

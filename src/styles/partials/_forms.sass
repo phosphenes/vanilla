@@ -1,10 +1,46 @@
 
 
 
+input[type=text], input[type=password], input[type=email], input[type=number], input[type=tel], input[type=date], textarea, select
+	margin: 0
+	padding: 5px 10px
+	font-size: 16px
+	color: #888
+	line-height: 1.5em
+	border: 1px solid #888
+
+input[type=submit], input[type=reset], input[type=button], button, .button
+	font-family: $baseFont
+	font-size: 1em
+	font-weight: 700
+	display: inline-block
+	padding: 8px 20px
+	background-color: $light-green
+	color: black
+	transition: 0.3s
+	border: none
+	outline-width: 0
+	cursor: pointer
+
+	&:hover
+		text-decoration: none
+		background-color: $green
+		color: white
+
+label
+	color: $heading-color
 
 
 
+// NINJA FORMS
+.nf-input-limit, .nf-form-fields-required
+	display: none
 
+.nf-field-container
+	margin-bottom: 20px !important
+
+.label-above .nf-field-label
+	margin-bottom: 5px !important
 
 
 //////////////////////////////////////

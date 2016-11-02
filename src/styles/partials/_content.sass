@@ -155,12 +155,10 @@ body.inside-page #hero h1
 
 // BREADCRUMB
 #breadcrumb
-
 	a
 		margin-right: 20px
 		position: relative
 		display: inline-block
-
 
 		&:after
 			content: ''
@@ -235,15 +233,24 @@ body.inside-page #hero h1
 
 	.columns > *
 		width: calc(50% - 20px)
-		margin: 0 10px 20px 10px
+		margin: 0 20px 20px 20px
+
+
+
+
 
 //@media (min-width: 900px)
+
+
+
 
 @media (min-width: 1024px)
 
 	.columns
 		& > *
-			width: calc(50% - 20px)
+			width: calc(50% - 40px)
+		&.col-2 > *
+			margin: 20px
 		&.col-3 > *
 			width: calc(33.33333% - 20px) !important
 		&.col-5 > *
@@ -255,8 +262,10 @@ body.inside-page #hero h1
 		column-count: 2
 		column-gap: 30px
 
-@media (min-width: 1100px)
 
+
+
+@media (min-width: 1100px)
 
 	section
 		padding: 0 30px
@@ -281,6 +290,8 @@ body.inside-page #hero h1
 
 	.columns-inline
 		column-gap: 40px
+
+
 
 @media (min-width: 1200px)
 

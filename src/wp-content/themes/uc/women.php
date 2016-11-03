@@ -46,15 +46,16 @@ the_post();
 </header>
 
 <section id="banner" class="white-text">
+	<video id="homeVideo" src="/wp-content/themes/uc/_uc/images/girl-at-sunset.mp4" poster="/wp-content/themes/uc/_uc/images/girl-at-sunset.jpg" autoplay loop></video>
 	<main>
-		<img src="logo.svg" alt="wwin logo">
+		<img class="logo" src="/wp-content/themes/uc/_uc/images/logo.svg" alt="wwin logo">
 		<h1>25 Years of Inspiring Women</h1>
 	</main>
 </section>
 
 <section id="greenStars" class="green-background">
 	<main>
-		<h2><span class="yellow">Always give back.</span><br>Never Give up.</h2>
+		<h2><span class="yellow-text">Always give back.</span><br>Never Give up.</h2>
 		<p>There is a star in each of us. WWIN wants to let it shine. It was 25 years ago that Julia Love Prit started a movement that has positively impacted the lives of over 6,000 women across our state, not to mention their families and communities.</p>
 		<p>For so many, stories of struggle have been replaced by stories of hope, gratitude, courage and dreams fulfilled. This year, we celebrate a quarter century of inspiring women.</p>
 		<blockquote>
@@ -123,7 +124,7 @@ the_post();
 
 
 
-
+<a href="#top" id="backToTop"></a>
 
 
 

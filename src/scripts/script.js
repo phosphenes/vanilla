@@ -3,6 +3,7 @@
 		console.log("π loaded. janky.")
 		initAnchorScrolling();
 		initExhibits();
+		if(π1('#backToTop')) initBackToTopButton();
 	})
 
 	////////////////////////////////////
@@ -31,6 +32,24 @@
 			toggleExhibits(el);
 		});
 	}
+
+
+
+	function initBackToTopButton() {
+		var backButton = π1('#backToTop');
+		setInterval(function() {
+			if(window.scrollY >= 200 && !backButton.hasClass('show')) {
+				backButton.addClass('show');
+			}
+			else if(window.scrollY < 200 && backButton.hasClass('show')) {
+				backButton.killClass('show');
+			}
+		}, 10);
+	}
+
+
+
+
 
 	/////////////////////////////////////////
 	// HASHTAG/ANCHOR LINK ANIMATED SCROLLING

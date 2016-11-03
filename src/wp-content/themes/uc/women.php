@@ -99,7 +99,7 @@ the_post();
 
 <footer>
 	<div>
-		
+
 	</div>
 </footer>
 

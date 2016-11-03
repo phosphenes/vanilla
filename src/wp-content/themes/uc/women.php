@@ -53,7 +53,7 @@ the_post();
 	</main>
 </section>
 
-<section id="greenStars" class="green-background">
+<section id="greenStars" class="green-background white-text">
 	<main>
 		<h2><span class="yellow-text">Always give back.</span><br>Never Give up.</h2>
 		<p>There is a star in each of us. WWIN wants to let it shine. It was 25 years ago that Julia Love Prit started a movement that has positively impacted the lives of over 6,000 women across our state, not to mention their families and communities.</p>

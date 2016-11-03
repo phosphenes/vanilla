@@ -1,39 +1,9 @@
 ;(function(){
 	π.mods.push(function () {
-		console.log("π loaded. poo.")
-
-
-		initStickyHeader();
+		console.log("π loaded. janky.")
 		initAnchorScrolling();
-		initMobileMenu();
 		initExhibits();
-		initCenterImages();
-
-
 	})
-
-
-
-	function initStickyHeader() {
-		var header = π1('header');
-		setInterval(function() {
-			if(window.scrollY >= 200 && !header.hasClass('sticky')) {
-				header.addClass('sticky');
-			}
-			else if(window.scrollY < 200 && header.hasClass('sticky')) {
-				header.killClass('sticky');
-			}
-		}, 10);
-	}
-
-	function initMobileMenu() {
-		var button = π1('#menuButton');
-		var menu = π1('#menu');
-		var body = π1('body');
-		button.onclick = function() {
-			(body.hasClass('openMenu')) ? body.killClass('openMenu'): body.addClass('openMenu');
-		};
-	}
 
 	////////////////////////////////////
 	// EXHIBIT SECTION ANIMATIONS
@@ -62,42 +32,6 @@
 		});
 	}
 
-	////////////////////////////////////
-	// SCROLL TO/FROM FIXED CENTER
-	////////////////////////////////////
-	function initCenterImages() {
-		π('*[data-scroll-center]').forEach(function(el, i) {
-			window.requestAnimationFrame(function() {
-				scrollInAndOutOfFixedCenter(el, i);
-			});
-		});
-	}
-
-	function scrollInAndOutOfFixedCenter(el, i) {
-
-		var parent = π1('#'+el.dataset.scrollCenter);
-		var pPos = scrollPosition($(parent));
-		var maxTop = ((window.innerHeight/2)-(el.offsetHeight/2));
-		var maxBottom = maxTop + el.offsetHeight;
-
-		var isTop = (pPos.top > maxTop);
-		var isBottom = (pPos.bottom < maxBottom);
-		var isCenter = (pPos.top < maxTop && pPos.bottom > maxBottom);
-
-		// ADD CLASSES
-		if(isTop && !el.hasClass('fixToTop')) el.addClass('fixToTop');
-		if(isBottom && !el.hasClass('fixToBottom')) el.addClass('fixToBottom');
-		if(isCenter && !el.hasClass('fixToCenter')) el.addClass('fixToCenter');
-
-		if(!isTop && el.hasClass('fixToTop')) el.killClass('fixToTop');
-		if(!isBottom && el.hasClass('fixToBottom')) el.killClass('fixToBottom');
-		if(!isCenter && el.hasClass('fixToCenter')) el.killClass('fixToCenter');
-
-		window.requestAnimationFrame(function() {
-			scrollInAndOutOfFixedCenter(el, i);
-		});
-	}
-
 	/////////////////////////////////////////
 	// HASHTAG/ANCHOR LINK ANIMATED SCROLLING
 	/////////////////////////////////////////
@@ -121,22 +55,6 @@
 	////////////////////////////////////
 	// UTILITIES
 	////////////////////////////////////
-	function elementOverlappingAnother(box, win) {
-		box = $(box);
-		win = $(win);
-
-		var boxPos = scrollPosition(box);
-		var winPos = scrollPosition(win);
-
-		return (boxPos.bottom > winPos.top && boxPos.top < winPos.bottom);
-	}
-
-	function elementInView(box) {
-		box = $(box);
-		var boxPos = scrollPosition(box);
-		return (boxPos.bottom > 0 && boxPos.top < $(window).height())
-	}
-
 	function elementInRange(box, margin) {
 
 		box = $(box);
@@ -185,6 +103,4 @@
 			centerizeThisThing(el, parent);
 		});
 	}
-
-
 })()

@@ -45,52 +45,62 @@ the_post();
 	</main>
 </header>
 
-<section id="banner">
+<section id="banner" class="white-text">
+	<main>
+		<img src="logo.svg" alt="wwin logo">
+		<h1>25 Years of Inspiring Women</h1>
+	</main>
+</section>
+
+<section id="greenStars" class="green-background">
+	<main>
+		<h2><span class="yellow">Always give back.</span><br>Never Give up.</h2>
+		<p>There is a star in each of us. WWIN wants to let it shine. It was 25 years ago that Julia Love Prit started a movement that has positively impacted the lives of over 6,000 women across our state, not to mention their families and communities.</p>
+		<p>For so many, stories of struggle have been replaced by stories of hope, gratitude, courage and dreams fulfilled. This year, we celebrate a quarter century of inspiring women.</p>
+		<blockquote>
+			If you educate a woman, you educate a family.
+			<p>— lark, wwin donor</p>
+		</blockquote>
+	</main>
+</section>
+
+<section id="story" class="white-text">
+	<main>
+		<!-- // TODO: needs redesign -->
+	</main>
+</section>
+
+<section id="storyQuote" class="green-text">
+	<main>
+		<blockquote>
+			Deep down inside we know where we belong, and we know that we have worth, and you need to just keep listening to that voice, because there is a path for you.
+			<p>— melissa, wwin grantee</p>
+		</blockquote>
+	</main>
+</section>
+
+<section id="collage">
 	<main>
 
 	</main>
 </section>
 
-<section>
+<section id="event">
 	<main>
 
 	</main>
 </section>
 
-<section>
-	<main>
-
-	</main>
-</section>
-
-<section>
-	<main>
-
-	</main>
-</section>
-
-<section>
-	<main>
-
-	</main>
-</section>
-
-<section>
-	<main>
-
-	</main>
-</section>
-
-<section>
+<section id="yellowStars">
 	<main>
 
 	</main>
 </section>
 
 <footer>
-	<main>
-
-	</main>
+	<div>
+		
+	</div>
 </footer>
 
 

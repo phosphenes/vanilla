@@ -128,8 +128,6 @@ the_post();
 
 
 
-</body>
-</html>
 
 
 

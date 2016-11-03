@@ -39,9 +39,59 @@ the_post();
 
 
 
+<header>
+	<main>
 
+	</main>
+</header>
 
+<section id="banner">
+	<main>
 
+	</main>
+</section>
+
+<section>
+	<main>
+
+	</main>
+</section>
+
+<section>
+	<main>
+
+	</main>
+</section>
+
+<section>
+	<main>
+
+	</main>
+</section>
+
+<section>
+	<main>
+
+	</main>
+</section>
+
+<section>
+	<main>
+
+	</main>
+</section>
+
+<section>
+	<main>
+
+	</main>
+</section>
+
+<footer>
+	<main>
+
+	</main>
+</footer>
 
 
 

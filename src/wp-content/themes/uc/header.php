@@ -1,4 +1,18 @@
 <?php
+
+
+
+
+
+global $post;
+
+if(get_the_slug($post->ID) !== 'inspiringwomen') {
+
+
+
+
+
+
 $isBlog = (!is_page()) ? true: false;
 $isHome = ($post->post_name == 'home') ? true: false;
 
@@ -66,3 +80,4 @@ $extraClasses = implode(' ', $extraClasses);
 
 
 
+<?php } ?>

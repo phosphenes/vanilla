@@ -113,7 +113,6 @@ the_post();
 
 <section id="story" class="white-text">
 	<main>
-
 		<p>Star Story: Melissa</p>
 		<h1>Building a Path In Life</h1>
 		<button data-vimeo-trigger="storyVid" data-video-id="63352852">show vid</button>

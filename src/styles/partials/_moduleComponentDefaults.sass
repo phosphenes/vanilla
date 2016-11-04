@@ -6,29 +6,43 @@ $light-grey: #666666
 	z-index: 9999999
 
 .pi-prev-button, .pi-next-button
-	width: 30px
-	height: 30px
-	background: none
+	width: 60px
+	height: 60px
+	background: rgba(34,34,34,0.5)
 	border: 0
-	border-top: 1px solid white
-	border-right: 1px solid white
+	border-radius: 50%
 	top: 50%
 	cursor: pointer
-	transition: opacity 0.3s, border-color 0.3s
+	transition: all 0.15s
+	transform: translateY(-50%)
+
+	&:before
+		content: ''
+		display: block
+		width: 20px
+		height: 20px
+		border: solid #fff
+		border-width: 4px 0 0 4px
+		position: absolute
+		top: 50%
+		left: calc(50% + 5px)
+		transform: translate(-50%, -50%) rotate(-45deg)
 
 	&:hover
-		border-color: $light-grey
+		background: #222
 
 	&.off
 		opacity: 0
 
 .pi-prev-button
-	left: 20px
-	transform: translateY(-50%) rotate(-135deg)
+	left: 0
 
 .pi-next-button
-	right: 20px
-	transform: translateY(-50%) rotate(45deg)
+	right: 0
+
+	&:before
+		left: calc(50% - 5px)
+		transform: translate(-50%, -50%) rotate(135deg)
 
 .pi-modal-close-button
 	background: none

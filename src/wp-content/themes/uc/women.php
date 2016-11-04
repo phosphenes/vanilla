@@ -57,7 +57,8 @@ the_post();
 	<div class="weird-line white-background"></div>
 </section>
 
-<section id="greenStars" class="green-background starField white-text">
+<section id="greenStars" class="green-background white-text">
+	<div class="starField"></div>
 	<main>
 		<div class="narrow">
 			<h2><span class="yellow-text">Always give back.</span><br>Never Give up.</h2>

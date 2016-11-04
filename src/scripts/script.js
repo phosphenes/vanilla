@@ -3,7 +3,10 @@
 		console.log("π loaded. janky.")
 		initAnchorScrolling();
 		initExhibits();
-		if(π1('#backToTop')) initBackToTopButton();
+		starFieldsORama()
+		
+		var backToTopButton = π1('#backToTop') 
+		if(backToTopButton) initBackToTopButton(backToTopButton);
 	})
 
 	////////////////////////////////////
@@ -18,7 +21,6 @@
 	}
 
 	function toggleExhibits(el) {
-
 		var margin = (el.dataset.rangeMargin) ? parseInt(el.dataset.rangeMargin): 10;
 		var inRange = elementInRange(el, margin);
 
@@ -35,19 +37,39 @@
 
 
 
-	function initBackToTopButton() {
-		var backButton = π1('#backToTop');
-		setInterval(function() {
-			if(window.scrollY >= 200 && !backButton.hasClass('show')) {
-				backButton.addClass('show');
-			}
-			else if(window.scrollY < 200 && backButton.hasClass('show')) {
-				backButton.killClass('show');
-			}
-		}, 10);
+	function initBackToTopButton(backButton) {
+		if(window.scrollY >= 200 && !backButton.hasClass('show')) {
+			backButton.addClass('show');
+		}
+		else if(window.scrollY < 200 && backButton.hasClass('show')) {
+			backButton.killClass('show');
+		}
+		
+		requestAnimationFrame(function () {
+			initBackToTopButton(backButton)
+		})
 	}
 
 
+	/////////////////////////////////////////
+	// PARALLAX ON THE STARFIELDS
+	/////////////////////////////////////////
+	function starFieldsORama() {
+		var y = window.scrollY
+		
+		var y3 = px(y * 1.05)
+		var y2 = px(y * 1.15)
+		var y1 = px(y * 1.25)
+		
+		
+		π('.starField').forEach(function (field) {
+			var color = field.parentNode.className.indexOf('green') > -1 ? 'green' : 'yellow'
+			var output = 'url(/wp-content/themes/uc/_uc/images/stars-3-' + color + '.png) center ' + y3 + ', url(/wp-content/themes/uc/_uc/images/stars-2-' + color + '.png) center  ' + y2 + ', url(/wp-content/themes/uc/_uc/images/stars-1-' + color + '.png) center  ' + y1
+			field.css({background: output})
+		})
+		
+		requestAnimationFrame(starFieldsORama)
+	}
 
 
 

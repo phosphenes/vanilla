@@ -58,16 +58,17 @@
 		var y = window.scrollY
 		
 		var y3 = px(y * 1.05)
-		var y2 = px(y * 1.15)
-		var y1 = px(y * 1.25)
+		var y2 = px(y * 1.10)
+		var y1 = px(y * 1.15)
 		
 		
-		π('.starField').forEach(function (field) {
-			var color = field.parentNode.className.indexOf('green') > -1 ? 'green' : 'yellow'
-			var output = 'url(/wp-content/themes/uc/_uc/images/stars-3-' + color + '.png) center ' + y3 + ', url(/wp-content/themes/uc/_uc/images/stars-2-' + color + '.png) center  ' + y2 + ', url(/wp-content/themes/uc/_uc/images/stars-1-' + color + '.png) center  ' + y1
-			field.css({background: output})
-		})
-		
+		π('.starField').forEach(setBackgroundPositions)
+
+		function setBackgroundPositions(el) {
+			var output = 'center ' + y3 + ', center ' + y2 + ', center ' + y1 + ', center 0'
+			el.css({backgroundPosition: output})
+		}
+
 		requestAnimationFrame(starFieldsORama)
 	}
 

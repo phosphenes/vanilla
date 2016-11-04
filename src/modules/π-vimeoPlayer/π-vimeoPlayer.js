@@ -81,6 +81,10 @@ var allPlayers = {}
 		}
 	}
 
+
+
+
+
 	function Drawer(el) {
 		this.el = el
 

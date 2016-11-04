@@ -39,30 +39,62 @@ the_post();
 
 
 
-<header>
+<header class="pi-sticky-header">
 	<main>
-
+		<a href="http://wwin.org/">&lt; wwin.org</a>
+		<span>Please help improve the lives of low-income women in Washington.</span>
+		<a href="https://www.sagepayments.net/sagenonprofit/shopping_cart/forms/donate.asp?M_id=669091193768" target="_blank" class="button yellow-background">donate now</a>
 	</main>
 </header>
 
 <section id="banner" class="white-text">
 	<video id="homeVideo" src="/wp-content/themes/uc/_uc/images/girl-at-sunset.mp4" poster="/wp-content/themes/uc/_uc/images/girl-at-sunset.jpg" autoplay loop></video>
 	<main>
-		<img class="logo" src="/wp-content/themes/uc/_uc/images/logo.svg" alt="wwin logo">
+		<img src="/wp-content/themes/uc/_uc/images/logo.svg" id="wwinLogo" alt="wwin logo">
 		<h1>25 Years of Inspiring Women</h1>
 	</main>
+	<div class="weird-line white-background"></div>
 </section>
 
 <section id="greenStars" class="green-background white-text">
 	<main>
-		<h2><span class="yellow-text">Always give back.</span><br>Never Give up.</h2>
-		<p>There is a star in each of us. WWIN wants to let it shine. It was 25 years ago that Julia Love Prit started a movement that has positively impacted the lives of over 6,000 women across our state, not to mention their families and communities.</p>
-		<p>For so many, stories of struggle have been replaced by stories of hope, gratitude, courage and dreams fulfilled. This year, we celebrate a quarter century of inspiring women.</p>
-		<blockquote>
-			If you educate a woman, you educate a family.
-			<p>— lark, wwin donor</p>
-		</blockquote>
+		<div class="narrow">
+			<h2><span class="yellow-text">Always give back.</span><br>Never Give up.</h2>
+			<p>There is a star in each of us. WWIN wants to let it shine. It was 25 years ago that Julia Love Pritt started a movement that has positively impacted the lives of over 6,000 women across our state, not to mention their families and communities.</p>
+			<p>For so many, stories of struggle have been replaced by stories of hope, gratitude, courage and dreams fulfilled. This year, we celebrate a quarter century of inspiring women.</p>
+		</div>
+		<div id="quoteRotator" class="pi-rotator" data-options='{
+			"inline": true,
+			"carousel": true,
+			"prevNext": true,
+			"autoPlay": 6000
+		}'>
+			<blockquote class="item">
+				If you educate a woman, you educate a family.
+				<p>— lark, wwin donor</p>
+			</blockquote>
+			<blockquote class="item">
+				Thanks in great part to my WWIN grant I was able to break free from my violent marriage. A supportive community has replace extreme isolation and…my life is bright and full of love.
+				<p>— Misty, Health Care Grant Recipient</p>
+			</blockquote>
+			<blockquote class="item">
+				This grant was a massive dose of hope and enhanced everything I was doing to create a fantastic life for my daughter and me. Support in dark times made all the difference.
+				<p>— Angela, Education Grant Recipient</p>
+			</blockquote>
+			<blockquote class="item">
+				I’m not sure I would have been able to finish school without WWIN…I’m very happy with my career and the ability to provide for my family.
+				<p>— Christy, Education Grant Recipient</p>
+			</blockquote>
+			<blockquote class="item">
+				Many doors have opened for me as a result of renewed confidence and I will never forget WWIN for their help. The dignity they restore to women with nowhere else to turn is a gift beyond measure.
+				<p>— Aladia, Health Care Grant Recipient</p>
+			</blockquote>
+			<blockquote class="item">
+				The grant award validated that I was on the right path, that my vision, what I feel, is true.
+				<p>— Adriana, Education Grant Recipient</p>
+			</blockquote>
 	</main>
+	<div class="weird-line yellow-background"></div>
 </section>
 
 <section id="story" class="white-text">

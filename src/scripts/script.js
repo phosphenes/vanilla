@@ -99,7 +99,6 @@
 	}
 
 	function scrollToAnchor(el, speed, padding) {
-		console.log(el);
 		el = $(el);
 		speed = (speed) ? speed: 500;
 		padding = (padding) ? padding: -1;

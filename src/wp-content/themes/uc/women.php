@@ -118,8 +118,10 @@ the_post();
 <section id="storyQuote" class="green-text">
 	<main>
 		<blockquote>
+			<div class="quote">
 			Deep down inside we know where we belong, and we know that we have worth, and you need to just keep listening to that voice, because there is a path for you.
 			<p>— melissa, wwin grantee</p>
+			</div>
 		</blockquote>
 	</main>
 </section>

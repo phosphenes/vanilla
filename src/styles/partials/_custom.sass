@@ -29,9 +29,8 @@ header
 .narrow
 	position: relative
 	margin: 0 auto
-	width: 60%
+	width: 100%
 	max-width: 800px
-	min-width: 600px
 
 	h2
 		text-align: center
@@ -56,7 +55,7 @@ blockquote
 	font-size: 2em
 	line-height: 1.25em
 	padding-top: 80px
-	quotes: "“" "”" "‘" "’"
+	text-align: center
 
 	.quote
 		&:before
@@ -74,7 +73,8 @@ blockquote
 		color: $yellow
 		text-transform: uppercase
 
-
+.green-text blockquote .quote:before
+	background: url('/wp-content/themes/uc/_uc/images/quotes-green.png') center center no-repeat
 
 #banner
 	margin-top: -60px

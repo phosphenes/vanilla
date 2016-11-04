@@ -1,6 +1,3 @@
-// TODO: need to figure out the best z-indexing strategy
-// so that inline rotators don't "snap out"
-
 .pi-rotator
 	display: none
 	user-select: none
@@ -17,7 +14,7 @@
 		top: 0
 		width: 100%
 		height: 100%
-		transition: left 0.15s
+		transition: left 0.4s
 
 	.stage
 		z-index: 0
@@ -28,6 +25,7 @@
 		left: 100%
 
 	.pi-prev-button, .pi-next-button
+		outline: none
 		z-index: 5
 
 	.item
@@ -82,3 +80,19 @@
 		.stage, .sled
 			left: 0
 			transition: opacity 0.25s
+
+			
+#quoteRotator
+	position: relative
+	background-color: transparent
+	width: 100%
+	height: 300px
+	
+	.item
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		text-align: center
+		border: 0
+		padding: 20px 10% !important

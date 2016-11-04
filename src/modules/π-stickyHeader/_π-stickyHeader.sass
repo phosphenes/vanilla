@@ -1,7 +1,4 @@
-$sticky-header-height: 80px
-
-
-
+$sticky-header-height: 60px
 
 .pi-sticky-header 
 	position: fixed
@@ -10,17 +7,21 @@ $sticky-header-height: 80px
 	width: 100%
 	height: $sticky-header-height
 	color: white
-	background-color: #222222
+	background-color: transparent
 	padding: 0 20px
 	display: flex
 	justify-content: space-between
 	align-items: center
+	z-index: 1000
 	transition: 0.3s
+	
+	&.scrolled
+		background-color: $green		
 	
 	&.hidden
 		top: -$sticky-header-height
 
 	&.stuck
 		top: 0
-		background-color: #555555
+		background-color: $green
 		height: 50px

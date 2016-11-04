@@ -21,6 +21,7 @@ the_post();
 <!-- JQUERY -->
 <script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
 <script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://player.vimeo.com/api/player.js"></script>
 
 <!-- SITE STYLES/SCRIPTS -->
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/_uc/styles.css" />
@@ -111,6 +112,7 @@ the_post();
 
 <section id="story" class="white-text">
 	<main>
+		<button data-vimeo-trigger="storyVid" data-video-id="63352852">show vid</button>
 		<!-- // TODO: needs redesign -->
 	</main>
 </section>
@@ -150,13 +152,7 @@ the_post();
 	</div>
 </footer>
 
-
-
-
-
-
-
-
+<div class="pi-vimeo-player" id="storyVid"></div>
 
 
 

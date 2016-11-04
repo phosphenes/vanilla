@@ -1,16 +1,17 @@
-.pi-drawer
+.pi-drawer, .pi-vimeo-player
 	position: fixed
 	top: 0
-	left: -100vw
+	left: 0
+	opacity: 0
 	width: 100vw
 	height: 100vh
-	transition: left 0.3s
-	background-color: white
+	transition: opacity 0.3s
+	background-color: rgba(0, 0, 0, 0.8)
 	z-index: 5000
 	display: none
 
 	&.on
-		left: 0
+		opacity: 1
 
 	.drawer-wrapper
 		position: relative
@@ -20,3 +21,5 @@
 		padding: 100px
 
 
+iframe
+	border: 0

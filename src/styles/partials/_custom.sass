@@ -128,8 +128,21 @@ blockquote
 		i
 			font-size: 0.8em
 
+.starField
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-position: center 0, center 0, center 0, auto
+	background-size: cover, cover, cover, cover
+	background-attachment: scroll, scroll, scroll, fixed
+	
 #greenStars
 	padding-bottom: 50px
+	
+	.starField
+		background-image: url('/wp-content/themes/uc/_uc/images/stars-3-yellow.png'), url('/wp-content/themes/uc/_uc/images/stars-2-yellow.png'), url('/wp-content/themes/uc/_uc/images/stars-1-yellow.png'), url('/wp-content/themes/uc/_uc/images/green-bg.jpg')
 
 	main
 		padding-top: 100px
@@ -139,7 +152,9 @@ blockquote
 	.narrow
 		margin-bottom: 80px
 
-
+#yellowStars
+	.starField
+		background-image: url('/wp-content/themes/uc/_uc/images/stars-3-green.png'), url('/wp-content/themes/uc/_uc/images/stars-2-green.png'), url('/wp-content/themes/uc/_uc/images/stars-1-green.png'), url('/wp-content/themes/uc/_uc/images/green-bg.jpg')
 
 
 #story

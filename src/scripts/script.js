@@ -3,7 +3,10 @@
 		console.log("π loaded. janky.")
 		initAnchorScrolling();
 		initExhibits();
-		if(π1('#backToTop')) initBackToTopButton();
+		starFieldsORama()
+		
+		var backToTopButton = π1('#backToTop') 
+		if(backToTopButton) initBackToTopButton(backToTopButton);
 	})
 
 	////////////////////////////////////
@@ -18,7 +21,6 @@
 	}
 
 	function toggleExhibits(el) {
-
 		var margin = (el.dataset.rangeMargin) ? parseInt(el.dataset.rangeMargin): 10;
 		var inRange = elementInRange(el, margin);
 
@@ -35,19 +37,40 @@
 
 
 
-	function initBackToTopButton() {
-		var backButton = π1('#backToTop');
-		setInterval(function() {
-			if(window.scrollY >= 200 && !backButton.hasClass('show')) {
-				backButton.addClass('show');
-			}
-			else if(window.scrollY < 200 && backButton.hasClass('show')) {
-				backButton.killClass('show');
-			}
-		}, 10);
+	function initBackToTopButton(backButton) {
+		if(window.scrollY >= 200 && !backButton.hasClass('show')) {
+			backButton.addClass('show');
+		}
+		else if(window.scrollY < 200 && backButton.hasClass('show')) {
+			backButton.killClass('show');
+		}
+		
+		requestAnimationFrame(function () {
+			initBackToTopButton(backButton)
+		})
 	}
 
 
+	/////////////////////////////////////////
+	// PARALLAX ON THE STARFIELDS
+	/////////////////////////////////////////
+	function starFieldsORama() {
+		var y = window.scrollY
+		
+		var y3 = px(y * 1.05)
+		var y2 = px(y * 1.10)
+		var y1 = px(y * 1.15)
+		
+		
+		π('.starField').forEach(setBackgroundPositions)
+
+		function setBackgroundPositions(el) {
+			var output = 'center ' + y3 + ', center ' + y2 + ', center ' + y1 + ', center 0'
+			el.css({backgroundPosition: output})
+		}
+
+		requestAnimationFrame(starFieldsORama)
+	}
 
 
 

@@ -56,7 +56,7 @@ the_post();
 	<div class="weird-line white-background"></div>
 </section>
 
-<section id="greenStars" class="green-background white-text">
+<section id="greenStars" class="green-background starField white-text">
 	<main>
 		<div class="narrow">
 			<h2><span class="yellow-text">Always give back.</span><br>Never Give up.</h2>
@@ -70,28 +70,40 @@ the_post();
 			"autoPlay": 6000
 		}'>
 			<blockquote class="item">
-				If you educate a woman, you educate a family.
-				<p>— lark, wwin donor</p>
+				<div class="quote">
+					If you educate a woman, you educate a family.
+					<p>— lark, wwin donor</p>
+				</div>
 			</blockquote>
 			<blockquote class="item">
-				Thanks in great part to my WWIN grant I was able to break free from my violent marriage. A supportive community has replace extreme isolation and…my life is bright and full of love.
+				<div class="quote">
+				Thanks in great part to my WWIN grant I was able to break free from my violent marriage. A supportive community has replaced extreme isolation and…my life is bright and full of love.
 				<p>— Misty, Health Care Grant Recipient</p>
+				</div>
 			</blockquote>
 			<blockquote class="item">
+				<div class="quote">
 				This grant was a massive dose of hope and enhanced everything I was doing to create a fantastic life for my daughter and me. Support in dark times made all the difference.
 				<p>— Angela, Education Grant Recipient</p>
+				</div>
 			</blockquote>
 			<blockquote class="item">
+				<div class="quote">
 				I’m not sure I would have been able to finish school without WWIN…I’m very happy with my career and the ability to provide for my family.
 				<p>— Christy, Education Grant Recipient</p>
+				</div>
 			</blockquote>
 			<blockquote class="item">
+				<div class="quote">
 				Many doors have opened for me as a result of renewed confidence and I will never forget WWIN for their help. The dignity they restore to women with nowhere else to turn is a gift beyond measure.
 				<p>— Aladia, Health Care Grant Recipient</p>
+				</div>
 			</blockquote>
 			<blockquote class="item">
+				<div class="quote">
 				The grant award validated that I was on the right path, that my vision, what I feel, is true.
 				<p>— Adriana, Education Grant Recipient</p>
+				</div>
 			</blockquote>
 	</main>
 	<div class="weird-line yellow-background"></div>

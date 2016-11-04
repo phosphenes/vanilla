@@ -1,3 +1,8 @@
+body
+	line-height: 1.5em
+
+
+
 .white-background
 	background-color: white
 
@@ -37,6 +42,7 @@ header
 
 p
 	font-size: 1.25em
+	line-height: 1.3em
 
 .weird-line
 	position: absolute
@@ -70,11 +76,15 @@ blockquote
 		font-family: $baseFont
 		font-style: normal
 		font-size: 0.5em
+		line-height: 2em
 		color: $yellow
 		text-transform: uppercase
 
-.green-text blockquote .quote:before
-	background: url('/wp-content/themes/uc/_uc/images/quotes-green.png') center center no-repeat
+.green-text blockquote
+	.quote:before
+		background: url('/wp-content/themes/uc/_uc/images/quotes-green.png') center center no-repeat
+	p
+		color: $green
 
 #banner
 	margin-top: -60px

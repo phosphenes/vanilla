@@ -43,7 +43,7 @@ the_post();
 <header class="pi-sticky-header">
 	<main>
 		<a href="http://wwin.org/">&lt; wwin.org</a>
-		<span>Please help improve the lives of low-income women in Washington.</span>
+		<div class="social"><a href="#" class="social"><img src="/wp-content/themes/uc/_uc/images/facebook.png"></a><a href="#" class="social"><img src="/wp-content/themes/uc/_uc/images/twitter.png"></a><a href="#" class="social"><img src="/wp-content/themes/uc/_uc/images/instagram.png"></a></div>
 		<a href="https://www.sagepayments.net/sagenonprofit/shopping_cart/forms/donate.asp?M_id=669091193768" target="_blank" class="button yellow-background">donate now</a>
 	</main>
 </header>
@@ -135,22 +135,22 @@ the_post();
 	</main>
 </section>
 
-<section id="collage">
-	<main>
-
-	</main>
-</section>
+<section id="collage"><main></main></section>
 
 <section id="event">
 	<main>
-
+		My event is better than yours. 
 	</main>
 </section>
 
-<section id="yellowStars" class="yellow-background white-text">
+<section id="yellowStars" class="yellow-background green-text">
 	<div class="starField"></div>
 	<main>
-		Cras ultricies ligula sed magna dictum porta. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur aliquet quam id dui posuere blandit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Pellentesque in ipsum id orci porta dapibus.
+		<h5>make a difference</h5>
+		<h2>Be part of a life-changing experience</h2>
+		<a href="#" class="button green-background yellow-text">please support wwin</a>
+		<a href="#" class="button green-background yellow-text">apply to be a grantee</a>
+		<div class="social"><a href="#" class="social"><img src="/wp-content/themes/uc/_uc/images/facebook.png"></a><a href="#" class="social"><img src="/wp-content/themes/uc/_uc/images/twitter.png"></a><a href="#" class="social"><img src="/wp-content/themes/uc/_uc/images/instagram.png"></a></div>
 	</main>
 </section>
 
@@ -164,28 +164,10 @@ the_post();
 <div class="pi-vimeo-player" id="storyVid"></div>
 
 
-
-
-
-
-
-
-
-
-
-
-
 <a href="#top" id="backToTop"></a>
-
-
-
-
-
-
-
-
 
 
 <?php
 get_footer();
 ?>
+

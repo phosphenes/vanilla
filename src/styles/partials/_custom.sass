@@ -13,6 +13,7 @@ section
 
 .yellow-background
 	background-color: $yellow
+	text-shadow: 0 0 5px $yellow
 
 .white-text
 	color: #ffffff
@@ -25,7 +26,9 @@ section
 
 
 h5
+	font-family: $baseFont
 	text-transform: uppercase
+	margin-bottom: 0
 
 
 header
@@ -162,20 +165,6 @@ blockquote
 	.narrow
 		margin-bottom: 80px
 
-#yellowStars
-	.starField
-		background-image: url('/wp-content/themes/uc/_uc/images/stars-3-green.png'), url('/wp-content/themes/uc/_uc/images/stars-2-green.png'), url('/wp-content/themes/uc/_uc/images/stars-1-green.png'), url('/wp-content/themes/uc/_uc/images/yellow-bg.jpg')
-
-	main
-		display: flex
-		flex-direction: column
-		justify-content: center
-		align-items: center
-		padding: 80px 0
-		
-		* + *
-			margin-top: 20px
-
 #story
 	background: url('/wp-content/themes/uc/_uc/images/story-video-bg.jpg') center center no-repeat
 	background-size: cover
@@ -205,13 +194,65 @@ blockquote
 		background-repeat: repeat-x
 		background-size: cover
 		transition: all 0.15s
-		animation: animatedBackground 35s linear infinite;
+		animation: animatedBackground 35s linear infinite
 
 @keyframes animatedBackground
 	from
 		background-position: 0 0
 	to
 		background-position: -1890px 0
+
+	
+#event
+	main
+		padding: 80px 0
+		display: flex
+		justify-content: center
+		
+		& > div:first-child
+			margin-right: 80px
+			max-width: 60%
+	
+	h5
+		color: $yellow
+	
+	p
+		font-family: $heading
+		font-size: 1.5em
+	
+	a
+		position: relative
+		display: inline-block
+		color: $green
+		font-size: 1.25em
+		line-height: 60px
+		padding-left: 80px
+		
+		&:hover
+			text-decoration: none
+		
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 60px
+			height: 60px
+			background: url('/wp-content/themes/uc/_uc/images/calendar.png') no-repeat center
+
+#yellowStars
+	.starField
+		background-image: url('/wp-content/themes/uc/_uc/images/stars-3-green.png'), url('/wp-content/themes/uc/_uc/images/stars-2-green.png'), url('/wp-content/themes/uc/_uc/images/stars-1-green.png'), url('/wp-content/themes/uc/_uc/images/yellow-bg.jpg')
+
+	main
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		padding: 80px 0
+		
+		* + *
+			margin-top: 20px
 
 
 
@@ -253,7 +294,7 @@ footer
 		main
 			width: 2835px
 			height: 555px
-			animation: animatedBackground 35s linear infinite;
+			animation: animatedBackground 35s linear infinite
 
 	@keyframes animatedBackground
 		from
@@ -271,7 +312,7 @@ footer
 		main
 			width: 3780px
 			height: 740px
-			animation: animatedBackground 35s linear infinite;
+			animation: animatedBackground 35s linear infinite
 
 	@keyframes animatedBackground
 		from

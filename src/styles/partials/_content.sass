@@ -118,4 +118,9 @@ main
 
 @media (min-width: 1100px)
 
-	.columns.size-66-33
+	.columns.sizes-66-33
+		& > *:first-child
+			width: calc(66.666666% - 40px)
+
+		& > *:last-child
+			width: calc(33.333333% - 40px)

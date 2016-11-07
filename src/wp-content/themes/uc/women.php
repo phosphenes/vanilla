@@ -37,7 +37,11 @@ the_post();
 <header class="pi-sticky-header">
 	<main>
 		<a href="http://wwin.org/">&lt; wwin.org</a>
-		<div class="social"><a href="https://www.facebook.com/wwin.org" class="social"><img src="/wp-content/themes/uc/_uc/images/facebook-white.png"></a><a href="https://twitter.com/WaWomenInNeed" class="social"><img src="/wp-content/themes/uc/_uc/images/twitter-white.png"></a><a href="https://www.instagram.com/wawomeninneed/" class="social"><img src="/wp-content/themes/uc/_uc/images/instagram-white.png"></a></div>
+		<div class="social">
+			<a href="https://www.facebook.com/wwin.org" class="social" target="_blank"><img src="/wp-content/themes/uc/_uc/images/facebook-white.png"></a>
+			<a href="https://twitter.com/WaWomenInNeed" class="social" target="_blank"><img src="/wp-content/themes/uc/_uc/images/twitter-white.png"></a>
+			<a href="https://www.instagram.com/wawomeninneed/" class="social" target="_blank"><img src="/wp-content/themes/uc/_uc/images/instagram-white.png"></a>
+		</div>
 		<a href="https://www.sagepayments.net/sagenonprofit/shopping_cart/forms/donate.asp?M_id=669091193768" target="_blank" class="button yellow-background">donate now</a>
 	</main>
 </header>
@@ -107,9 +111,10 @@ the_post();
 
 <section id="story" class="white-text">
 	<main>
-		<button id="launchVideoButton" data-vimeo-trigger="storyVid" data-video-id="63352852">show vid</button>
+
 		<h3>Star Story: Melissa</h3>
 		<h1>Building a Path In Life</h1>
+		<button id="launchVideoButton" data-vimeo-trigger="storyVid" data-video-id="63352852"></button>
 	</main>
 </section>
 
@@ -138,10 +143,10 @@ the_post();
 				 <h5>events & involvement</h5>
 				 <h2>Save the Date: March 21, 2017</h2>
 				 <p>This year, our annual Women of Courage Luncheon is going to be a special 25th Anniversary celebration. It's an inspiring opportunity for WWIN's long-time supporters, first-time donors and grant recipients to get together and experience the transformative impact of this unique organization.</p>
-				 <a href="http://wwin.org/luncheons/">Register for the <b>Women of Courage Luncheon</b></a>
+				 <a class="calendarLink" href="http://wwin.org/luncheons/">Register for the <b>Women of Courage Luncheon</b></a>
 			 </div>
 			<div class="verticalCenter">
-				<img class="parentWidth" src="/wp-content/themes/uc/_uc/images/event.jpg" alt="Save the date">
+				<img class="alignmiddle" src="/wp-content/themes/uc/_uc/images/event.jpg" alt="Save the date">
 			</div>
 		</div>
 	</main>
@@ -154,7 +159,11 @@ the_post();
 		<h2>Be part of a life-changing experience</h2>
 		<a href="http://wwin.org/donate/" class="button green-background yellow-text">please support wwin</a>
 		<a href="http://wwin.org/grants-program/" class="button green-background yellow-text">apply to be a grantee</a>
-		<div class="social"><a href="https://www.facebook.com/wwin.org" class="social"><img src="/wp-content/themes/uc/_uc/images/facebook.png"></a><a href="https://twitter.com/WaWomenInNeed" class="social"><img src="/wp-content/themes/uc/_uc/images/twitter.png"></a><a href="https://www.instagram.com/wawomeninneed/" class="social"><img src="/wp-content/themes/uc/_uc/images/instagram.png"></a></div>
+		<div class="social">
+			<a href="https://www.facebook.com/wwin.org" class="social" target="_blank"><img src="/wp-content/themes/uc/_uc/images/facebook.png"></a>
+			<a href="https://twitter.com/WaWomenInNeed" class="social" target="_blank"><img src="/wp-content/themes/uc/_uc/images/twitter.png"></a>
+			<a href="https://www.instagram.com/wawomeninneed/" class="social" target="_blank"><img src="/wp-content/themes/uc/_uc/images/instagram.png"></a>
+		</div>
 	</main>
 </section>
 

@@ -43,7 +43,9 @@ header
 			margin: 0 20px 0 auto
 	
 	.social
-		margin-top: 8px
+		display: none
+		justify-content: center
+		align-items: center
 	
 
 .social
@@ -55,6 +57,13 @@ header
 	border-radius: 4px
 	text-transform: uppercase
 	font-weight: 600
+	transition: all 0.15s
+
+	&:hover
+		text-decoration: none
+
+		&.yellow-background
+			background: $green
 
 .narrow
 	position: relative
@@ -84,9 +93,9 @@ p
 blockquote
 	position: relative
 	border: 0
-	font-size: 2em
+	font-size: 1.7em
 	line-height: 1.25em
-	padding-top: 80px
+	padding: 60px 0 0 0
 	text-align: center
 
 	.quote
@@ -95,7 +104,7 @@ blockquote
 			display: block
 			width: 100%
 			height: 33px
-			margin-bottom: 30px
+			margin-bottom: 20px
 			background: url('/wp-content/themes/uc/_uc/images/quotes-yellow.png') center center no-repeat
 
 	p
@@ -114,11 +123,22 @@ blockquote
 		color: $green
 
 #banner
-	margin-top: -60px
-	overflow: hidden
 	height: 60vw
 	max-height: 90vh
-	background: #222
+	margin-top: -60px
+	overflow: hidden
+	background: #222 url('/wp-content/themes/uc/_uc/images/hero-mobile-bg.jpg') center center no-repeat
+	background-size: cover
+
+	&:before
+		content: ''
+		display: block
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 0
+		left: 0
+		background: rgba(34, 34, 34, 0.2)
 
 	video
 		position: absolute
@@ -127,7 +147,18 @@ blockquote
 		transform: translate(-50%, -50%)
 		min-height: 102%
 		min-width: 102%
-		opacity: 0.9
+		opacity: 1
+		display: none
+
+		&:before
+			content: ''
+			display: block
+			width: 100%
+			height: 100%
+			position: absolute
+			top: 0
+			left: 0
+			background: rgba(34, 34, 34, 0.2)
 
 	main
 		height: 100%
@@ -136,9 +167,11 @@ blockquote
 		flex-direction: column
 		justify-content: flex-end
 		align-items: center
+		text-align: center
 
 	h1
-		font-size: 4em
+		font-size: 3em
+		line-height: 1em
 		margin: 0
 
 		i
@@ -172,14 +205,30 @@ blockquote
 	background: url('/wp-content/themes/uc/_uc/images/story-video-bg.jpg') center center no-repeat
 	background-size: cover
 	height: 50vw
+	min-height: 50vh
 	max-height: 100vh
 
-	main
+	&:before
+		content: ''
+		display: block
+		width: 100%
 		height: 100%
-		display: flex
+		position: absolute
+		top: 0
+		left: 0
+		background: rgba(34, 34, 34, 0.2)
+
+	main
+
+		display: block
 		flex-direction: column
-		justify-content: flex-end
+		justify-content: center
 		align-items: center
+		text-align: center
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
 
 		p
 			font-size: 20px
@@ -208,12 +257,10 @@ blockquote
 	
 #event
 	main
-		padding: 80px 0
+		padding: 40px 0
 		display: flex
 		justify-content: center
-		
 
-	
 	h5
 		color: $yellow
 	
@@ -221,13 +268,12 @@ blockquote
 		font-family: $heading
 		font-size: 1.5em
 	
-	a
+	.calendarLink
 		position: relative
 		display: inline-block
 		color: $green
 		font-size: 1.25em
-		line-height: 60px
-		padding-left: 80px
+		padding: 10px 0 10px 80px
 		
 		&:hover
 			text-decoration: none
@@ -238,8 +284,38 @@ blockquote
 			top: 0
 			left: 0
 			width: 60px
-			height: 60px
+			height: 100%
+			min-height: 44px
 			background: url('/wp-content/themes/uc/_uc/images/calendar.png') no-repeat center
+
+
+
+#launchVideoButton
+	display: inline-block
+	border: none
+	width: 60px
+	height: 60px
+	border-radius: 50%
+	background: rgba(34, 34, 34, 0.5)
+	transition: all 0.15s
+	position: relative
+	cursor: pointer
+
+	&:before
+		content: ''
+		display: block
+		width: 0
+		height: 0
+		position: absolute
+		top: 50%
+		left: calc(50% + 2px)
+		transform: translate(-50%, -50%)
+		border-style: solid
+		border-width: 12px 0 12px 20px
+		border-color: transparent transparent transparent #fff
+
+	&:hover
+		background: #222
 
 #yellowStars
 	.starField
@@ -273,15 +349,13 @@ footer
 			color: $yellow !important
 			margin-bottom: 10px
 
-
-
-
-
 // PI SHIT
 .pi-sticky-header.stuck, .pi-sticky-header.scrolled
 	height: 60px !important
 	background: #222 !important
 
+.pi-prev-button, .pi-next-button
+	display: none
 
 //////////////////////////////////////
 // RESPONSIVE
@@ -291,6 +365,15 @@ footer
 
 @media (min-width: 768px)
 
+	header .social
+		display: flex
+
+	#story main
+		display: flex
+		position: relative
+		transform: none
+		top: auto
+		left: auto
 
 	#collage
 		main
@@ -304,11 +387,37 @@ footer
 		to
 			background-position: -2835px 0
 
+	.pi-prev-button, .pi-next-button
+		display: block
+
+	blockquote
+		font-size: 2em
+
+		.quote
+			&:before
+				content: ''
+				display: block
+				width: 100%
+				height: 33px
+				margin-bottom: 30px
+				background: url('/wp-content/themes/uc/_uc/images/quotes-yellow.png') center center no-repeat
+
+
 //@media (min-width: 900px)
 
-//@media (min-width: 1024px)
+@media (min-width: 1025px)
+
+	#banner video
+		display: block
 
 @media (min-width: 1100px)
+
+	#banner
+		height: 60vw
+		max-height: 90vh
+
+		h1
+			font-size: 4em
 
 	#collage
 		main

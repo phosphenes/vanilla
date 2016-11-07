@@ -34,12 +34,6 @@ the_post();
 
 
 
-
-
-
-
-
-
 <header class="pi-sticky-header">
 	<main>
 		<a href="http://wwin.org/">&lt; wwin.org</a>
@@ -171,7 +165,7 @@ the_post();
 	</main>
 </footer>
 
-<div class="pi-vimeo-player" id="storyVid"></div>
+<div class="pi-vimeo-player" id="storyVid"><div id="player" class="drawer-wrapper"></div></div>
 
 
 <a href="#top" id="backToTop"></a>

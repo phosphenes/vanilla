@@ -1,27 +1,52 @@
+var tag = document.createElement('script')
+tag.src = "https://www.youtube.com/iframe_api"
+
+var firstScriptTag = document.getElementsByTagName('script')[0]
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
+
+var player
+
 var allPlayers = {}
-	;(function(){
-	var iframe, player
+;(function(){
 
 	π.vimeoPlayer = {
 		show: function(el, event){
-			var videoId = actualDrawerTrigger(event.target).dataset.videoId
-			var videoURL = 'https://player.vimeo.com/video/' + videoId
-
-			iframe = π.dom('iframe')
-			iframe.width = '100%'
-			iframe.height = '100%'
-			iframe.src = videoURL
-
-			el.π1('.drawer-wrapper').add(iframe)
-
-			if (player) {
-				player.play() }
-			else {
-				player = new Vimeo.Player(iframe)
-				player.ready().then(function () {
-					player.play()
-				})
+			if (player){
+				player.playVideo()
+			} else {
+				player = new YT.Player('player', {
+					height: '100%',
+					width: '100%',
+					videoId: 'M7lc1UVf-VE'
+				});
+				
+					player.addEventListener('onReady', function () {
+						player.playVideo()
+					})
 			}
+			
+			
+			//
+			//
+			// var videoId = actualDrawerTrigger(event.target).dataset.videoId
+			// var videoURL = 'https://player.vimeo.com/video/' + videoId
+			//
+			// iframe = π.dom('iframe')
+			// iframe.width = '100%'
+			// iframe.height = '100%'
+			// iframe.src = videoURL
+			//
+			// el.π1('.drawer-wrapper').add(iframe)
+			//
+			// if (player) {
+			// 	player.play() 
+			// }
+			// else {
+			// 	player = new Vimeo.Player(iframe)
+			// 	player.ready().then(function () {
+			// 		player.play()
+			// 	})
+			// }
 
 
 			π.listen(listenForEsc, 'keydown');
@@ -45,9 +70,10 @@ var allPlayers = {}
 
 			doAfterTransition(el, 'opacity', function () {
 				el.css({display: 'none'})
-				player.pause()
+				player.pauseVideo()
 				setTimeout(function () {
-					iframe.kill()
+					// iframe.kill()
+					player.destroy()
 					player = null
 				}, 500)
 			})
@@ -91,8 +117,8 @@ var allPlayers = {}
 		var options = JSON.parse(el.dataset.options ? el.dataset.options : '{}')
 		delete el.dataset.options
 
-		var wrapper = π.dom(".drawer-wrapper", el.innerHTML);
-		el.fill(wrapper);
+		// var wrapper = π.dom(".drawer-wrapper#player", el.innerHTML);
+		// el.fill(wrapper);
 
 		if (!options.externalTrigger) {
 			var closeButton = π.dom('button.pi-modal-close-button');

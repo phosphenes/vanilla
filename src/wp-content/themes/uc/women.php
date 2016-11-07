@@ -43,7 +43,7 @@ the_post();
 <header class="pi-sticky-header">
 	<main>
 		<a href="http://wwin.org/">&lt; wwin.org</a>
-		<div class="social"><a href="#" class="social"><img src="/wp-content/themes/uc/_uc/images/facebook.png"></a><a href="#" class="social"><img src="/wp-content/themes/uc/_uc/images/twitter.png"></a><a href="#" class="social"><img src="/wp-content/themes/uc/_uc/images/instagram.png"></a></div>
+		<div class="social"><a href="#" class="social"><img src="/wp-content/themes/uc/_uc/images/facebook-white.png"></a><a href="#" class="social"><img src="/wp-content/themes/uc/_uc/images/twitter-white.png"></a><a href="#" class="social"><img src="/wp-content/themes/uc/_uc/images/instagram-white.png"></a></div>
 		<a href="https://www.sagepayments.net/sagenonprofit/shopping_cart/forms/donate.asp?M_id=669091193768" target="_blank" class="button yellow-background">donate now</a>
 	</main>
 </header>

@@ -51,7 +51,7 @@ var allPlayers = {}
 
 			π.listen(listenForEsc, 'keydown');
 
-			el.css({display: "block"});
+			el.css({display: "block", zIndex: π.highestZ()});
 
 			setTimeout(function () {
 				el.addClass("on");

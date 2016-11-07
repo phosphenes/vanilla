@@ -139,14 +139,16 @@ the_post();
 
 <section id="event">
 	<main>
-		 <div>
-			 <h5>events & involvement</h5>
-			 <h2>Save the Date: March 21, 2017</h2>
-			 <p>This year, our annual Women of Courage Luncheon is going to be a special 25th Anniversary celebration. It's an inspiring opportunity for WWIN's long-time supporters, first-time donors and grant recipients to get together and experience the transformative impact of this unique organization.</p>
-			 <a href="http://wwin.org/luncheons/">Register for the <b>Women of Courage Luncheon</b></a>
-		 </div>
-		<div>
-			<img src="/wp-content/themes/uc/_uc/images/event.jpg" alt="Save the date">
+		<div class="columns col-2 sizes-66-33">
+			<div class="verticalCenter">
+				 <h5>events & involvement</h5>
+				 <h2>Save the Date: March 21, 2017</h2>
+				 <p>This year, our annual Women of Courage Luncheon is going to be a special 25th Anniversary celebration. It's an inspiring opportunity for WWIN's long-time supporters, first-time donors and grant recipients to get together and experience the transformative impact of this unique organization.</p>
+				 <a href="http://wwin.org/luncheons/">Register for the <b>Women of Courage Luncheon</b></a>
+			 </div>
+			<div class="verticalCenter">
+				<img class="parentWidth" src="/wp-content/themes/uc/_uc/images/event.jpg" alt="Save the date">
+			</div>
 		</div>
 	</main>
 </section>

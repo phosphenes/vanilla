@@ -10,6 +10,12 @@ input[type=text], input[type=password], input[type=email], input[type=number], i
 	color: #888
 	line-height: 1.5em
 	border: 1px solid #888
+	background: rgba(255,255,255,0.7)
+	border-radius: 0
+	outline: none
+
+	&:focus
+		background: #fff
 
 input[type=submit], input[type=reset], input[type=button], button, .button
 	font-family: $baseFont
@@ -28,7 +34,11 @@ input[type=submit], input[type=reset], input[type=button], button, .button
 		text-decoration: none
 		background-color: $green
 		color: white
-	
+
+select
+	-webkit-appearance: none
+
+
 label
 	color: $heading-color
 

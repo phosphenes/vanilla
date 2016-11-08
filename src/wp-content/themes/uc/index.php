@@ -15,9 +15,9 @@ $image = ($banner) ? $banner['sizes']['large']: '/wp-content/themes/uc/images/sa
 		<div class="pi-rotator" id="heroRotator"
 			 data-options='{
 		        "inline": true,
-		        "blips": true,
+		        "prevNext": true,
 		        "carousel": true,
-		        "autoPlay": 20000,
+		        "autoPlay": 6000,
 		        "crossfade": true
 		    }'>
 

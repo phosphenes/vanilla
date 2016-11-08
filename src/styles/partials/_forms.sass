@@ -26,12 +26,47 @@ input[type=submit], input[type=reset], input[type=button], button, .button
 		text-decoration: none
 		background-color: $green
 		color: white
-
+	
 label
 	color: $heading-color
 
+	
+#registration
+	fieldset
+		border: 0
+		margin-bottom: 50px
+		
+	.text-label, .checkbox-label, .labelradio
+		display: block
+		font-weight: bold
 
+	.text-label span
+		display: inline-block
+		
+	.labelradio
+		line-height: 1.5em
 
+	.text-label input[type=text], .checkbox-label input[type=text], .text-label textarea
+		display: block
+
+	.checkbox-label input[type=text], .text-label textarea
+		width: auto
+		margin-left: 20px
+		
+	.radiogroup br
+		display: none
+		
+	input[type=text]
+		width: 100%
+
+.formRow + .formRow
+	margin-top: 20px
+	
+.screen-reader
+	display: none
+
+	
+	
 // NINJA FORMS
 .nf-input-limit, .nf-form-fields-required
 	display: none

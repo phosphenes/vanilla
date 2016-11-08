@@ -1,19 +1,3 @@
-<?php
-/**
- * Template Name: Patient Info
- */
-
-get_header();
-
-?>
-
-
-	<section class="mainContent"><main>
-
-			<?php the_content(); ?>
-
-	<clear></clear></main></section>
-
 
 	<section id="patientInfoForm">
 		<main>
@@ -471,7 +455,4 @@ get_header();
 		})(window)
 	</script>
 
-<?php
-get_footer();
-?>
 

@@ -31,6 +31,7 @@ $image = ($banner) ? $banner['sizes']['large']: '/wp-content/themes/uc/images/sa
 <?php
 include 'flex-content.php';
 
+if(get_the_slug(get_the_ID()) == 'for-patients') include 'patient-info.php';
 
 get_footer();
 ?>

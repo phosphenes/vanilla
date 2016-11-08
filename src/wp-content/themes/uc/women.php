@@ -163,7 +163,6 @@ the_post();
 		<h5>make a difference</h5>
 		<h2>Be part of a life-changing experience</h2>
 		<a href="http://wwin.org/donate/" class="button green-background yellow-text">please support wwin</a>
-		<a href="http://wwin.org/grants-program/" class="button green-background yellow-text">apply to be a grantee</a>
 		<div class="social">
 			<a href="https://www.facebook.com/wwin.org" class="social" target="_blank"><img src="/wp-content/themes/uc/_uc/images/facebook.png"></a>
 			<a href="https://twitter.com/WaWomenInNeed" class="social" target="_blank"><img src="/wp-content/themes/uc/_uc/images/twitter.png"></a>

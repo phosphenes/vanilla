@@ -109,9 +109,18 @@ the_post();
 	<div class="weird-line yellow-background"></div>
 </section>
 
+<section id="storyText">
+	<main>
+		<div class="narrow">
+			<h4>We have always believed that a woman has the wisdom and freedom to make her own choices and design her own future. Given the opportunity, every woman can inspire positive change for herself, her family, and her community.</h4>
+<!--			<p>WWIN’s mission is to change lives, not people. It doesn’t matter where a grant applicant comes from. We want to help her get where she’s going. It’s not about what she did before, but what she’s going to do to improve her life and the lives of others.</p>-->
+			<p>Melissa, like so many that have become part of the WWIN family over the past quarter century, was a single mother who realized she had to face her past and take control of her future if her life was going to change for the better. Watch her inspiring story and see how, with a little help, her hope and courage transformed her future.</p>
+		</div>
+	</main>
+</section>
+
 <section id="story" class="white-text">
 	<main>
-
 		<h3>Star Story: Melissa</h3>
 		<h1>Building a Path In Life</h1>
 		<button id="launchVideoButton" data-vimeo-trigger="storyVid" data-video-id="63352852"></button>
@@ -121,11 +130,6 @@ the_post();
 <section id="storyQuote" class="green-text">
 	<main>
 
-		<div class="narrow">
-			<p>We have always believed that a woman has the wisdom and freedom to make her own choices and design her own future. Given the opportunity, every woman can inspire positive change for herself, her family, and her community.</p>
-			<p>WWIN’s mission is to change lives, not people. It doesn’t matter where a grant applicant comes from. We want to help her get where she’s going. It’s not about what she did before, but what she’s going to do to improve her life and the lives of others.</p>
-			<p>Melissa, like so many that have become part of the WWIN family over the past quarter century, was a single mother who realized she had to face her past and take control of her future if her life was going to change for the better. Watch her inspiring story and see how, with a little help, her hope and courage transformed her future.</p>
-		</div>
 		<blockquote>
 			<div class="quote">
 			Deep down inside we know where we belong, and we know that we have worth, and you need to just keep listening to that voice, because there is a path for you.

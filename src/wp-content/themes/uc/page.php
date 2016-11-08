@@ -1,4 +1,4 @@
- <?php
+<?php
 /**
  * The template for displaying all pages
  *
@@ -16,15 +16,21 @@ get_header();
 $pageID = get_the_ID();
 $parentPageID = (wp_get_post_parent_id($pageID) != 0) ? wp_get_post_parent_id($pageID): NULL;
 $childPages = ($parentPageID) ? get_pages(array('child_of' => $parentPageID, 'parent' => $parentPageID, 'sort_column' => 'menu_order')): NULL;
-//$heroImage = get_field('hero_image');
-//if ($heroImage) {
-//	$url = $heroImage ? $heroImage['sizes']['large'] : '';
-//	echo "<section id='hero' style='background-image: url($url)'></section>";
-//}
 
+$banner = (get_field('featured_image')) ? get_field('featured_image'): null;
+$image = ($banner) ? $banner['sizes']['large']: '/wp-content/themes/uc/images/sample-1.jpg';
 
+?>
+
+<section id="hero" style="background-image: url('<?php echo $image; ?>');">
+	<main>
+		<h1><?php the_title(); ?></h1>
+	</main>
+</section>
+
+<?php
 include 'flex-content.php';
 
 
-get_footer(); 
+get_footer();
 ?>

@@ -51,12 +51,12 @@ main
 		top: 0
 		left: 0
 		width: 100%
-		height: 180px
-		opacity: 0.7
-		background: -moz-linear-gradient(top,  rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)
-		background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%)
-		background: linear-gradient(to bottom,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%)
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 )
+		height: 100%
+		opacity: 0.6
+		background: -moz-linear-gradient(top,  rgba(0,0,0,1) 0%, rgba(0,0,0,1) 7%, rgba(0,0,0,0.25) 38%, rgba(0,0,0,0.25) 99%, rgba(0,0,0,0.25) 100%);
+		background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 7%,rgba(0,0,0,0.25) 38%,rgba(0,0,0,0.25) 99%,rgba(0,0,0,0.25) 100%);
+		background: linear-gradient(to bottom,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 7%,rgba(0,0,0,0.25) 38%,rgba(0,0,0,0.25) 99%,rgba(0,0,0,0.25) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#40000000',GradientType=0 );
 
 	& > main
 		height: 100%
@@ -73,26 +73,21 @@ main
 	.item
 		padding: 0 20px
 
-		&:before
-			content: ''
-			display: block
-			position: absolute
-			top: 0
-			left: 0
-			width: 100%
-			height: 180px
-			opacity: 0.7
-			background: -moz-linear-gradient(top,  rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)
-			background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%)
-			background: linear-gradient(to bottom,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%)
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 )
+
+
+
 
 		main
 			position: relative
 			height: 100%
 			display: flex
-			justify-content: flex-start
-			align-items: center
+			justify-content: center
+			align-items: flex-end
+			text-align: center
+
+			div > *
+				display: block
+				margin: 0 auto 10px auto
 		
 	p
 		max-width: 50%
@@ -231,9 +226,12 @@ body.inside-page #hero h1
 		b, strong
 			display: inline-block
 
-	.columns > *
-		width: calc(50% - 20px)
-		margin: 0 20px 20px 20px
+	.columns
+		justify-content: space-between
+
+		& > *
+			width: calc(50% - 20px)
+			margin: 0 0 20px 0
 
 
 
@@ -249,8 +247,8 @@ body.inside-page #hero h1
 	.columns
 		& > *
 			width: calc(50% - 40px)
-		&.col-2 > *
-			margin: 20px
+		//&.col-2 > *
+		//	margin: 20px
 		&.col-3 > *
 			width: calc(33.33333% - 20px) !important
 		&.col-5 > *

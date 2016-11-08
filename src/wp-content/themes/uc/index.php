@@ -4,10 +4,16 @@
  */
 
 get_header();
+
+
+
+$banner = (get_field('featured_image')) ? get_field('featured_image'): null;
+$image = ($banner) ? $banner['sizes']['large']: '/wp-content/themes/uc/images/sample-1.jpg';
+
 ?>
-	<section id="hero">
+	<section id="hero" style="background-image: url('<?php echo $image; ?>');">
 		<div class="pi-rotator" id="heroRotator"
-			data-options='{
+			 data-options='{
 		        "inline": true,
 		        "blips": true,
 		        "carousel": true,
@@ -47,5 +53,5 @@ get_header();
 include 'flex-content.php';
 
 
-get_footer(); 
+get_footer();
 ?>

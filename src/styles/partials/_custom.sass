@@ -151,7 +151,7 @@ blockquote
 
 	main
 		height: 100%
-		padding-bottom: 10vw
+		padding-bottom: 10vh
 		display: flex
 		flex-direction: column
 		justify-content: flex-end
@@ -187,13 +187,12 @@ blockquote
 		padding-top: 100px
 	h2
 		margin-bottom: 40px
-
-	.narrow
-		margin-bottom: 80px
-		
 	
 #storyText
-	padding: 60px
+	padding: 0 20px
+
+	main
+		padding: 5vw 0
 	
 	h4
 		font-size: 1.7em
@@ -225,9 +224,21 @@ blockquote
 		top: 50%
 		left: 50%
 		transform: translate(-50%, -50%)
+		width: calc(100% - 40px)
 
 		p
 			font-size: 20px
+
+
+#storyQuote
+
+	main
+		padding: 5vw 0
+
+	blockquote
+		margin: 0
+		padding: 0
+
 
 #collage
 	overflow: hidden
@@ -421,6 +432,9 @@ footer
 	#banner
 		height: 60vw
 		max-height: 90vh
+
+		main
+			padding-bottom: 10vh
 
 		h1
 			font-size: 4em

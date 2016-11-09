@@ -123,9 +123,7 @@ blockquote
 		color: $green
 
 #banner
-	height: 60vw
-	max-height: 90vh
-	margin-top: -60px
+	height: 100vh
 	overflow: hidden
 	background: #222 url('/wp-content/themes/uc/_uc/images/hero-mobile-bg.jpg') center center no-repeat
 	background-size: cover
@@ -139,6 +137,7 @@ blockquote
 		top: 0
 		left: 0
 		background: rgba(34, 34, 34, 0.2)
+		z-index: 1
 
 	video
 		position: absolute
@@ -150,16 +149,6 @@ blockquote
 		opacity: 1
 		display: none
 
-		&:before
-			content: ''
-			display: block
-			width: 100%
-			height: 100%
-			position: absolute
-			top: 0
-			left: 0
-			background: rgba(34, 34, 34, 0.2)
-
 	main
 		height: 100%
 		padding-bottom: 10vw
@@ -168,9 +157,10 @@ blockquote
 		justify-content: flex-end
 		align-items: center
 		text-align: center
+		z-index: 2
 
 	h1
-		font-size: 3em
+		font-size: 2.5em
 		line-height: 1em
 		margin: 0
 
@@ -363,6 +353,14 @@ footer
 //@media (min-width: 550px)
 
 @media (min-width: 768px)
+
+	#banner
+		height: 60vw
+		max-height: 90vh
+		min-height: 50vh
+
+		h1
+			font-size: 3em
 
 	header .social
 		display: flex

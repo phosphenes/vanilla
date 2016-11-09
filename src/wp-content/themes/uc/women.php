@@ -59,7 +59,7 @@ the_post();
 	<div class="starField"></div>
 	<main>
 		<div class="narrow">
-			<h2><span class="yellow-text">Always give back.</span><br>Never Give up.</h2>
+			<h2><span class="yellow-text">Always give back.</span><br>Never give up.</h2>
 			<p>There is a star in each of us. WWIN wants to let it shine. It was 25 years ago that Julia Love Pritt started a movement that has positively impacted the lives of over 6,000 women across our state, not to mention their families and communities.</p>
 			<p>For so many, stories of struggle have been replaced by stories of hope, gratitude, courage and dreams fulfilled. This year, we celebrate a quarter century of inspiring women.</p>
 		</div>

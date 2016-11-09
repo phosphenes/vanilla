@@ -109,9 +109,18 @@ the_post();
 	<div class="weird-line yellow-background"></div>
 </section>
 
+<section id="storyText">
+	<main>
+		<div class="narrow">
+			<h4>We have always believed that a woman has the wisdom and freedom to make her own choices and design her own future. Given the opportunity, every woman can inspire positive change for herself, her family, and her community.</h4>
+<!--			<p>WWIN’s mission is to change lives, not people. It doesn’t matter where a grant applicant comes from. We want to help her get where she’s going. It’s not about what she did before, but what she’s going to do to improve her life and the lives of others.</p>-->
+			<p>Melissa, like so many that have become part of the WWIN family over the past quarter century, was a single mother who realized she had to face her past and take control of her future if her life was going to change for the better. Watch her inspiring story and see how, with a little help, her hope and courage transformed her future.</p>
+		</div>
+	</main>
+</section>
+
 <section id="story" class="white-text">
 	<main>
-
 		<h3>Star Story: Melissa</h3>
 		<h1>Building a Path In Life</h1>
 		<button id="launchVideoButton" data-vimeo-trigger="storyVid" data-video-id="63352852"></button>
@@ -121,10 +130,6 @@ the_post();
 <section id="storyQuote" class="green-text">
 	<main>
 
-		<div class="narrow">
-			<p>Sed porttitor lectus nibh. Pellentesque in ipsum id orci porta dapibus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Proin eget tortor risus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p>
-			<p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
-		</div>
 		<blockquote>
 			<div class="quote">
 			Deep down inside we know where we belong, and we know that we have worth, and you need to just keep listening to that voice, because there is a path for you.
@@ -158,7 +163,6 @@ the_post();
 		<h5>make a difference</h5>
 		<h2>Be part of a life-changing experience</h2>
 		<a href="http://wwin.org/donate/" class="button green-background yellow-text">please support wwin</a>
-		<a href="http://wwin.org/grants-program/" class="button green-background yellow-text">apply to be a grantee</a>
 		<div class="social">
 			<a href="https://www.facebook.com/wwin.org" class="social" target="_blank"><img src="/wp-content/themes/uc/_uc/images/facebook.png"></a>
 			<a href="https://twitter.com/WaWomenInNeed" class="social" target="_blank"><img src="/wp-content/themes/uc/_uc/images/twitter.png"></a>

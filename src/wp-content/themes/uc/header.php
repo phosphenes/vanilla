@@ -37,7 +37,6 @@ $navExclusions = (get_field('nav_exclusions','options')) ? implode(',',get_field
 	<!-- SITE STYLES/SCRIPTS -->
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/styles.css" />
 	<script src="<?php echo get_template_directory_uri(); ?>/script.js"></script>
-
 </head>
 
 <?php

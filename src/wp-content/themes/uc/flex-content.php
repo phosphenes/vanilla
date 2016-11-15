@@ -93,9 +93,11 @@ if(have_rows('sections')) {
 				else if(get_row_layout() == '2_column') {
 
 					$sizes = get_sub_field('column_sizes');
+					$alignment = get_sub_field('vertical_alignment');
 					$positions = array('left','right');
 
 					array_push($extraClasses, 'sizes-'.str_replace('/', '-', $sizes));
+					array_push($extraClasses, $alignment);
 					$extraClasses = implode(' ', $extraClasses);
 
 					echo '<div class="columns col-2 '.$extraClasses.'">';

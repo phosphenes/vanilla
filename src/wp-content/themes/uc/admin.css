@@ -62,6 +62,13 @@
 }
 
 
+.acf-field[data-width] + .acf-field[data-width] {
+	border-left: none;
+}
+.acf-fields > .acf-field {
+	border-top: none;
+}
+
 .contentColumns .acf-repeater .acf-row-handle.order span {
 	display: inline-block;
 	width: 20px;

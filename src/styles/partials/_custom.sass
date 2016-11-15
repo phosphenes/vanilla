@@ -1,5 +1,10 @@
-.poop
-	background: brown
+
+
+
+
+
+
+
 
 // SECTION BG COLORS AND STYLES
 .beige
@@ -9,6 +14,9 @@
 	text-align: center
 	margin-bottom: 30px
 
+
+.introquote
+	margin-top: 80px !important
 
 // EVEN MORE CUSTOM-FLAVORED HOO-HAW
 #homeIntro
@@ -26,17 +34,17 @@
 				margin-bottom: 30px
 
 #servicesHomeIntro
-		.columns
-			justify-content: center
+	.columns
+		justify-content: center
 
-			& > *
-				max-width: 320px
-				margin: 0 10px 20px 10px
-				text-align: center
+		& > *
+			max-width: 320px
+			margin: 0 10px 20px 10px
+			text-align: center
 
-				img
-					height: 100px
-					margin-bottom: 20px
+			img
+				height: 100px
+				margin-bottom: 20px
 
 #aboutContent
 	img
@@ -63,20 +71,12 @@
 				margin: 0 0 20px 0
 				display: block
 
-.serviceDescription, .technologiesIntro
-	.columns
-		& > *
-			display: flex
-			justify-content: center
-			flex-direction: column
-
-			&.imageOnly
-				text-align: center
-				display: none
-
-				img
-					width: 260px
-					max-width: 100%
+.serviceDescription
+	//.columns
+	//	& > *
+	//		&.imageOnly img
+	//			width: 260px
+	//			max-width: 100%
 
 	&.cosmetic .columns .imageOnly img
 		width: 100%
@@ -84,6 +84,36 @@
 .technologiesIntro .columns > *.imageOnly
 	display: block
 
+
+.exams, .fillings, .children, .implants
+	.columns > * h2
+		padding: 5px 0 5px 80px
+		position: relative
+
+		&:before
+			content: ''
+			display: block
+			background-position: left center
+			background-repeat: no-repeat
+			background-size: contain
+			width: 80px
+			height: 100%
+			max-height: 60px
+			position: absolute
+			top: 0
+			left: 0
+
+.exams .columns > * h2:before
+	background-image: url('/wp-content/uploads/2016/11/icon-little-mirror.svg')
+
+.fillings .columns > * h2:before
+	background-image: url('/wp-content/uploads/2016/11/icon-tooth.svg')
+
+.children .columns > * h2:before
+	background-image: url('/wp-content/uploads/2016/11/icon-child.svg')
+
+.implants .columns > * h2:before
+	background-image: url('/wp-content/uploads/2016/11/icon-dentures.svg')
 
 //////////////////////////////////////
 // RESPONSIVE

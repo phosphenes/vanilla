@@ -31,9 +31,6 @@ the_post();
 
 <body id="top">
 
-
-
-
 <header class="pi-sticky-header">
 	<main>
 		<a href="http://wwin.org/">&lt; wwin.org</a>
@@ -42,7 +39,7 @@ the_post();
 			<a href="https://twitter.com/WaWomenInNeed" class="social" target="_blank"><img src="/wp-content/themes/uc/_uc/images/twitter-white.png"></a>
 			<a href="https://www.instagram.com/wawomeninneed/" class="social" target="_blank"><img src="/wp-content/themes/uc/_uc/images/instagram-white.png"></a>
 		</div>
-		<a href="https://www.sagepayments.net/sagenonprofit/shopping_cart/forms/donate.asp?M_id=669091193768" target="_blank" class="button yellow-background">donate now</a>
+		<a href="http://wwin.org/donate/" target="_blank" class="button yellow-background">donate now</a>
 	</main>
 </header>
 
@@ -69,42 +66,42 @@ the_post();
 			"prevNext": true,
 			"autoPlay": 6000
 		}'>
-			<blockquote class="item">
-				<div class="quote">
-					If you educate a woman, you educate a family.
-					<p>— lark, wwin donor</p>
-				</div>
-			</blockquote>
-			<blockquote class="item">
-				<div class="quote">
-				Thanks in great part to my WWIN grant I was able to break free from my violent marriage. A supportive community has replaced extreme isolation and…my life is bright and full of love.
-				<p>— Misty, Health Care Grant Recipient</p>
-				</div>
-			</blockquote>
-			<blockquote class="item">
-				<div class="quote">
-				This grant was a massive dose of hope and enhanced everything I was doing to create a fantastic life for my daughter and me. Support in dark times made all the difference.
-				<p>— Angela, Education Grant Recipient</p>
-				</div>
-			</blockquote>
-			<blockquote class="item">
-				<div class="quote">
-				I’m not sure I would have been able to finish school without WWIN…I’m very happy with my career and the ability to provide for my family.
-				<p>— Christy, Education Grant Recipient</p>
-				</div>
-			</blockquote>
-			<blockquote class="item">
-				<div class="quote">
-				Many doors have opened for me as a result of renewed confidence and I will never forget WWIN for their help. The dignity they restore to women with nowhere else to turn is a gift beyond measure.
-				<p>— Aladia, Health Care Grant Recipient</p>
-				</div>
-			</blockquote>
-			<blockquote class="item">
-				<div class="quote">
-				The grant award validated that I was on the right path, that my vision, what I feel, is true.
-				<p>— Adriana, Education Grant Recipient</p>
-				</div>
-			</blockquote>
+		<blockquote class="item">
+			<div class="quote">
+				If you educate a woman, you educate a family.
+				<p>— lark, wwin donor</p>
+			</div>
+		</blockquote>
+		<blockquote class="item">
+			<div class="quote">
+			Thanks in great part to my WWIN grant I was able to break free from my violent marriage. A supportive community has replaced extreme isolation and…my life is bright and full of love.
+			<p>— Misty, Health Care Grant Recipient</p>
+			</div>
+		</blockquote>
+		<blockquote class="item">
+			<div class="quote">
+			This grant was a massive dose of hope and enhanced everything I was doing to create a fantastic life for my daughter and me. Support in dark times made all the difference.
+			<p>— Angela, Education Grant Recipient</p>
+			</div>
+		</blockquote>
+		<blockquote class="item">
+			<div class="quote">
+			I’m not sure I would have been able to finish school without WWIN…I’m very happy with my career and the ability to provide for my family.
+			<p>— Christy, Education Grant Recipient</p>
+			</div>
+		</blockquote>
+		<blockquote class="item">
+			<div class="quote">
+			Many doors have opened for me as a result of renewed confidence and I will never forget WWIN for their help. The dignity they restore to women with nowhere else to turn is a gift beyond measure.
+			<p>— Aladia, Health Care Grant Recipient</p>
+			</div>
+		</blockquote>
+		<blockquote class="item">
+			<div class="quote">
+			The grant award validated that I was on the right path, that my vision, what I feel, is true.
+			<p>— Adriana, Education Grant Recipient</p>
+			</div>
+		</blockquote>
 	</main>
 	<div class="weird-line yellow-background"></div>
 </section>
@@ -161,7 +158,7 @@ the_post();
 	<main>
 		<h5>make a difference</h5>
 		<h2>Be part of a life-changing experience</h2>
-		<a href="http://wwin.org/donate/" class="button green-background yellow-text">please support wwin</a>
+		<a href="http://wwin.org/donate/" target="_blank" class="button green-background yellow-text">please support wwin</a>
 		<div class="social">
 			<a href="https://www.facebook.com/wwin.org" class="social" target="_blank"><img src="/wp-content/themes/uc/_uc/images/facebook.png"></a>
 			<a href="https://twitter.com/WaWomenInNeed" class="social" target="_blank"><img src="/wp-content/themes/uc/_uc/images/twitter.png"></a>

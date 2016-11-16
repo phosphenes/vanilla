@@ -89,7 +89,7 @@
 		}
 		
 		if (options.inline) {
-			stage.fill(items[0])
+			stage.fill(items[0].cloneNode(true))
 			updateTheView()
 		}
 		
@@ -128,7 +128,7 @@
 				{left: pct(100 * delta)}
 			)
 			var incomingIdx = jumpTo ? jumpTo.idx : currentIdx + delta
-			sled.fill(items[incomingIdx])
+			sled.fill(items[incomingIdx].cloneNode(true))
 			container.appendChild(sled)
 
 			showIncomingItem(delta, jumpTo)
@@ -153,7 +153,7 @@
 
 				doAfterTransition(stage, transitionProperty, function () {
 					container.removeChild(stage)
-					stage.fill(items[currentIdx])
+					stage.fill(items[currentIdx].cloneNode(true))
 					stage.removeAttribute('style')
 
 					container.replaceChild(stage, sled)
@@ -266,7 +266,7 @@
 				zIndex: π.highestZ()
 			})
 			currentIdx = parseInt(acutalItem(e.target).dataset.idx) || 0
-			stage.fill(items[currentIdx])
+			stage.fill(items[currentIdx].cloneNode(true))
 			updateTheView()
 			
 			πbody.appendChild(el)

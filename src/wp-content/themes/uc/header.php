@@ -41,9 +41,6 @@ $extraClasses = implode(' ', $extraClasses);
 
 <body <?php body_class($extraClasses); ?> id="top">
 
-
-
-
 	<header>
 
 		<main>
@@ -63,6 +60,3 @@ $extraClasses = implode(' ', $extraClasses);
 			</a>
 		</main>
 	</header>
-
-
-

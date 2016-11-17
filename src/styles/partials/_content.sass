@@ -5,6 +5,10 @@ section
 	position: relative
 	padding: 0 20px
 
+	&:nth-child(odd)
+		background: #eee
+
+
 main
 	width: 100%
 	max-width: 1200px
@@ -66,10 +70,25 @@ main
 	b, strong
 		display: none
 
+
+
+
+/////////////////////////////
+// CONTENT
+/////////////////////////////
+.content
+	margin: 0 0 40px 0
+
+	&:last-child
+		margin-bottom: 0
+
+
+/////////////////////////////
 // COLUMNS
+/////////////////////////////
 .columns
 	display: flex
-	justify-content: space-around
+	justify-content: center
 	flex-wrap: wrap
 	padding: 0
 	margin: 0
@@ -80,10 +99,73 @@ main
 		margin: 0 0 20px 0
 		width: 100%
 
+		img
+			max-width: 100%
+
 .verticalCenter
 	display: flex
 	justify-content: center
 	flex-direction: column
+
+.vertical-align-top
+	align-items: flex-start
+
+.vertical-align-middle
+	align-items: center
+
+.vertical-align-bottom
+	align-items: flex-end
+
+.columns-inline
+	column-count: 1
+	column-gap: 40px
+
+	& > *
+		display: inline-block
+		break-inside: avoid
+
+.imageOnly
+	text-align: center
+	display: flex
+	justify-content: center
+	align-items: center
+
+.narrow
+	max-width: 600px
+	margin: 0 auto
+
+
+
+/////////////////////////////
+// FAQ
+/////////////////////////////
+.faq
+	.q-and-a
+		margin-bottom: 20px
+		position: relative
+
+		.question, .answer
+			padding-left: 24px
+			position: relative
+
+			&:before
+				content: 'Q:'
+				display: block
+				position: absolute
+				top: 0
+				left: 0
+				font-weight: 800
+
+		.answer:before
+			content: 'A:'
+
+
+
+
+
+
+
+
 
 
 
@@ -106,14 +188,66 @@ main
 		b, strong
 			display: inline-block
 
-	.columns > *
-		width: calc(50% - 40px)
+	.columns
+		justify-content: space-between
+
+		& > *
+			width: calc(50% - 20px)
+			margin: 0 0 20px 0
+
 
 //@media (min-width: 900px)
 
+
 @media (min-width: 1024px)
 
-	.columns.col-3 > *
-		width: calc(33.33333% - 20px) !important
+	.columns
+		& > *
+			width: calc(50% - 40px)
+		//&.col-2 > *
+		//	margin: 20px
+		&.col-3 > *
+			width: calc(33.33333% - 20px) !important
+		&.col-5 > *
+			width: calc(33.33333% - 20px) !important
+		&.col-6 > *
+			width: calc(33.33333% - 20px) !important
 
-//@media (min-width: 1100px)
+	.columns-inline
+		column-count: 2
+		column-gap: 30px
+
+
+@media (min-width: 1100px)
+
+	section
+		padding: 0 30px
+
+	main
+		padding: 80px 0
+
+	.columns
+		&.col-2
+			&.sizes-33-66
+				div:nth-child(1)
+					width: calc(33.33333% - 20px) !important
+				div:nth-child(2)
+					width: calc(66.66666% - 20px) !important
+			&.sizes-66-33
+				div:nth-child(1)
+					width: calc(66.66666% - 20px) !important
+				div:nth-child(2)
+					width: calc(33.33333% - 20px) !important
+		&.col-4 > *
+			width: calc(25% - 20px) !important
+
+	.columns-inline
+		column-gap: 40px
+
+
+@media (min-width: 1200px)
+
+	&.col-5 > *
+		width: calc(20% - 20px) !important
+	&.col-6 > *
+		width: calc(16.666666% - 20px) !important

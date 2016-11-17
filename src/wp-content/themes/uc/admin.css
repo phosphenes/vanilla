@@ -15,6 +15,14 @@
 
 #sections > .acf-input > .acf-repeater > table > tbody > tr > td {
 	/*padding-top: 50px;*/
+	border-top: 10px solid #82aa2b
+}
+#sections > .acf-input > .acf-repeater > .acf-actions > li > .acf-button {
+	/*padding-top: 50px;*/
+	background: #82aa2b;
+	border: none;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.6);
+	box-shadow: 0 1px 0 rgba(0,0,0,0.5);
 }
 
 
@@ -27,12 +35,12 @@
 	display: flex;
 	justify-content: space-between;
 	float: left;
-	width: calc(50% - 1);
+	width: calc(33.33333% - 1px);
 	margin-bottom: 20px;
 }
-.contentColumns .acf-table .acf-row:nth-child(odd) {
+.contentColumns .acf-table .acf-row:nth-child(3n+1) {
 	clear: both;
-	border-right: 1px solid #e5e5e5;
+	/*border-right: 1px solid #e5e5e5;*/
 }
 .contentColumns .acf-table .acf-row td {
 	display: block;
@@ -47,11 +55,31 @@
 
 .contentColumns .acf-repeater .acf-row-handle.order, .contentColumns .acf-repeater .acf-row-handle.remove {
 	background: #fff;
-	width: 30px !important;
+	width: 20px !important;
 }
 .contentColumns .acf-repeater .acf-row-handle.order:hover, .contentColumns .acf-repeater .acf-row-handle.order:hover {
 	background: #f4f4f4;
 }
+
+
+.acf-field[data-width] + .acf-field[data-width] {
+	border-left: none;
+}
+.acf-fields > .acf-field {
+	border-top: none;
+}
+
+.contentColumns .acf-repeater .acf-row-handle.order span {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	color: #fff;
+	background: #bbb;
+	border-radius: 50%;
+	font-weight: 100;
+}
+
 
 .contentColumns .acf-repeater.-row > table > tbody > tr > td, .contentColumns .acf-repeater.-block > table > tbody > tr > td {
 	border-width: 0;

@@ -73,6 +73,34 @@ main
 
 
 
+
+/////////////////////////////
+// FLEX TEXT ALIGNING
+/////////////////////////////
+.flex-text-align
+	display: flex
+
+.flex-align-left
+	justify-content: flex-start
+	text-align: left
+
+.flex-align-center
+	justify-content: center
+	text-align: center
+
+.flex-align-right
+	justify-content: flex-end
+	text-align: right
+
+.flex-align-top
+	align-items: flex-start
+
+.flex-align-middle
+	align-items: center
+
+.flex-align-bottom
+	align-items: flex-end
+
 /////////////////////////////
 // CONTENT
 /////////////////////////////
@@ -246,8 +274,8 @@ main
 
 
 @media (min-width: 1200px)
-
-	&.col-5 > *
-		width: calc(20% - 20px) !important
-	&.col-6 > *
-		width: calc(16.666666% - 20px) !important
+	.columns
+		&.col-5 > *
+			width: calc(20% - 20px) !important
+		&.col-6 > *
+			width: calc(16.666666% - 20px) !important

@@ -40,7 +40,7 @@
 		numberOfItems = items.length
 		
 		if (numberOfItems === 0) {
-			console.warn('A rotator without items is no rotator at all', el)
+			console.warn('A rotator with no items is no rotator at all', el)
 			return
 		}
 

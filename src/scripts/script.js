@@ -1,21 +1,20 @@
 ;(function(){
 	π.mods.push(function () {
-		console.log("π loaded. poo.")
-
+		console.log("π loaded.")
 
 		initStickyHeader();
 		initAnchorScrolling();
 		initMobileMenu();
 		initExhibits();
 		initCenterImages();
-
-
 	})
 
 
 
 	function initStickyHeader() {
 		var header = π1('header');
+		if (!header) return
+		
 		setInterval(function() {
 			if(window.scrollY >= 200 && !header.hasClass('sticky')) {
 				header.addClass('sticky');
@@ -28,10 +27,10 @@
 
 	function initMobileMenu() {
 		var button = π1('#menuButton');
-		var menu = π1('#menu');
-		var body = π1('body');
+		if (!button) return
+		
 		button.onclick = function() {
-			(body.hasClass('openMenu')) ? body.killClass('openMenu'): body.addClass('openMenu');
+			(πbody.hasClass('openMenu')) ? πbody.killClass('openMenu'): πbody.addClass('openMenu');
 		};
 	}
 
@@ -40,14 +39,11 @@
 	////////////////////////////////////
 	function initExhibits() {
 		π('.exhibit').forEach(function(el) {
-			window.requestAnimationFrame(function() {
-				toggleExhibits(el);
-			});
+			toggleExhibits(el);
 		});
 	}
 
 	function toggleExhibits(el) {
-
 		var margin = (el.dataset.rangeMargin) ? parseInt(el.dataset.rangeMargin): 10;
 		var inRange = elementInRange(el, margin);
 
@@ -57,7 +53,7 @@
 		}
 		else if(!inRange && el.hasClass('inRange') && !el.hasClass('exhibitOnOnly')) el.killClass('inRange');
 
-		window.requestAnimationFrame(function() {
+		requestAnimationFrame(function() {
 			toggleExhibits(el);
 		});
 	}
@@ -67,9 +63,7 @@
 	////////////////////////////////////
 	function initCenterImages() {
 		π('*[data-scroll-center]').forEach(function(el, i) {
-			window.requestAnimationFrame(function() {
-				scrollInAndOutOfFixedCenter(el, i);
-			});
+			scrollInAndOutOfFixedCenter(el, i);
 		});
 	}
 
@@ -93,7 +87,7 @@
 		if(!isBottom && el.hasClass('fixToBottom')) el.killClass('fixToBottom');
 		if(!isCenter && el.hasClass('fixToCenter')) el.killClass('fixToCenter');
 
-		window.requestAnimationFrame(function() {
+		requestAnimationFrame(function() {
 			scrollInAndOutOfFixedCenter(el, i);
 		});
 	}
@@ -102,6 +96,11 @@
 	// HASHTAG/ANCHOR LINK ANIMATED SCROLLING
 	/////////////////////////////////////////
 	function initAnchorScrolling() {
+		if (typeof $ == "undefined") {
+			console.log("jquery is needed for anchor scrolling.")
+			return
+		} 
+		
 		$('a[href*="#"]').each(function() {
 			var url = $(this).attr('href').replace(/\/$/, "");
 			var name = (url.indexOf("#") !== -1) ? url.substring(url.indexOf("#")+1): url.match(/([^\/]*)\/*$/)[1];

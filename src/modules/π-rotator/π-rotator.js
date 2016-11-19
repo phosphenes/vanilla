@@ -6,17 +6,17 @@
 	π.rotator = {
 		toggle: function (id, e) {
 			var rotator = AllRotators[id]
-			rotator.el.hasClass('on') ? rotator.hide() : rotator.show(e) 
+			rotator.el.hasClass('on') ? rotator.hide() : rotator.show(e)
 		}
 	}
 
 	function Rotator(el) {
 		var thisRotator = this
 		thisRotator.el = el
-		
+
 		var options = JSON.parse(el.dataset.options ? el.dataset.options : '{}')
 		delete el.dataset.options
-		
+
 		var currentIdx = 0
 		var stage = π.dom('.stage'), sled = π.dom('.sled')
 		var items = []
@@ -30,6 +30,7 @@
 
 		// TODO: show a spinner if loadCount < numberOfItems
 		var loadCount = 0
+		
 
 		el.π('.item').forEach(function (item) {
 			items.push(item)
@@ -37,7 +38,7 @@
 		})
 
 		numberOfItems = items.length
-		
+
 		if (options.inline) {
 			container = el
 			el.addClass('inline')
@@ -55,53 +56,58 @@
 			container.appendChild(closeButton)
 		}
 		
-		if (options.prevNext) {
-			prevButton = π.dom('button.pi-prev-button')
-			if (!carousel) prevButton.addClass('off')
+		if (numberOfItems > 1) {
+			if (options.prevNext) {
+				prevButton = π.dom('button.pi-prev-button')
+				if (!carousel) prevButton.addClass('off')
 
-			nextButton = π.dom('button.pi-next-button')
-			prevButton.onclick = prev
-			nextButton.onclick = next
+				nextButton = π.dom('button.pi-next-button')
+				prevButton.onclick = prev
+				nextButton.onclick = next
 
-			container.add([prevButton, nextButton])
+				container.add([prevButton, nextButton])
+			}
+
+			if (counter) {
+				counter.add([π.dom('span'), π.dom('span', numberOfItems.toString())])
+				container.add(counter)
+			}
+
+			if (blips) {
+				var dots = items.map(function (item, idx) {
+					var dot = π.dom('button')
+					dot.dataset.idx = idx
+					dot.onclick = jumpToItem
+					return dot
+				})
+
+				blips.add(dots)
+				container.add(blips)
+				updateBlips()
+			}
+
+			if (options.crossfade) {
+				el.addClass('crossfade')
+			}
+
+			if (options.autoPlay) {
+				var delay = parseInt(options.autoPlay)
+				setTimeout(function () {
+					autoPlay(delay)
+				}, delay)
+			}
 		}
 
-		if (counter) {
-			counter.add([π.dom('span'), π.dom('span', numberOfItems.toString())])
-			container.add(counter)
-		}
 
-		if (blips) {
-			var dots = items.map(function (item, idx) {
-				var dot = π.dom('button')
-				dot.dataset.idx = idx
-				dot.onclick = jumpToItem
-				return dot
-			})
-
-			blips.add(dots)
-			container.add(blips)
-		}
-		
-		if (options.crossfade) {
-			el.addClass('crossfade')
-		}
-		
 		if (options.inline) {
-			stage.fill(items[0])
+			stage.fill(items[0].cloneNode(true))
 			updateTheView()
 		}
-		
-		if (options.autoPlay) {
-			var delay = parseInt(options.autoPlay)
-			setTimeout(function () {
-				autoPlay(delay)
-			}, delay)
-		}
-		
+
+
 		function autoPlay(delay) {
 			if (!options.autoPlay) return
-			
+
 			next()
 			setTimeout(function () {
 				autoPlay(delay)
@@ -110,7 +116,7 @@
 
 		function jumpToItem() {
 			options.autoPlay = false
-			
+
 			var idx = parseInt(this.dataset.idx)
 			if (currentIdx !== idx) {
 				var delta = idx > currentIdx ? 1 : -1
@@ -119,13 +125,15 @@
 		}
 
 		function slide(delta, jumpTo) {
+			if (moving) return
+
 			moving = true
-			sled.css(options.crossfade ? 
-				{opacity: 0} : 
+			sled.css(options.crossfade ?
+				{opacity: 0} :
 				{left: pct(100 * delta)}
 			)
 			var incomingIdx = jumpTo ? jumpTo.idx : currentIdx + delta
-			sled.fill(items[incomingIdx])
+			sled.fill(items[incomingIdx].cloneNode(true))
 			container.appendChild(sled)
 
 			showIncomingItem(delta, jumpTo)
@@ -146,10 +154,11 @@
 				sled.css(sledStyle)
 
 				currentIdx = jumpTo ? jumpTo.idx : currentIdx + delta
+				updateBlips()
 
 				doAfterTransition(stage, transitionProperty, function () {
 					container.removeChild(stage)
-					stage.fill(items[currentIdx])
+					stage.fill(items[currentIdx].cloneNode(true))
 					stage.removeAttribute('style')
 
 					container.replaceChild(stage, sled)
@@ -165,7 +174,6 @@
 		function updateTheView() {
 			updatePrevNext()
 			updateCounter()
-			updateBlips()
 		}
 
 		function updateBlips() {
@@ -226,12 +234,12 @@
 					break
 			}
 		}
-		
+
 		function acutalItem(el) {
 			while (!el.getAttribute('pi-rotator-trigger')) {
 				el = el.parentNode
 			}
-			
+
 			return el
 		}
 
@@ -263,11 +271,11 @@
 				zIndex: π.highestZ()
 			})
 			currentIdx = parseInt(acutalItem(e.target).dataset.idx) || 0
-			stage.fill(items[currentIdx])
+			stage.fill(items[currentIdx].cloneNode(true))
 			updateTheView()
-			
+
 			πbody.appendChild(el)
-			
+
 			setTimeout(function () {
 				el.addClass('on')
 			}, 50)

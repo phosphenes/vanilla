@@ -1,6 +1,22 @@
 
 
 /* ACF */
+
+
+.acf-align-left {
+	float: left !important;
+	clear: none !important;
+	min-height: 0 !important;
+}
+.acf-align-right {
+	float: right !important;
+	clear: none !important;
+	min-height: 0 !important;
+}
+.acf-top-border {
+	border-top: 1px solid #ddd !important;
+}
+
 .acf-flexible-content .layout .acf-fc-layout-handle {
 	background: #0073aa !important;
 	color: #fff;
@@ -14,9 +30,9 @@
 
 
 
-#sections > .acf-input > .acf-repeater > table > tbody > tr > td {
+.acf-repeater > table > tbody > tr > td {
 	/*padding-top: 50px;*/
-	border-top: 10px solid #82aa2b
+	border-top: 10px solid #82aa2b !important;
 }
 #sections > .acf-input > .acf-repeater > .acf-actions > li > .acf-button {
 	/*padding-top: 50px;*/

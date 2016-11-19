@@ -24,11 +24,40 @@ function my_wp_nav_menu_args($args='') {
 }
 add_filter('wp_nav_menu_args','my_wp_nav_menu_args');
 
+
+
+
+
+
 // TINYMCE STYLESHEET
 function my_theme_add_editor_styles() {
     add_editor_style( 'tinymce-styles.css' );
 }
 add_action( 'init', 'my_theme_add_editor_styles' );
+
+// CUSTOM STYLES
+function my_mce_before_init_insert_formats( $init_array ) {
+
+	$style_formats = array(
+		array(
+			'title' => 'Button',
+			'inline' => 'a',
+			'classes' => 'button',
+			'wrapper' => false,
+			'exact' => true,
+			'attributes' => array('href'=>'/')
+
+		)
+	);
+	// Insert the array, JSON ENCODED, into 'style_formats'
+	$init_array['style_formats'] = json_encode( $style_formats );
+
+	return $init_array;
+
+}
+// Attach callback to 'tiny_mce_before_init'
+add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );
+
 
 // EXCLUDE HOME LINK
 function page_menu_args( $args ) {

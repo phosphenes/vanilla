@@ -30,7 +30,7 @@ autoPlay        : milliseconds for delay between auto-playing slides
 <anyTag pi-rotator-trigger="ID_OF_ROTATOR" data-idx="0">toggle my rotator</anyTag>
 ```
 ###notes
-anyTag Elements will toggle the targeted rotator open/closed. The optional data-idx  
+anyTag Elements will toggle a targeted modal rotator open/closed. The optional data-idx  
 opens the rotator to a specific item.  
 
 The "data-options" value must be valid JSON, meaning keys must be in double quotes.  

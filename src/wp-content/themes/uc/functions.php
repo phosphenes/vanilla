@@ -46,7 +46,6 @@ function my_mce_before_init_insert_formats( $init_array ) {
 			'wrapper' => false,
 			'exact' => true,
 			'attributes' => array('href'=>'/')
-
 		)
 	);
 	// Insert the array, JSON ENCODED, into 'style_formats'

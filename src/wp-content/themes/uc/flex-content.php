@@ -24,7 +24,7 @@ if(have_rows('sections')) {
 		echo '<section id="'.(($sID) ? $sID: '').'" class="'.(($sClasses) ? $sClasses: '').'"><main>';
 
 		/////////////////////////////////
-		// CONTENT BLOCKS
+		// LOOP CONTENT BLOCKS
 		/////////////////////////////////
 		if(have_rows('content')) {
 
@@ -46,6 +46,12 @@ if(have_rows('sections')) {
 				echo '<div id="'.(($cID) ? $cID: '').'" class="'.(($contentClasses) ? $contentClasses: '').'">';
 
 				$extraClasses = array();
+
+
+
+				/////////////////////////////////
+				// CONTENT TYPES
+				/////////////////////////////////
 
 				// BASIC
 				if(get_row_layout() == 'basic') {

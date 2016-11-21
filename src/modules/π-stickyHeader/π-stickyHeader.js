@@ -2,7 +2,6 @@
 	var stickyHeader, thisY, previousY, topAnchorPoint, bottomAnchorPoint, THRESHOLD
 	thisY = previousY = topAnchorPoint = bottomAnchorPoint = 0
 
-	console.log("sticky")
 	function checkScrolling() {
 		if (stickyHeader.parentNode !== πbody) {
 			πbody.add(stickyHeader)
@@ -45,6 +44,7 @@
 	function init() {
 		stickyHeader = π1('.pi-sticky-header')
 		if (stickyHeader) {
+			console.log("sticky")
 			var options = JSON.parse(stickyHeader.dataset.options ? stickyHeader.dataset.options : '{}')
 			THRESHOLD = options.threshold || 100
 

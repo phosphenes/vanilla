@@ -9,6 +9,64 @@ get_header();
 $banner = (get_field('featured_image')) ? get_field('featured_image'): null;
 $image = ($banner) ? $banner['sizes']['large']: '/wp-content/themes/uc/images/sample-1.jpg';
 ?>
+
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+	<h3>foobang</h3>
+
+
 <!--
 	<section id="hero" class="banner-rotator" style="background-image: url('<?php echo $image; ?>');">
 		<div class="pi-rotator" id="heroRotator"

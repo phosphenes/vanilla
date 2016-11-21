@@ -41,22 +41,19 @@ $extraClasses = implode(' ', $extraClasses);
 
 <body <?php body_class($extraClasses); ?> id="top">
 
-	<header>
+	<header class="pi-sticky-header">
 
 		<main>
+			<a href="/"><img id="logo" src="<?php echo get_template_directory_uri(); ?>/images/logo.png"></a>
 
-			<nav id="menu"><main>
+			<nav><main>
 				<ul class="menu">
 					<?php wp_list_pages('sort_column=menu_order&title_li=&depth=2&exclude='.$navExclusions); ?>
 				</ul>
 			</main></nav>
 
-			<a id="logo" href="/">
-				LOGO
-			</a>
-
-			<a href="javascript:;" id="menuButton" class="menuButton" title="Open/Close Menu">
-				<div class="hamburger"><span></span></div>
-			</a>
+<!--			<a href="javascript:;" id="menuButton" class="menuButton" title="Open/Close Menu">-->
+<!--				<div class="hamburger"><span></span></div>-->
+<!--			</a>-->
 		</main>
 	</header>

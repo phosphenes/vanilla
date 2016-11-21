@@ -10,7 +10,16 @@ $banner = (get_field('featured_image')) ? get_field('featured_image'): null;
 $image = ($banner) ? $banner['sizes']['large']: '/wp-content/themes/uc/images/sample-1.jpg';
 ?>
 
-	<h3>foobang</h3>
+	<section id="hero">
+		<main>
+			<h1>Supporting quality in higher education</h1>
+			<div id="userPaths">
+				<a href="process">Know the Process</a>
+				<a href="process">Get Tools and Resources</a>
+				<a href="process">Search Institutions</a>
+			</div>
+		</main>
+	</section>
 	<h3>foobang</h3>
 	<h3>foobang</h3>
 	<h3>foobang</h3>

@@ -26,12 +26,12 @@
 						<h4>Patient Information</h4>
 						<div class="formRow">
 							<label for="lastname">Last Name:</label>
-							<input type="text" name="last_name" id="lastname" value="">
+							<input type="text" name="last_name" id="lastname" value="" required>
 							<span class="required">*required</span>
 						</div>
 						<div class="formRow">
 							<label for="firstname">First Name:</label>
-							<input type="text" name="first_name" id="firstname" value="">
+							<input type="text" name="first_name" id="firstname" value="" required>
 							<span class="required">*required</span>
 						</div>
 						<div class="formRow">
@@ -41,7 +41,7 @@
 
 						<div class="formRow">
 							<label for="email">Email Address:</label>
-							<input type="text" name="email" id="email" value="">
+							<input type="text" name="email" id="email" value="" required>
 							<span class="required">*required</span>
 						</div>
 
@@ -386,17 +386,20 @@
 							<p><input type="checkbox" name="special_attention" id="specialattention" value="true"><label for="specialattention">Is there anything you would like us to pay special attention to? Please specify: </label><input type="text" name="special_attention_info" value=""></p>
 						</div>
 					</fieldset>
-					<fieldset>
-<!--						<div class="formRow screen-reader">-->
-<!--							<label for="honeepot">Don't put anything here</label>-->
-<!--							<input type="text" name="honeepot" id="honeepot">-->
-<!--						</div>-->
-						<div class="formRow">
-							<input type="submit" name="submit" value="Submit">
-						</div>
-					</fieldset>
 					
 				</div>
+				<hr>
+				<fieldset style="text-align: center">
+					<!--						<div class="formRow screen-reader">-->
+					<!--							<label for="honeepot">Don't put anything here</label>-->
+					<!--							<input type="text" name="honeepot" id="honeepot">-->
+					<!--						</div>-->
+					<div class="formRow">
+						<input type="submit" name="submit" value="Submit">
+						<p id="invalidForm">First name, last name and email are all required fields. You can submit the form once they're all filled out.</p>
+					</div>
+				</fieldset>
+
 			</form>
 
 
@@ -421,7 +424,7 @@
 
 				// put inputs inside labels alongside spans
 				var form = πd('registration')
-				form.π('input[type=text]').forEach(function (textInput) {
+				form.π('input[type=text], input[type=email]').forEach(function (textInput) {
 					var parent = textInput.parentNode
 					if (parent.hasClass('radiogroup')) {
 						textInput.addClass('radio-text')
@@ -472,6 +475,8 @@
 					return field.π1('input').value == ''
 				}))
 				
+				πd('invalidForm').className = submitButton.disabled ? '' : 'valid'
+				
 				requestAnimationFrame(enableSubmit)
 			}
 			
@@ -492,6 +497,22 @@
 		}
 		
 		input[type=submit]:disabled {
+			opacity: 0.25;
+			cursor: default;
+		}
+
+		input[type=submit]:disabled:hover {
+			color: black;
+			background-color: #C5D5A6;
+		}
+		
+		#invalidForm {
+			color: red;
+			font-style: italic;
+			margin-top: 20px;
+		}
+		
+		#invalidForm.valid {
 			display: none;
 		}
 	</style>

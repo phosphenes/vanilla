@@ -11,7 +11,7 @@ $banner = (get_field('featured_image')) ? get_field('featured_image'): null;
 $image = ($banner) ? $banner['sizes']['large']: '/wp-content/themes/uc/images/sample-1.jpg';
 
 ?>
-	<section id="hero" style="background-image: url('<?php echo $image; ?>');">
+	<section id="hero">
 		<div class="pi-rotator" id="heroRotator"
 			 data-options='{
 		        "inline": true,

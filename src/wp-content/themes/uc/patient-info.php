@@ -491,8 +491,8 @@
 		.required:after {
 			content: '*';
 			position: absolute;
-			top: 10px;
-			right: -10px;
+			top: 0;
+			left: -10px;
 			color: red;
 		}
 		

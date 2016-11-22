@@ -1,3 +1,9 @@
+$imagesDirectory: "/wp-content/themes/uc/images/"
+
+@function imageUrl($imageName)
+	@return url($imagesDirectory + $imageName)
+
+
 @function sqrt($r)
 	$x0: 1
 	$x1: $x0

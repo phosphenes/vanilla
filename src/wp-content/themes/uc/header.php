@@ -26,6 +26,7 @@ $navExclusions = (get_field('nav_exclusions','options')) ? implode(',',get_field
 <script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 
 <!-- SITE STYLES/SCRIPTS -->
+<link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css "> 
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/styles.css" />
 <script src="<?php echo get_template_directory_uri(); ?>/script.js"></script>
 

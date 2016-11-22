@@ -12,68 +12,47 @@ $image = ($banner) ? $banner['sizes']['large']: '/wp-content/themes/uc/images/sa
 
 	<section id="hero">
 		<main>
-			<h1>Supporting quality in higher education</h1>
-			<div id="userPaths">
-				<a href="process">Know the Process</a>
-				<a href="process">Get Tools and Resources</a>
-				<a href="process">Search Institutions</a>
+			<div class="pi-rotator" data-options='{"inline": true}'>
+				<div class="item">
+					<h1>Supporting quality in higher education</h1>
+					<ul id="userPaths">
+						<li><a href="process">Know the Process</a></li>
+						<li><a href="process">Get Tools and Resources</a></li>
+						<li><a href="process">Search Institutions</a></li>
+					</ul>
+					<p>
+						NWCCU is the independent, non-profit regional authority on educational quality and effectiveness of more than 160 higher education institutions in Alaska, Idaho, Montana, Nevada, Oregon, Utah and Washington. The commission is comprised of up to 26 Commissioners responsible for establishing and accreditation criteria and evaluation procedures.
+					</p>
+					<a href="#" id="learnMore">Learn more about NWCCU</a>
+				</div>
 			</div>
 		</main>
 	</section>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
-	<h3>foobang</h3>
+
+	<section id="newsAndLinks">
+		<main>
+			<div id="" class="content content-2-columns">
+				<div class="columns col-2 sizes-66-33">
+					<div id="recentNews" class="left textContent">
+						stuff here
+					</div>
+					<div id="quickLinks" class="right textContent">
+						<ul>
+							<li><a>Quick Links</a></li>
+							<li><a href="#">Forms</a></li>
+							<li><a href="#">Accredition Process</a></li>
+							<li><a href="#">Directory of Institutions</a></li>
+							<li><a href="#">Standards & Policies</a></li>
+							<li><a href="#">Complaint Process</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</main>
+	</section>
+
+
+
 
 
 <!--

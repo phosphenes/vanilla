@@ -5,10 +5,6 @@ section
 	position: relative
 	padding: 0 20px
 
-	&:nth-child(odd)
-		background: #eee
-
-
 main
 	width: 100%
 	max-width: 1200px
@@ -48,6 +44,10 @@ main
 
 // BREADCRUMB
 #breadcrumb
+	border-bottom: 1px solid #ccc
+
+	main
+		padding: 10px 0
 
 	a
 		margin-right: 20px
@@ -69,6 +69,7 @@ main
 
 	b, strong
 		display: none
+		color: $dark-blue
 
 
 
@@ -104,6 +105,9 @@ main
 /////////////////////////////
 // CONTENT
 /////////////////////////////
+.flexContent
+	border-top: 1px solid #ccc
+
 .content
 	margin: 0 0 40px 0
 

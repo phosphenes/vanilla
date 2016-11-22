@@ -54,3 +54,20 @@ $imagesDirectory: "/wp-content/themes/uc/images/"
 	left: 0
 	width: 100%
 	height: 100%
+
+// right triangle
+@mixin pointy($direction, $sideLength, $color)
+	$top: if($direction == up, 0, $sideLength)
+	$right: if($direction == right, 0, $sideLength)
+	$bottom: if($direction == down, 0, $sideLength)
+	$left: if($direction == left, 0, $sideLength)
+	$topColor: if($direction == down, $color, transparent)
+	$rightColor: if($direction == left, $color, transparent)
+	$bottomColor: if($direction == up, $color, transparent)
+	$leftColor: if($direction == right, $color, transparent)
+	position: absolute
+	width: 0
+	height: 0
+	border-style: solid
+	border-width: $top $right $bottom $left
+	border-color: $topColor $rightColor $bottomColor $leftColor

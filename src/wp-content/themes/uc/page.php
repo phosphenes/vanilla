@@ -18,13 +18,18 @@ $parentPageID = (wp_get_post_parent_id($pageID) != 0) ? wp_get_post_parent_id($p
 $childPages = ($parentPageID) ? get_pages(array('child_of' => $parentPageID, 'parent' => $parentPageID, 'sort_column' => 'menu_order')): NULL;
 
 $banner = (get_field('featured_image')) ? get_field('featured_image'): null;
-$image = ($banner) ? $banner['sizes']['large']: '/wp-content/themes/uc/images/sample-1.jpg';
+$image = ($banner) ? $banner['sizes']['large']: '/wp-content/themes/uc/images/hero.jpg';
 
 ?>
 
 	<section id="hero" style="background-image: url('<?php echo $image; ?>');">
 		<main>
 			<h1><?php the_title(); ?></h1>
+		</main>
+	</section>
+	<section>
+		<main>
+			<?php the_content(); ?>
 		</main>
 	</section>
 

@@ -34,7 +34,47 @@ $image = ($banner) ? $banner['sizes']['large']: '/wp-content/themes/uc/images/sa
 			<div id="" class="content content-2-columns">
 				<div class="columns col-2 sizes-66-33">
 					<div id="recentNews" class="left textContent">
-						stuff here
+						<h4>RECENT NEWS</h4>
+						<article>
+							<a href="#">Vestibulum id lugula prota felis euismod semper</a>
+							<p>Cras mattis consectetur purus sit amet fermenurm. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+						</article>
+						<article>
+							<a href="#">Sed posuere consectetur est at lobortis</a>
+							<p>Cras mattis consectetur purus sit amet fermenurm. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+						</article>
+						<article>
+							<a href="#">Vestibulum id lugula prota felis euismod semper</a>
+							<p>Cras mattis consectetur purus sit amet fermenurm. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+						</article>
+						<article>
+							<a href="#">Sed posuere consectetur est at lobortis</a>
+							<p>Cras mattis consectetur purus sit amet fermenurm. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+						</article>
+						<article>
+							<a href="#">Vestibulum id lugula prota felis euismod semper</a>
+							<p>Cras mattis consectetur purus sit amet fermenurm. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+						</article>
+						<article>
+							<a href="#">Sed posuere consectetur est at lobortis</a>
+							<p>Cras mattis consectetur purus sit amet fermenurm. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+						</article>
+						<article>
+							<a href="#">Vestibulum id lugula prota felis euismod semper</a>
+							<p>Cras mattis consectetur purus sit amet fermenurm. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+						</article>
+						<article>
+							<a href="#">Sed posuere consectetur est at lobortis</a>
+							<p>Cras mattis consectetur purus sit amet fermenurm. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+						</article>
+						<article>
+							<a href="#">Vestibulum id lugula prota felis euismod semper</a>
+							<p>Cras mattis consectetur purus sit amet fermenurm. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+						</article>
+						<article>
+							<a href="#">Sed posuere consectetur est at lobortis</a>
+							<p>Cras mattis consectetur purus sit amet fermenurm. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+						</article>
 					</div>
 					<div id="quickLinks" class="right textContent">
 						<ul>

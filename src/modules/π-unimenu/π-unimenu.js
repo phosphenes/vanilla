@@ -4,7 +4,7 @@
  *
  *****************************************************************/
 ;(function(){
-	var HAMBURGER_THRESHHOLD = 1024
+	var HAMBURGER_THRESHHOLD = 1200
 	var WINDOW_WIDTH = 0
 	var OPEN_NAV = false
 	var MOVING = false

@@ -47,12 +47,10 @@ $extraClasses = implode(' ', $extraClasses);
 		<main>
 			<a id="logo" href="/"><img id="logo" src="<?php echo get_template_directory_uri(); ?>/images/logo.svg"></a>
 
-			<nav>
-				<main>
+			<nav class="pi-unimenu">
 					<ul class="menu">
 						<?php wp_list_pages('sort_column=menu_order&title_li=&depth=2&exclude='.$navExclusions); ?>
 					</ul>
-				</main>
 			</nav>
 
 <!--			<a href="javascript:;" id="menuButton" class="menuButton" title="Open/Close Menu">-->

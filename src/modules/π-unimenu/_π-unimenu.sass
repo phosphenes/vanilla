@@ -1,3 +1,5 @@
+$burgerThreshhold: 1200px
+
 nav.pi-unimenu
 	position: relative
 	opacity: 1
@@ -34,7 +36,7 @@ nav.pi-unimenu
 .pi-burger-button
 	display: none
 
-@media screen and (max-width: 1024px)
+@media screen and (max-width: $burgerThreshhold)
 	.pi-burger-button
 		display: block
 		position: fixed

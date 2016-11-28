@@ -62,8 +62,6 @@ if(have_rows('sections')) {
 				</div>
 			</section>
 
-
-
 			<?php
 
 
@@ -75,7 +73,7 @@ if(have_rows('sections')) {
 		else if(get_row_layout() == 'variable_content') {
 
 			// START SECTION
-			echo '<section id="' . (($sID) ? $sID : '') . '" class="' . (($sClasses) ? $sClasses : '') . '"><main>';
+			echo '<section id="' . (($sID) ? $sID : '') . '" class="flexContent ' . (($sClasses) ? $sClasses : '') . '"><main>';
 
 			/////////////////////////////////
 			// LOOP CONTENT BLOCKS

@@ -45,7 +45,7 @@ $extraClasses = implode(' ', $extraClasses);
 	<header class="pi-sticky-header">
 
 		<main>
-			<a href="/"><img id="logo" src="<?php echo get_template_directory_uri(); ?>/images/logo.png"></a>
+			<a id="logo" href="/"><img id="logo" src="<?php echo get_template_directory_uri(); ?>/images/logo.svg"></a>
 
 			<nav>
 				<main>

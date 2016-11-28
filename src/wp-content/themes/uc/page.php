@@ -20,11 +20,6 @@ $childPages = ($parentPageID) ? get_pages(array('child_of' => $parentPageID, 'pa
 $banner = (get_field('featured_image')) ? get_field('featured_image'): null;
 $image = ($banner) ? $banner['sizes']['large']: '/wp-content/themes/uc/images/hero.jpg';
 
-
-
-
-
-
 ?>
 
 	<section id="hero" style="background-image: url('<?php echo $image; ?>');">
@@ -33,20 +28,19 @@ $image = ($banner) ? $banner['sizes']['large']: '/wp-content/themes/uc/images/he
 		</main>
 	</section>
 
-<?php
-	/////////////////////////////////////////
+	<?php
 	// BREADCRUMB
-	/////////////////////////////////////////
 	echo '<section id="breadcrumb"><main>';
 	echo '<a href="/">Home</a>';
 	$parents = get_post_ancestors(get_the_ID());
 	if($parents) {
-	$parents = array_reverse($parents);
-	foreach ($parents as $p) echo '<a href="'.get_permalink($p).'">'.get_the_title($p).'</a>';
+		$parents = array_reverse($parents);
+		foreach ($parents as $p) echo '<a href="'.get_permalink($p).'">'.get_the_title($p).'</a>';
 	}
 	echo '<b>'.get_the_title(get_the_ID()).'</b>';
 	echo '</main></section>';
-?>
+	?>
+
 	<section class="mainContent">
 		<main>
 			<?php the_content(); ?>

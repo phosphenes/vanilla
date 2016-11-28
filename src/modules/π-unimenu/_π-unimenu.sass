@@ -3,15 +3,19 @@ $burgerThreshhold: 1200px
 nav.pi-unimenu
 	position: relative
 	opacity: 1
+	
+	main
+		margin: 0
+		padding: 0
 
 	ul
 		margin: 0
 		padding: 0
-		height: 0
 		overflow: hidden
 
 	li > ul
 		padding-left: 20px
+		height: 0
 
 	a
 		display: inline-block
@@ -24,7 +28,7 @@ nav.pi-unimenu
 		justify-content: space-between
 		margin: 0
 		padding: 0
-		height: auto
+		height: auto !important
 
 	& > ul > li + li
 		margin-left: 30px

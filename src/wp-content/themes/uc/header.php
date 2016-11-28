@@ -57,7 +57,7 @@ $extraClasses = implode(' ', $extraClasses);
 
 				<div class="actionButtons">
 					<a class="fa fa-calendar" href="/contact-us/">Request an appointment</a>
-					<a class="fa fa-phone" href="/">Call us: 360.754.5363</a>
+					<a class="fa fa-phone" href="/contact-us/">Call us: 360.754.5363</a>
 				</div>
 
 				<ul id="topNav">

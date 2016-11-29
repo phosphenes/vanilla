@@ -110,7 +110,7 @@ nav.pi-unimenu
 	right: 0
 	width: 60px
 	height: 100%
-	background: blue
+	background: transparent
 	border: none
 	color: #eeeeee
 	z-index: 99999999999
@@ -183,9 +183,6 @@ nav.pi-unimenu
 	body.open-nav
 		overflow: hidden
 
-		.pi-burger-button:after
-			content: 'X'
-
 		& nav.pi-unimenu
 			display: flex
 			position: fixed
@@ -204,12 +201,12 @@ nav.pi-unimenu
 			& > ul > li + li
 				margin-left: 0 !important
 
-@media screen and (max-width: 768px)
+@media screen and (max-width: 760px)
 
 	nav.pi-unimenu main > ul
 		column-count: 1
 
-@media screen and (max-width: 768px) and (orientation: landscape)
+@media screen and (max-width: 760px) and (orientation: landscape)
 
 	nav.pi-unimenu main > ul
 		column-count: 2

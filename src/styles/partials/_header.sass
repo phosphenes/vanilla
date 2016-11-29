@@ -72,7 +72,7 @@ header
 	display: block
 	height: 4px
 	width: 30px
-	background-color: #fff
+	background-color: $dark-blue
 	vertical-align: middle
 	position: absolute
 	left: 50%
@@ -86,7 +86,7 @@ header
 		position: absolute
 		height: 4px
 		width: 100%
-		background-color: #fff
+		background-color: $dark-blue
 		right: 0
 		top: -10px
 		transition: all 0.15s ease-out
@@ -95,100 +95,26 @@ header
 		top: auto
 		bottom: -10px
 
-body.openMenu
-	overflow: hidden
+body.open-nav
 
-	header
-		position: fixed
-		top: 0
-		left: 0
+	.hamburger
+		background-color: transparent !important
 
-	#logo
-		display: none
+		&:before, &:after
+			width: 100%
+			top: 0
+			right: 0
+			transform: rotate(45deg)
+			background-color: #fff !important
 
-	.menuButton
-		opacity: 1 !important
-		color: #fff !important
+		&:after
+			width: 100%
+			bottom: 0
+			right: 0
+			transform: rotate(-45deg)
+			background-color: #fff !important
 
-		.hamburger
-			background-color: transparent !important
 
-			&:before, &:after
-				width: 100%
-				top: 0
-				right: 0
-				transform: rotate(45deg)
-				background-color: #fff !important
-
-			&:after
-				width: 100%
-				bottom: 0
-				right: 0
-				transform: rotate(-45deg)
-				background-color: #fff !important
-
-// MENU
-//#menu
-//	width: 100%
-//	height: 100vh
-//	background: $dark-gray
-//	color: rgba(255,255,255,0.5)
-//	display: flex
-//	justify-content: center
-//	align-items: center
-//	position: fixed
-//	top: 0
-//	left: 0
-//	opacity: 0
-//	visibility: hidden
-//	transition: opacity 0.15s ease-out, visibility 0s 0.15s linear
-//	z-index: 0
-//	font-size: 13px
-//	line-height: 1.5em
-//
-//	main
-//		max-width: 700px
-//		padding: 40px 0
-//		display: flex
-//		justify-content: center
-//		align-items: center
-//
-//	.menu
-//		display: inline-block
-//
-//	ul, li, a
-//		list-style: none
-//		margin: 0
-//		padding: 0
-//		display: block
-//
-//	li
-//		margin-bottom: 5px
-//	a
-//		color: #fff
-//		font-size: 20px
-//		line-height: 1.5em
-//
-//	h1, h2, h3, h4
-//		color: #fff
-//
-//
-//
-//.openMenu
-//	#menu
-//		opacity: 1
-//		visibility: visible
-//		transition: opacity 0.15s ease-out, visibility 0s 0s linear
-//		display: block
-//		overflow: auto
-//		z-index: 2
-//
-//	#logo, #menuButton
-//		z-index: 3
-//
-//
-//
-//
 
 
 nav
@@ -213,7 +139,7 @@ nav
 		top: 0
 		left: 0
 		height: 60px
-		padding: 0 30px
+		padding: 0 20px
 
 	#logo
 		display: flex
@@ -238,7 +164,7 @@ nav
 @media (min-width: 1200px)
 
 	body
-		padding-top: 110px
+		padding-top: 110px !important
 
 	header.pi-sticky-header
 		height: 110px

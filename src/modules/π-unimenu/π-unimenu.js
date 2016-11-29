@@ -22,8 +22,9 @@
 		if (!el) return
 		
 		NAV = el
-		
-		BURGER_BUTTON = π.dom('button.pi-burger-button')
+
+
+		BURGER_BUTTON = π.dom('button.pi-burger-button', π.dom('div.hamburger'))
 		BURGER_BUTTON.onclick = toggleMenu
 		π1('header').add(BURGER_BUTTON)
 		

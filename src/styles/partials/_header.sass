@@ -3,7 +3,7 @@
 header
 	position: relative
 	width: 100%
-	height: 40px
+	height: 60px
 	text-align: center
 	z-index: 1000
 	background: $deep-blue
@@ -23,25 +23,20 @@ header
 		position: relative
 		list-style: none
 		display: inline-block
-		
-	//li ul
-	//	display: none
-		
-	li + li
-		margin-left: 12px
-		
-	.menu > li:first-child
-		display: none
-		
 
 #logo
 	display: flex
 	flex-direction: row
 	align-items: flex-end
 	height: 100%
+	width: 220px
+	min-width: 220px
+	background: url('/wp-content/themes/uc/images/logo-mobile.svg') bottom center no-repeat
+	background-size: contain
 
 	img
 		height: calc(100% - 10px)
+		display: none
 
 
 
@@ -210,7 +205,10 @@ nav
 
 @media (min-width: 768px)
 
-	header
+	body
+		padding-top: 60px
+
+	header.pi-sticky-header
 		position: fixed
 		top: 0
 		left: 0
@@ -237,4 +235,21 @@ nav
 
 //@media (min-width: 1024px)
 
-//@media (min-width: 1100px)
+@media (min-width: 1200px)
+
+	body
+		padding-top: 110px
+
+	header.pi-sticky-header
+		height: 110px
+
+		&.stuck
+			height: 110px
+		//
+		//&.hidden
+		//	top: 110px
+
+	#logo
+		background: url('/wp-content/themes/uc/images/logo.svg') bottom center no-repeat
+		width: 360px
+		min-width: 360px

@@ -25,7 +25,7 @@
 		
 		BURGER_BUTTON = π.dom('button.pi-burger-button')
 		BURGER_BUTTON.onclick = toggleMenu
-		πbody.add(BURGER_BUTTON)
+		π1('header').add(BURGER_BUTTON)
 		
 		setMenuStyles()
 	}

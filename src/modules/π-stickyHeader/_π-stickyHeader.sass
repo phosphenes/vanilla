@@ -1,4 +1,4 @@
-$sticky-header-height: 110px
+$sticky-header-height: 60px
 
 .pi-sticky-header 
 	position: fixed
@@ -13,7 +13,8 @@ $sticky-header-height: 110px
 	transition: 0.3s
 	
 	&.hidden
-		top: -$sticky-header-height
+		//top: -$sticky-header-height
+		transform: translateY(-100%)
 
 	&.stuck
 		top: 0
@@ -21,4 +22,4 @@ $sticky-header-height: 110px
 		
 		
 body
-	padding-top: $sticky-header-height !important
+	padding-top: $sticky-header-height

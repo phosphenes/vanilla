@@ -42,7 +42,7 @@ nav.pi-unimenu
 
 				a
 					display: block
-					padding: 5px 10px
+					padding: 8px
 					background-color: #fff
 					transition: all 0.15s ease-out
 					transform: translateY(-10px)
@@ -54,7 +54,7 @@ nav.pi-unimenu
 
 		a
 			display: inline-block
-			padding: 10px
+			padding: 10px 8px
 			width: 100%
 			position: relative
 			z-index: 2
@@ -62,10 +62,15 @@ nav.pi-unimenu
 			&:hover
 				text-decoration: none
 
-		&:hover > ul
-			opacity: 1
-			visibility: visible
-			transition: visibility 0s, opacity 0.15s ease-out
+		&:hover
+
+			& > ul
+				opacity: 1
+				visibility: visible
+				transition: visibility 0s, opacity 0.15s ease-out
+
+			a
+				color: $dark-blue
 
 			li a
 				transform: translateY(0)

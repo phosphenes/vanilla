@@ -1,6 +1,8 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900'
 
-$light-blue: #639ADB
+@import 'https://fonts.googleapis.com/css?family=Montserrat:400,700'
+
+$light-blue: #6199de
 $medium-blue: #3756A9
 $dark-blue: #1E2465
 $deep-blue: #035a9d
@@ -9,7 +11,7 @@ $dark-gray: #262f35
 $light-grey: #dddddd
 
 $baseFont: 'Roboto', Arial, Helvetica, sans-serif
-$heading: 'Roboto', Arial, Helvetica, sans-serif
+$heading: 'Montserrat', Arial, Helvetica, sans-serif
 $main-nav-font: 'Roboto', Arial, Helvetica, sans-serif
 
 $center-transform: translate(-50%, -50%)
@@ -36,7 +38,7 @@ body
 
 a
 	text-decoration: none
-	color: $deep-blue
+	color: $light-blue
 
 	&:hover
 		text-decoration: underline
@@ -49,6 +51,7 @@ h1, h2, h3, h4, h5
 	font-family: $heading
 	line-height: 1.3em
 	color: $dark-blue
+	letter-spacing: -0.03em
 
 h1
 	font-size: 2.5em

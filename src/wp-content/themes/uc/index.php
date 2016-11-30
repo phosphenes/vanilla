@@ -16,14 +16,14 @@ $image = ($banner) ? $banner['sizes']['large']: '/wp-content/themes/uc/images/sa
 				<div class="item">
 					<h1>Supporting quality in higher education</h1>
 					<ul id="userPaths">
-						<li><a href="process">Know the Process</a></li>
-						<li><a href="process">Get Tools and Resources</a></li>
-						<li><a href="process">Search Institutions</a></li>
+						<li><a href="/accreditation/accreditation-process/">Know the Process</a></li>
+						<li><a href="/evaluator-toolkit/">Get Tools and Resources</a></li>
+						<li><a href="/member-institutions/">Search Institutions</a></li>
 					</ul>
 					<p>
 						NWCCU is the independent, non-profit regional authority on educational quality and effectiveness of more than 160 higher education institutions in Alaska, Idaho, Montana, Nevada, Oregon, Utah and Washington. The commission is comprised of up to 26 Commissioners responsible for establishing and accreditation criteria and evaluation procedures.
 					</p>
-					<a href="#" id="learnMore">Learn more about NWCCU</a>
+					<a href="/about-nwccu/" id="learnMore">Learn more about NWCCU</a>
 				</div>
 			</div>
 		</main>
@@ -80,10 +80,10 @@ $image = ($banner) ? $banner['sizes']['large']: '/wp-content/themes/uc/images/sa
 						<ul>
 							<li><a>Quick Links</a></li>
 							<li><a href="#">Forms</a></li>
-							<li><a href="#">Accredition Process</a></li>
-							<li><a href="#">Directory of Institutions</a></li>
-							<li><a href="#">Standards & Policies</a></li>
-							<li><a href="#">Complaint Process</a></li>
+							<li><a href="/accreditation/accreditation-process/">Accreditation Process</a></li>
+							<li><a href="/member-institutions/directory/">Directory of Institutions</a></li>
+							<li><a href="/accreditation/standards-policies/">Standards & Policies</a></li>
+							<li><a href="#">Feedback Process</a></li>
 						</ul>
 					</div>
 				</div>

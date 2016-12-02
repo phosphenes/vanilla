@@ -1,5 +1,5 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900'
-
+@import 'https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i'
 @import 'https://fonts.googleapis.com/css?family=Montserrat:400,700'
 
 $light-blue: #6199de
@@ -54,19 +54,21 @@ h1, h2, h3, h4, h5
 	letter-spacing: -0.03em
 
 h1
-	font-size: 2.5em
+	font-size: 3em
 	margin-bottom: 20px
+	font-family: 'Playfair Display', Georgia, serif
 
 h2
 	font-size: 2em
 
 h3
 	font-size: 1.5em
+	text-transform: uppercase
 
 h4
 	font-size: 1.3em
 	margin-bottom: 0
-	color: $deep-blue
+	color: $light-blue
 
 h5
 	font-size: 1.2em
@@ -79,6 +81,7 @@ p
 
 strong, b
 	font-weight: bold
+	color: #000
 
 blockquote
 	padding: 0 0 0 20px
@@ -124,6 +127,16 @@ table
 	overflow: auto
 
 
+.fa
+	font-family: $heading
+	position: relative
+	padding-left: 40px !important
+
+.fa:before
+	font-family: 'FontAwesome'
+	position: absolute
+	left: 10px
+	line-height: 1.2em
 
 
 

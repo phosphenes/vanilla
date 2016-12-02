@@ -1,4 +1,4 @@
-
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 body#tinymce {
 	padding:20px !important;
@@ -55,6 +55,18 @@ b, strong {
 	font-weight: 400;
 }
 
+
+.fa {
+	font-family: 'Helvetica', 'Arial', sans-serif;
+	position: relative;
+	padding-left: 36px !important;
+}
+.fa:before {
+	font-family: 'FontAwesome';
+	position: absolute;
+	left: 12px;
+	line-height: 0.9em;
+}
 
 
 ul, ol {

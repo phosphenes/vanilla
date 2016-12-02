@@ -4,9 +4,11 @@
 
 		initStickyHeader();
 		initAnchorScrolling();
-		initMobileMenu();
+		// initMobileMenu();
 		initExhibits();
 		initCenterImages();
+
+		if(π1('#backToTop')) initBackToTopButton();
 	})
 
 
@@ -32,6 +34,18 @@
 		button.onclick = function() {
 			(πbody.hasClass('openMenu')) ? πbody.killClass('openMenu'): πbody.addClass('openMenu');
 		};
+	}
+
+	function initBackToTopButton() {
+		var backButton = π1('#backToTop');
+		setInterval(function() {
+			if(window.scrollY >= 200 && !backButton.hasClass('show')) {
+				backButton.addClass('show');
+			}
+			else if(window.scrollY < 200 && backButton.hasClass('show')) {
+				backButton.killClass('show');
+			}
+		}, 10);
 	}
 
 	////////////////////////////////////

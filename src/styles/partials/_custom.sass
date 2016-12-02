@@ -19,6 +19,10 @@
 	main
 		color: white
 		text-align: center
+		margin: auto
+		min-height: 50vh
+		position: relative
+		z-index: 2
 
 	a
 		color: #fff
@@ -29,8 +33,9 @@
 		background-color: transparent
 		
 	h1
-		margin: 0 auto 1em auto
+		margin: 0 auto 0.5em auto
 		color: #fff
+		font-size: 3em
 		
 	#userPaths
 		position: relative
@@ -84,12 +89,6 @@
 			&:before
 				background-color: $dark-blue
 				background-image: imageUrl("search_institutions.png")
-
-	p
-		position: relative
-		width: 70%
-		margin: 0 auto 60px
-		font-size: 1.23em
 		
 	#learnMore
 		position: relative
@@ -107,92 +106,133 @@
 			@include pointy(right, 8px, white)
 
 
-body.inside-page #hero h1
-	margin: 0 auto
+body.inside-page #hero
+	main
+		min-height: 30vh
+	h1
+		margin: 0 auto
+
+#homeContent .right
+	padding-top: 20px
+	border-top: 1px solid $dark-blue
+
+	p
+		font-size: 14px
+		line-height: 1.5em
+
+	hr
+		padding: 0 0 0 0
+		margin: 0 0 5px 0
 
 /////////////////////////////
 // NEWS AND QUICK LINKS
 /////////////////////////////
-#newsAndLinks
-	background-color: transparent
-	
-	main
-		padding: 0
+//#newsAndLinks
+//	background-color: transparent
+//
+//	main
+//		padding: 0
+//
+//#recentNews
+//	padding: 20px 0
+//
+//	h4
+//		color: $dark-blue
+//
+//	article
+//		display: block
+//
+//		a
+//			position: relative
+//			display: inline-block
+//			color: $medium-blue
+//			font-size: 1.25em
+//
+//			&:after
+//				content: ''
+//				top: 50%
+//				transform: translateY(-50%)
+//				left: calc(100% + 8px)
+//				@include pointy(right, 6px, $medium-blue)
+//
+//	article + article
+//		margin-top: 30px
 		
-#recentNews
-	padding: 20px 0
-	
-	h4
-		color: $dark-blue
-		
-	article
-		display: block
-		
-		a
-			position: relative
-			display: inline-block
-			color: $medium-blue
-			font-size: 1.25em
 
-			&:after
-				content: ''
-				top: 50%
-				transform: translateY(-50%)
-				left: calc(100% + 8px)
-				@include pointy(right, 6px, $medium-blue)
-			
-	article + article
-		margin-top: 30px
-		
-
-#quickLinks
-
-	a
-		color: #fff
-
-	ul
-		margin: 0
-		padding: 0
-		list-style: none
-		font-weight: 600
-		color: white
-		text-align: center
-
-	li:nth-child(1)
-		position: relative
-		background-color: $light-blue
-		text-transform: uppercase
-		font-size: 1.5em
-		padding-bottom: 14px
-		
-		&:after
-			content: ''
-			display: block
-			position: absolute
-			bottom: 10px
-			left: 50%
-			transform: translateX(-50%)
-			@include pointy(down, 8px, white)
-			width: 0
-			height: 0
-			border-style: solid
-			border-width: 8px 8px 0 8px
-			border-color: #ffffff transparent transparent transparent
+//#quickLinks
+//
+//	a
+//		color: #fff
+//
+//	ul
+//		margin: 0
+//		padding: 0
+//		list-style: none
+//		font-weight: 600
+//		color: white
+//		text-align: center
+//
+//	li:nth-child(1)
+//		position: relative
+//		background-color: $light-blue
+//		text-transform: uppercase
+//		font-size: 1.5em
+//		padding-bottom: 14px
+//
+//		&:after
+//			content: ''
+//			display: block
+//			position: absolute
+//			bottom: 10px
+//			left: 50%
+//			transform: translateX(-50%)
+//			@include pointy(down, 8px, white)
+//			width: 0
+//			height: 0
+//			border-style: solid
+//			border-width: 8px 8px 0 8px
+//			border-color: #ffffff transparent transparent transparent
+//
+//
+//		a:hover
+//			text-decoration: none
+//
+//
+//	@for $i from 2 through 6
+//		li:nth-child(#{$i})
+//			background-color: darken($light-blue, ($i * 5))
+//
+//	li + li
+//		border-top: 1px solid transparentize(lighten($light-blue, 3), 0.5)
+//
+//	a
+//		display: block
+//		padding: 10px
 
 
-		a:hover
-			text-decoration: none
+@media (min-width: 768px)
+
+	#hero h1
+		font-size: 4em
+
+	#homeContent
+		.left, .right
+			width: 100% !important
 
 
-	@for $i from 2 through 6
-		li:nth-child(#{$i})
-			background-color: darken($light-blue, ($i * 5))
-	
-	li + li
-		border-top: 1px solid transparentize(lighten($light-blue, 3), 0.5)
-		
-	a
-		display: block
-		padding: 10px
+@media (min-width: 1024px)
 
-				
+	#hero h1
+		font-size: 5em
+
+	#homeContent
+		.left
+			width: calc(66.66666% - 20px) !important
+		.right
+			width: calc(33.33333% - 20px) !important
+			padding-top: 0
+			border-top: none
+			padding-left: 30px
+			border-left: 1px solid $dark-blue
+
+

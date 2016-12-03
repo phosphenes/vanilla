@@ -98,216 +98,105 @@
 
 
 
-<?php if(!is_front_page()) { ?>
-
-	</div>
-	</div>
-	</div>
-
-	<?php echo get_option( OM_THEME_PREFIX . 'code_before_body' ) ?>
-
-	<!-- Modal -->
-	<div class="modal fade" id="video1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<div class="modal-body">
-					<!--<iframe width="100%" height="420" src="https://www.youtube.com/embed/l4tPrcePdGM" frameborder="0" allowfullscreen></iframe>-->
-					<iframe width="900" id="ytplayer1" height="506" src="https://www.youtube.com/embed/lsAL7rITEnQ?autoplay=0" frameborder="0" autostart="true" allowfullscreen></iframe>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-
-	<!-- Modal -->
-	<div class="modal fade" id="video2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<div class="modal-body">
-					<!--<iframe width="100%" height="420" src="https://www.youtube.com/embed/l4tPrcePdGM" frameborder="0" allowfullscreen></iframe>-->
-					<iframe width="900" id="ytplayer2" height="506" src="https://www.youtube.com/embed/ubT-G-wMbp4?autoplay=0" frameborder="0" autostart="true" allowfullscreen></iframe>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Services Modal -->
-	<div class="modal fade" id="video4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<div class="modal-body">
-
-					<iframe width="900" id="ytplayer4" height="506" src="https://www.youtube.com/embed/LJW1BU6Ouys?autoplay=0" frameborder="0" autostart="true" allowfullscreen></iframe>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- this is idf -->
-	<div class="modal fade" id="video3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<div class="modal-body">
-					<!--<iframe width="100%" height="420" src="https://www.youtube.com/embed/l4tPrcePdGM" frameborder="0" allowfullscreen></iframe>-->
-					<iframe width="900" id="ytplayer3" height="506" src="https://www.youtube.com/embed/BS8nKrIxGHQ?autoplay=0" frameborder="0" autostart="true" allowfullscreen></iframe>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- RFI Explainer Home - How to Join Network-->
-	<div class="modal fade" id="video5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<div class="modal-body">
-
-					<iframe width="900" id="ytplayer5" height="506" src="https://www.youtube.com/embed/HbSo2HmmyWA?autoplay=0" frameborder="0" autostart="true" allowfullscreen></iframe>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- RFI Explainer Home - Why Invent with IVIDF -->
-
-	<div class="modal fade" id="video6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<div class="modal-body">
-
-
-					<iframe width="900" id="ytplayer6" height="506" src="https://www.youtube.com/embed/ZkTB5XwIG-A?autoplay=0" frameborder="0" autostart="true" allowfullscreen></iframe>
-				</div>
-			</div>
-		</div>
-	</div>
 
 
 
 
-	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/bootstrap.min.js"></script>
-
-	<script type="text/javascript">
-		jQuery(document).ready(function(){
-			jQuery(".toggle").click(function(){
-				jQuery(".mobile-header-menu-container").toggle();
-			});
-
-
-			jQuery('#popv6').click(function()
-			{
-				var src_ = jQuery("iframe#ytplayer6").attr('src').replace("autoplay=0", "autoplay=1");
-				jQuery("iframe#ytplayer6").attr('src', src_);
-			});
-
-
-			jQuery('#popv5').click(function()
-			{
-				var src_ = jQuery("iframe#ytplayer5").attr('src').replace("autoplay=0", "autoplay=1");
-				jQuery("iframe#ytplayer5").attr('src', src_);
-			});
-
-			jQuery('#popv4').click(function()
-			{
-				var src_ = jQuery("iframe#ytplayer4").attr('src').replace("autoplay=0", "autoplay=1");
-				jQuery("iframe#ytplayer4").attr('src', src_);
-			});
-
-			jQuery('#popv3').click(function()
-			{
-				var src_ = jQuery("iframe#ytplayer3").attr('src').replace("autoplay=0", "autoplay=1");
-				jQuery("iframe#ytplayer3").attr('src', src_);
-			});
-
-			jQuery('#popv1').click(function()
-			{
-				var src_1 = jQuery("iframe#ytplayer1").attr('src').replace("autoplay=0", "autoplay=1");
-				jQuery("iframe#ytplayer1").attr('src', src_1);
-			});
-
-
-			jQuery('#popv2').click(function()
-			{
-				var src_2 = jQuery("iframe#ytplayer2").attr('src').replace("autoplay=0", "autoplay=1");
-				jQuery("iframe#ytplayer2").attr('src', src_2);
-			});
-
-
-
-			jQuery('.close').click(function() {
-				var vurl = jQuery('#video1').find('iframe').attr('src');
-				jQuery('#video1').find('iframe').attr('src', vurl);
-
-				var vurl = jQuery('#video2').find('iframe').attr('src');
-				jQuery('#video2').find('iframe').attr('src', vurl);
-
-				var vurl = jQuery('#video3').find('iframe').attr('src');
-				jQuery('#video3').find('iframe').attr('src', vurl);
-
-				var vurl = jQuery('#video5').find('iframe').attr('src');
-				jQuery('#video5').find('iframe').attr('src', vurl);
-
-				var vurl = jQuery('#video6').find('iframe').attr('src');
-				jQuery('#video6').find('iframe').attr('src', vurl);
-
-
-				var change_src_1 = jQuery("iframe#ytplayer1").attr('src').replace("autoplay=1", "autoplay=0");
-				jQuery("iframe#ytplayer1").attr('src', change_src_1);
-
-				var change_src_2 = jQuery("iframe#ytplayer2").attr('src').replace("autoplay=1", "autoplay=0");
-				jQuery("iframe#ytplayer2").attr('src', change_src_2);
-
-				var change_src_3 = jQuery("iframe#ytplayer3").attr('src').replace("autoplay=1", "autoplay=0");
-				jQuery("iframe#ytplayer3").attr('src', change_src_3);
-
-				var change_src_4 = jQuery("iframe#ytplayer4").attr('src').replace("autoplay=1", "autoplay=0");
-				jQuery("iframe#ytplayer4").attr('src', change_src_4);
-
-
-				var change_src_5 = jQuery("iframe#ytplayer5").attr('src').replace("autoplay=1", "autoplay=0");
-				jQuery("iframe#ytplayer5").attr('src', change_src_5);
-
-				var change_src_6 = jQuery("iframe#ytplayer6").attr('src').replace("autoplay=1", "autoplay=0");
-				jQuery("iframe#ytplayer6").attr('src', change_src_6);
-
-
+<!---->
+<!---->
+<!--	<!-- Modal -->-->
+<!--	<div class="modal fade" id="video1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">-->
+<!--		<div class="modal-dialog" role="document">-->
+<!--			<div class="modal-content">-->
+<!--				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+<!--				<div class="modal-body">-->
+<!--					<!--<iframe width="100%" height="420" src="https://www.youtube.com/embed/l4tPrcePdGM" frameborder="0" allowfullscreen></iframe>-->-->
+<!--					<iframe width="900" id="ytplayer1" height="506" src="https://www.youtube.com/embed/lsAL7rITEnQ?autoplay=0" frameborder="0" autostart="true" allowfullscreen></iframe>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
+<!---->
+<!---->
+<!---->
+<!--	<!-- Modal -->-->
+<!--	<div class="modal fade" id="video2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">-->
+<!--		<div class="modal-dialog" role="document">-->
+<!--			<div class="modal-content">-->
+<!--				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+<!--				<div class="modal-body">-->
+<!--					<!--<iframe width="100%" height="420" src="https://www.youtube.com/embed/l4tPrcePdGM" frameborder="0" allowfullscreen></iframe>-->-->
+<!--					<iframe width="900" id="ytplayer2" height="506" src="https://www.youtube.com/embed/ubT-G-wMbp4?autoplay=0" frameborder="0" autostart="true" allowfullscreen></iframe>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
+<!---->
+<!--	<!-- Services Modal -->-->
+<!--	<div class="modal fade" id="video4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">-->
+<!--		<div class="modal-dialog" role="document">-->
+<!--			<div class="modal-content">-->
+<!--				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+<!--				<div class="modal-body">-->
+<!---->
+<!--					<iframe width="900" id="ytplayer4" height="506" src="https://www.youtube.com/embed/LJW1BU6Ouys?autoplay=0" frameborder="0" autostart="true" allowfullscreen></iframe>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
+<!---->
+<!--	<!-- this is idf -->-->
+<!--	<div class="modal fade" id="video3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">-->
+<!--		<div class="modal-dialog" role="document">-->
+<!--			<div class="modal-content">-->
+<!--				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+<!--				<div class="modal-body">-->
+<!--					<!--<iframe width="100%" height="420" src="https://www.youtube.com/embed/l4tPrcePdGM" frameborder="0" allowfullscreen></iframe>-->-->
+<!--					<iframe width="900" id="ytplayer3" height="506" src="https://www.youtube.com/embed/BS8nKrIxGHQ?autoplay=0" frameborder="0" autostart="true" allowfullscreen></iframe>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
+<!---->
+<!--	<!-- RFI Explainer Home - How to Join Network-->-->
+<!--	<div class="modal fade" id="video5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">-->
+<!--		<div class="modal-dialog" role="document">-->
+<!--			<div class="modal-content">-->
+<!--				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+<!--				<div class="modal-body">-->
+<!---->
+<!--					<iframe width="900" id="ytplayer5" height="506" src="https://www.youtube.com/embed/HbSo2HmmyWA?autoplay=0" frameborder="0" autostart="true" allowfullscreen></iframe>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
+<!---->
+<!--	<!-- RFI Explainer Home - Why Invent with IVIDF -->-->
+<!---->
+<!--	<div class="modal fade" id="video6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">-->
+<!--		<div class="modal-dialog" role="document">-->
+<!--			<div class="modal-content">-->
+<!--				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+<!--				<div class="modal-body">-->
+<!---->
+<!---->
+<!--					<iframe width="900" id="ytplayer6" height="506" src="https://www.youtube.com/embed/ZkTB5XwIG-A?autoplay=0" frameborder="0" autostart="true" allowfullscreen></iframe>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
+<!---->
 
 
 
-			});
 
-		});
-	</script>
-
-	<script>
-		jQuery(document).ready(function() {
-
-			if(window.location.hash != ''){
-				var offsetSize = jQuery(".header").innerHeight();
-				var offsetSize_ = jQuery(window.location.hash).offset().top-offsetSize;
-				jQuery("html, body").animate({scrollTop:offsetSize_}, 500);
-			}
-
-		});
-	</script>
-
-
-<?php } ?>
 
 
 <?php wp_footer(); ?>
 
-<script>var $ = jQuery;</script>
-<script src="/wp-content/themes/uc/script.js"></script>
 
 
-<link rel="shortcut icon" href="/favicon.ico" />
+
 
 
 </body>

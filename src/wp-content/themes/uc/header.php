@@ -8,29 +8,84 @@ if(!$isBlog) {
 }
 
 $navExclusions = (get_field('nav_exclusions','options')) ? implode(',',get_field('nav_exclusions','options')): '';
-?>
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-<title><?php (is_home()) ? bloginfo('description') : wp_title(' :: ', true, 'right'); bloginfo('name'); ?></title>
-<meta charset="<?php bloginfo('charset'); ?>" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<?php wp_head(); ?>
+	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="google-site-verification" content="QiRO_4QS9RtZHo4ACKt9k-CRODDGZSzBO0LXItsNfyk" />
 
-<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+	<script
+			src="http://code.jquery.com/jquery-2.2.4.min.js"
+			integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+			crossorigin="anonymous"></script>
+	<?php wp_head(); ?>
 
-<!-- JQUERY -->
-<script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
-<script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<!--////////////////////////////
+	// UC STYLES 'N SHEET
+	/////////////////////////////-->
+	<script src="https://use.fontawesome.com/3b399369f9.js"></script>
+	<link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/1b31b2f6-825c-4585-a690-b6dfaa9c845e.css"/>
+	<link rel="stylesheet" href="/wp-content/themes/uc/overwrite.css">
+	<link rel="stylesheet" href="/wp-content/themes/uc/styles.css">
 
-<!-- SITE STYLES/SCRIPTS -->
-<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/styles.css" />
-<script src="<?php echo get_template_directory_uri(); ?>/script.js"></script>
+
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-85092950-1', 'auto');
+		ga('send', 'pageview');
+
+	</script>
+
+
+	<!-- Google Code for Xinova Contact Form Conversion Page
+	In your html page, add the snippet and call
+	goog_report_conversion when someone clicks on the
+	chosen link or button. -->
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		goog_snippet_vars = function() {
+			var w = window;
+			w.google_conversion_id = 934803336;
+			w.google_conversion_label = "7dFXCIz7tWoQiO_fvQM";
+			w.google_remarketing_only = false;
+		}
+		// DO NOT CHANGE THE CODE BELOW.
+		goog_report_conversion = function(url) {
+			goog_snippet_vars();
+			window.google_conversion_format = "3";
+			var opt = new Object();
+			opt.onload_callback = function() {
+				if (typeof(url) != 'undefined') {
+					window.location = url;
+				}
+			}
+			var conv_handler = window['google_trackConversion'];
+			if (typeof(conv_handler) == 'function') {
+				conv_handler(opt);
+			}
+		}
+		/* ]]> */
+	</script>
+	<script type="text/javascript"
+	        src="//www.googleadservices.com/pagead/conversion_async.js">
+	</script>
+
+
+	<!-- <?php echo get_the_ID(); ?> -->
+
+	<link rel="shortcut icon" href="/favicon.ico" />
 
 </head>
-
 <?php
 $extraClasses = array();
 if(!$isHome) array_push($extraClasses, 'inside-page');
@@ -40,23 +95,67 @@ $extraClasses = implode(' ', $extraClasses);
 ?>
 
 <body <?php body_class($extraClasses); ?> id="top">
+<menu id="menu">
 
-	<header>
-
-		<main>
-
-			<nav id="menu"><main>
-				<ul class="menu">
-					<?php wp_list_pages('sort_column=menu_order&title_li=&depth=2&exclude='.$navExclusions); ?>
+	<main>
+		<div class="row">
+			<div class="column sitemap animate fromLeft">
+				<h4 style="margin-bottom: 5px">Sitemap</h4>
+				<?php wp_nav_menu(array('menu' => 'New Menu')); ?>
+			</div>
+			<div class="column rfi">
+				<h4 class="animate fromRight" style="margin-bottom: 5px">Recent RFIs</h4>
+				<p class="animate fromRight" style="font-size: 18px">Seeking inventors to help innovate for:</p>
+				<ul class="animate fromRight">
+					<li><a href="/inventors/invention-opportunity-non-thermal-pasteurization/">Non-Thermal Pasteurization</a>
+						New cold-pressed technologies are needed to increase throughput and shelf life while decreasing costs.
+					</li>
+					<li><a href="/inventors/market-predictability/">Detecting Emotion to Predict Success</a>
+						Develop a technology that recognizes the true emotions of consumer product test groups.
+					</li>
+					<li><a href="/inventors/animal-tracking/">Animal ID, Tracking, and Monitoring</a>
+						Seeking a robust, tamper-proof animal identification, tracking and monitoring system to improve the livestock value chain.
+					</li>
+					<li><a href="/inventors/" class="button" style="display: inline-block; padding: 5px 10px;">View all opportunities</a>
+					</li>
 				</ul>
-			</main></nav>
+			</div>
+		</div>
+		<div class="theLogo animate fromBottom" style="text-align: center" class="animate fromBottom"><img src="/wp-content/themes/uc/images/footerLogo.png"></div>
+	</main>
+</menu>
 
-			<a id="logo" href="/">
-				LOGO
-			</a>
+<header>
 
-			<a href="javascript:;" id="menuButton" class="menuButton" title="Open/Close Menu">
-				<div class="hamburger"><span></span></div>
-			</a>
-		</main>
-	</header>
+	<div class="colorBox"><main>
+			<div class="logo"></div>
+			<div class="hamburger"><div></div></div>
+		</main></div>
+
+	<div class="colorBox light wiper"><main>
+			<div class="logo"></div>
+			<div class="hamburger"><div></div></div>
+		</main></div>
+
+	<main>
+		<a id="logo" href="/"></a>
+		<a id="menuButton"></a>
+	</main>
+
+</header>
+
+<div class="pi-drawer dark" id="myFirstPiDrawer">
+	<iframe id="videoFrame" src="https://player.vimeo.com/video/184605013" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	<!-- <iframe src="https://player.vimeo.com/video/148982525" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
+</div>
+
+
+
+
+
+
+
+<div class="bg-overlay">
+	<div class="container-wrapper">
+		<div class="hc-wrapper">
+

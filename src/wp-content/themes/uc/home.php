@@ -10,7 +10,6 @@ $thisPage = get_query_var('paged');
 ?>
 
 <section id="mainContent" class="postList"><main>
-	
 	<?php get_sidebar(); ?>
 	
 	<main>

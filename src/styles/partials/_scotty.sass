@@ -1,0 +1,1236 @@
+
+
+.imageBG
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+	width: 100%
+	height: 100%
+	position: absolute
+	top: 0
+	left: 0
+
+button, .button
+	display: inline-block
+	padding: 8px 20px 6px 20px
+	border-radius: 0
+	background: $pink
+	color: #fff
+	border: 0 solid
+	outline: none
+	cursor: pointer
+	transition: all 0.15s ease-out
+	font-weight: 300
+	font-size: 20px
+	line-height: 28px
+
+	&:hover
+		background: $purple
+		text-decoration: none
+
+		
+		
+		
+		
+		
+		
+section
+	padding: 30px 20px
+	position: relative
+	overflow: hidden
+	width: 100%
+
+	&.whiteText
+		h1, h2, h3, h4, a
+			color: #fff
+		p
+			color: #c2e3fd
+
+	&.dark
+		background-color: $dark-grey
+		color: rgba(255, 255, 255, 0.5)
+
+		h1, h2, h3, h4
+			color: #fff
+
+	&.light
+		background-color: #e6e9ec
+
+		&.whiteText
+			h2, h4
+				color: #4dafff
+			p
+				color: #979ea3
+
+	.blue
+		background-color: #4dafff
+
+	.lightGray
+		background-color: #e6e9ec
+
+	ma
+		display: flex
+		width: 100%
+		height: 100%
+		max-width: 1400px
+
+		&.vertical
+			align-items: flex-start
+			justify-content: center
+			flex-direction: column
+		&.center
+			align-items: center
+
+
+	.actionButtons
+		text-align: center
+
+		button
+			margin: 10px
+
+
+main
+	max-width: 1400px
+	margin: 0 auto
+	text-align: left
+	position: relative
+
+	a:hover
+		text-decoration: underline 
+
+
+
+
+
+
+
+#menu 
+	width: 100%
+	height: 100vh
+	background: $dark-grey
+	color: rgba(255, 255, 255, 0.5)
+	display: -webkit-flex
+	display: -ms-flexbox
+	display: flex
+	justify-content: center
+	align-items: center
+	position: fixed
+	opacity: 0
+	visibility: hidden
+	transition: opacity 0.15s ease-out, visibility 0s 0.15s linear
+	z-index: 3
+	font-size: 13px
+	line-height: 1.5em
+	
+	ul, li, a 
+		list-style: none
+		margin: 0
+		padding: 0
+		display: block 
+	li 
+		margin-bottom: 5px 
+	a 
+		color: #fff
+		font-size: 20px
+		line-height: 1.5em 
+		
+	h1, h2, h3, h4 
+		color: $pink
+			
+	main 
+		max-width: 700px 
+	
+	.sitemap 
+		text-align: right
+		margin: 0
+		padding: 0
+		width: calc(40% - 40px)
+			
+	.rfi 
+		padding-left: 40px
+		border-left: 2px solid #fff
+		width: calc(60% - 40px) 
+		
+		li 
+			margin-bottom: 20px 
+
+.openMenu #menu 
+	opacity: 1
+	visibility: visible
+	transition: opacity 0.15s ease-out, visibility 0s 0s linear 
+
+
+
+
+
+
+
+
+
+
+header 
+	width: 100%
+	height: 40px
+	position: relative
+	background: $dark-grey
+	transition: all 0.15s ease-out
+	overflow: hidden 
+	
+	main 
+		height: 100%
+			
+	.colorBox 
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		overflow: hidden
+		
+		&.dark 
+			display: none 
+
+#logo, .logo 
+	display: block
+	width: 84px
+	height: 30px
+	position: absolute
+	top: 50%
+	left: 10px
+	transform: translateY(-50%) 
+
+.logo 
+	background: transparent url(./images/logo-dark.png) left center no-repeat
+	background-size: contain
+	top: 11px
+	transform: none 
+
+.colorBox.light .logo 
+	background-image: url(./images/logo-light.png) 
+
+#bannerLogo 
+	display: none
+	width: 40vw
+	margin-bottom: 30px 
+
+#menuButton 
+	position: absolute
+	right: 0
+	top: 0
+	width: 60px
+	height: 100%
+	cursor: pointer
+	z-index: 3 
+
+.hamburger
+	@include pureCenter()
+	width: 28px
+	height: 20px
+	
+	&:before, &:after 
+		content: ''
+		height: 2px
+		width: calc(100% - 6px)
+		background: $dark-grey
+		position: absolute
+		top: 0
+		left: 0
+		transition: all 0.15s ease-out 
+
+	&:after 
+		top: auto
+		bottom: 0 
+
+	.hamburger div 
+		position: absolute
+		left: 0
+		top: 6px
+		width: 100%
+		height: 8px
+		border: solid $dark-grey
+		border-width: 2px 0
+		transition: all 0.15s ease-out 
+
+.colorBox.light .hamburger:before, .colorBox.light .hamburger:after 
+	background: #fff 
+
+.colorBox.light .hamburger div 
+	border-color: #fff 
+
+body.openMenu .hamburger:before, body.openMenu .hamburger:after 
+	background: #fff
+	left: 6px 
+
+body.openMenu .hamburger div 
+	border-color: #fff 
+
+body.openMenu header .colorBox.light, body.openMenu header .colorBox.light > * 
+	transform: translateY(0) !important 
+
+.halfHex 
+	position: absolute
+	right: 50%
+	top: 50%
+	transform: translateY(-50%)
+	max-width: 250px 
+
+	polygon 
+		fill: $dark-grey 
+
+section.dark .halfHex polygon 
+	fill: #fff
+
+	&.overlay 
+		fill: $video-grey
+		opacity: 0 
+
+footer 
+	padding: 40px 
+	
+	main 
+		text-align: center
+		font-size: 12px
+		font-weight: 300
+		
+		a 
+			color: #ffffff
+			text-decoration: none
+			font-weight: 300
+			
+		a:hover 
+			text-decoration: underline 
+
+		ul, li 
+			list-style: none
+			margin: 0
+			padding: 0 10px
+			display: inline-block
+			line-height: 1.5em 
+		li 
+			border-left: 1px solid #ffffff 
+
+		li:first-child 
+			border-left: none 
+			
+
+
+
+
+
+@media screen and (min-width: 768px) 
+	h1 
+		font-size: 50px 
+	h2 
+		font-size: 36px 
+	h3 
+		font-size: 30px 
+	h4 
+		font-size: 24px 
+
+	.fullHeight 
+		height: 100vh 
+
+	.dark 
+		background-color: $dark-grey
+		color: rgba(255, 255, 255, 0.5) 
+
+	main.vertical 
+		align-items: flex-start
+		justify-content: center
+		flex-direction: column 
+
+	main.center 
+		align-items: center 
+
+	main.spaceBetween 
+		flex-direction: row !important
+		justify-content: space-between !important 
+
+	header 
+		width: 100%
+		height: 60px
+		position: fixed
+		top: 0
+		left: 0
+		z-index: 3
+		background-color: transparent
+		
+		&.sticky 
+			background: $dark-grey
+			
+			.actionButtons 
+				display: block
+				
+	#logo, .logo 
+		width: 151px
+		height: 38px
+		left: 20px 
+
+	#bannerLogo 
+		display: block 
+
+	#menuButton 
+		width: 80px 
+
+	.hamburger 
+		top: 20px
+		right: 20px
+		left: auto
+		transform: none 
+
+	.arrowButton 
+		display: block
+		width: 60px
+		height: 60px
+		border-radius: 50%
+		cursor: pointer
+		position: relative
+		transition: all 0.15s ease-out
+		
+		&:hover 
+			background-color: rgba(0, 0, 0, 0.3)
+				
+		span 
+			width: 20px
+			height: 20px
+			position: absolute
+			border: solid #fff
+			top: calc(50% - 5px)
+			left: 50%
+			transition: all 0.15s ease-out 
+
+		&.down span 
+			border-width: 0 2px 2px 0
+			transform: translate(-50%, -50%) rotate(45deg)
+			transition: top 0.05s ease-out 
+
+	@keyframes bounce 
+		0% 
+			top: calc(50% - 5px) 
+		5% 
+			top: calc(50% - 20px) 
+		20% 
+			top: calc(50% - 5px) 
+		100% 
+			top: calc(50% - 5px)
+				
+	.bounce span 
+		animation: bounce 3s 0s infinite 
+
+	#thinkBeyond 
+		background: $video-grey
+		
+		.imageBG 
+			opacity: 0
+			transition: all 0.5s ease-out
+			
+			&.on 
+				opacity: 1
+				
+		.colorSplash 
+			position: absolute
+			top: 50%
+			left: calc(50% - 220px)
+			transform: translate(0, -50%)
+			display: none
+			height: 600px 
+
+		.introOutro 
+			width: 100%
+			position: absolute
+			bottom: 5%
+			left: 50%
+			transform: translate(-50%, 20px)
+			text-align: center
+			opacity: 0
+			transition: all 0.5s 2s ease-out 
+
+			&.on 
+				opacity: 1
+				transform: translate(-50%, 0) 
+
+	#beyondText 
+		opacity: 0
+		transition: all 0.3s 1s ease-out
+		
+		&.on 
+			opacity: 1
+				
+		#bWords 
+			display: block
+			position: absolute
+			top: 0
+			left: 0
+			transition: all 0.4s 0.4s cubic-bezier(0, 0, 0.26, 1)
+			
+			&.last 
+				transition-duration: 0.6s
+				transition-delay: 0.6s
+				
+				& > span 
+					transition-duration: 0.6s
+					transition-delay: 0.6s
+					
+			& > span 
+				display: block
+				transition: all 0.2s 0.4s ease-out
+				opacity: 0
+				
+				&.on 
+					opacity: 1  
+
+
+
+
+
+@media screen and (min-width: 900px) 
+	#intro main 
+		flex-direction: row !important
+		justify-content: space-between !important 
+
+		#introText 
+			width: 46%
+			text-align: left !important
+			margin-bottom: 0 
+
+	#intro #devices 
+		order: 0
+		width: 50% 
+
+	#intro h2 
+		margin-bottom: 5px
+		font-size: 3vw
+			
+	#intro p 
+		font-size: 2vw
+		line-height: 2.8vw
+		margin-bottom: 0
+			
+	.row 
+		display: flex
+		justify-content: space-between
+		flex-direction: row 
+
+		.column 
+			width: calc(50% - 40px)
+			margin: 0 40px 40px 0  
+			
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1024px) 
+	h1 
+		font-size: 60px 
+
+	h2 
+		font-size: 50px 
+
+	h3 
+		font-size: 40px 
+
+	h4 
+		font-size: 30px 
+
+	section 
+		padding: 30px 
+
+	#videoBanner main br 
+		display: block  
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1100px) 
+	.columnContent 
+		column-count: 2
+		column-gap: 40px 
+
+	#intro section main 
+		position: absolute
+		top: 100vh
+		left: 50%
+		transform: translate(-50%, -100%)
+		height: 100%
+		max-width: 1200px
+		padding: 70px 20px 
+
+	#intro section#thinkBeyond h1 
+		color: #ffffff
+		font-size: 90px 
+
+		#intro section#thinkBeyond h1:last-child 
+			transition-delay: 0.5s 
+
+	#intro section#theWrapUp main 
+		flex-direction: column !important
+		justify-content: flex-start !important
+		align-items: flex-start
+		padding: 140px 20px 
+
+		#intro section#theWrapUp main .connect 
+			position: absolute
+			left: calc(50% - 140px)
+			top: 160px 
+
+		#intro section#theWrapUp main h1 
+			font-size: 90px
+			color: #fff
+			margin-bottom: 0 
+
+		#intro section#theWrapUp main h4 
+			font-size: 30px
+			font-weight: 200
+			text-transform: none
+			color: #212a34 
+
+	section.dark 
+		color: #ffffff 
+
+	#process 
+		position: relative
+		background: #212a34 url(./images/hex-map.png) center center no-repeat
+		background-attachment: fixed
+		background-size: cover 
+
+		section 
+			min-height: 100vh
+			background-color: transparent
+			
+	#processSteps
+		padding: 70px 40px 40px 40px
+		min-height: 100vh !important
+
+		#processSteps[data-current-step="0"] main .line:nth-child(2) 
+			flex-grow: 0 
+
+		#processSteps.inRange main 
+			opacity: 1
+			visibility: visible
+			transition: opacity 0.2s ease-out, visibility 0.2s 0s 
+			
+		nav 
+			display: flex
+			justify-content: center
+			flex-direction: row 
+			a 
+				display: block
+				font-size: 20px
+				padding: 20px
+				transition: all 0.15s ease-out
+				color: rgba(255, 255, 255, 0.5)
+				position: relative 
+			
+			a:after 
+				content: ''
+				display: block
+				width: 10px
+				height: 10px
+				border: solid #ffffff
+				border-width: 1px 1px 0 0
+				position: absolute
+				right: -5px
+				top: 50%
+				opacity: 0.5
+					transform: translateY(-50%) rotate(45deg) 
+
+			a:last-child:after 
+				display: none 
+
+			a:hover 
+				text-decoration: none
+				color: white 
+
+			a.on 
+				color: $pink
+				font-weight: 600 
+
+		main 
+			justify-content: space-between
+			align-content: center
+			align-items: center
+			flex-flow: column
+			opacity: 0
+			visibility: hidden
+			transition: opacity 0.2s ease-out, visibility 0.2s 0.2s 
+
+			.headers 
+				height: 80px
+				width: 100%
+				text-align: center
+				position: relative 
+
+				h2 
+					margin: 0
+					line-height: 80px
+					color: #ffffff
+					font-size: 50px
+					font-weight: 600
+					position: absolute
+					bottom: 0
+					left: 0
+					text-align: center
+					width: 100%
+					margin-bottom: 30px
+					opacity: 0
+					transition: all 0.3s ease-out 
+				
+					h2.on 
+						opacity: 1
+						margin-bottom: 0 
+			.line 
+				width: 2px
+				background: white
+				flex-grow: 1 
+
+			.actions 
+				width: 40%
+				height: 0
+				display: flex
+				justify-content: center
+				align-items: center
+				transition: all 0.2s ease-out, height 0.2s 0.2s ease-out
+				position: relative 
+
+				&.open 
+					transition: all 0.2s ease-out, height 0.2s 0s ease-out 
+				.action 
+					text-align: center
+					font-size: 30px
+					line-height: 1.4em
+					padding: 30px
+					position: absolute
+					top: 50%
+					left: 0
+					transform: translateY(-50%)
+					width: 100%
+					opacity: 0
+					visibility: hidden
+					transition: all 0.2s ease-out, visibility 0s 0.15s 
+
+					.action.flipLines:before 
+						top: auto
+						bottom: -2px 
+
+					.action.flipLines:after 
+						bottom: auto
+						top: -1px 
+
+					.action.flipLines > div.client 
+						top: 100% 
+
+					.action.flipLines > div.inventor 
+						top: 0 
+
+					.action.noLines:before, .action.noLines:after 
+						display: none 
+
+					.action:before, .action:after 
+						content: ''
+						display: block
+						height: 2px
+						background: #fff
+						width: 0
+						position: absolute
+						transition: width 0.3s ease-out 
+
+					.action:before 
+						right: calc(50% - 1px)
+						top: -1px 
+
+					.action:after 
+						left: calc(50% - 1px)
+						bottom: -2px 
+
+					& > div 
+						position: absolute
+						font-size: 14px
+						line-height: 1.5em
+						transform: translateY(-50%)
+						color: #b0b6bd
+						opacity: 0
+						transition: opacity 0.3s ease-out 
+
+						&:before 
+							content: ''
+							display: block
+							width: 8px
+							height: 0
+							background: #6d73e7
+							position: absolute
+							top: 50%
+							right: 0
+							transform: translateY(-50%)
+							transition: height 0.3s ease-out 
+
+						&.inventor:before 
+							background: #c659b4 
+
+						& > div 
+							width: 300px
+							max-width: 25vw
+							transform: translateX(-20px)
+							transition: transform 0.3s ease-out
+
+						&.client 
+							text-align: right
+							top: 0
+							right: calc(100% + 2px)
+							padding-right: 24px 
+
+						&.inventor 
+							text-align: left
+							top: 100%
+							left: calc(100% + 2px)
+							padding-left: 24px 
+
+							&.inventor > div 
+								transform: translateX(20px) 
+
+							&.inventor:before 
+								right: auto
+								left: 0
+								
+						& h3 
+							color: #fff
+							font-size: 20px
+							font-weight: 700
+							margin-bottom: 3px
+							
+					.action.on 
+						z-index: 5
+						opacity: 1
+						visibility: visible
+						transition: all 0.2s 0.2s ease-out, visibility 0s 0s 
+
+						&:before, &:after 
+							width: 50%
+							transition-delay: 0.7s 
+
+						& > div 
+							opacity: 1
+							transition-delay: 0.7s 
+
+						& > div:before 
+							height: 100%
+							transition-delay: 0.7s 
+
+						& > div > div 
+							transform: translateX(0)
+							transition-delay: 0.7s 
+
+					.action:last-child:before 
+						display: none 
+
+			.progress 
+				height: 60px
+				width: 104px 
+
+		.arrowButton 
+			bottom: 30px
+			right: 30px
+			position: absolute 
+
+	.arrowButton 
+		display: block
+		width: 60px
+		height: 60px
+		border-radius: 50%
+		cursor: pointer
+		position: relative
+		transition: all 0.15s ease-out 
+
+	.arrowButton:hover 
+		background-color: rgba(0, 0, 0, 0.3) 
+
+	.arrowButton span 
+		width: 20px
+		height: 20px
+		position: absolute
+		border: solid #fff
+		border-width: solid #fff
+		top: calc(50% - 5px)
+		left: 50%
+		transition: all 0.15s ease-out 
+
+	.arrowButton.down span 
+		border-width: 0 2px 2px 0
+		transform: translate(-50%, -50%) rotate(45deg)
+		transition: top 0.05s ease-out 
+
+	@keyframes bounce 
+		0% 
+			top: calc(50% - 5px) 
+		5% 
+			top: calc(50% - 15px) 
+		25% 
+			top: calc(50% - 5px) 
+		100% 
+			top: calc(50% - 5px)  
+
+	.bounce span 
+		animation: bounce 2s 0s infinite 
+
+	.fixToTop, .fixToBottom 
+		position: absolute
+		top: 0
+		left: 50%
+		transform: translateX(-50%) 
+
+	.fixToBottom 
+		top: auto
+		bottom: 0 
+
+	.fixToCenter 
+		position: fixed
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%) 
+
+	.animate 
+		opacity: 0
+		transition: opacity 0.7s cubic-bezier(0, 0, 0.2, 1), -webkit-transform 0.7s cubic-bezier(0, 0, 0.2, 1)
+		transition: opacity 0.7s cubic-bezier(0, 0, 0.2, 1), transform 0.7s cubic-bezier(0, 0, 0.2, 1)
+		transition: opacity 0.7s cubic-bezier(0, 0, 0.2, 1), transform 0.7s cubic-bezier(0, 0, 0.2, 1), -webkit-transform 0.7s cubic-bezier(0, 0, 0.2, 1) 
+
+	.fromLeft 
+		transform: translate(-50px, 0) 
+
+	.fromRight 
+		transform: translate(50px, 0) 
+
+	.fromBottom 
+		transform: translate(0, 50px) 
+
+	.fromTop 
+		transform: translate(0, -50px) 
+
+	.inRange .animate 
+		opacity: 1 
+
+	.inRange .fromLeft, .inRange .fromRight, .inRange .fromBottom, .inRange .fromTop 
+		transform: translate(0, 0) 
+
+	p.big 
+		font-size: 24px
+		line-height: 1.5em 
+
+	#videoBanner 
+		min-height: 650px 
+
+	#rfiTicker main 
+		display: flex
+		align-items: center
+		justify-content: space-around
+		flex-direction: row 
+
+		h4 
+			margin-right: 20px
+			margin-bottom: 0 
+
+		#ticker 
+			height: 40px
+			overflow: hidden
+			line-height: 40px 
+
+			p 
+				margin: 0 40px
+				line-height: 40px 
+		button 
+			height: 40px
+			
+	#aboutUsSection, #whatWeDoSection 
+		min-height: 100vh
+		display: flex
+		align-items: center 
+
+		h1 
+			color: $pink
+				
+		.buttonBox 
+			margin-top: 20px
+			padding: 10px 0 0 0
+			border-top: 1px solid #394652
+			width: 100%
+			text-align: left
+			
+			a 
+				margin: 0 12px
+				position: relative
+				font-size: 20px
+				
+				&:before 
+					content: ''
+					display: block
+					width: 4px
+					height: 4px
+					background: #212a34
+					position: absolute
+					left: -14px
+					top: 50%
+					transform: translateY(-50%) 
+
+				&:first-child 
+					margin-left: 0 
+		
+					&:before 
+						display: none
+						
+				&:last-child 
+					margin-right: 0 
+
+	#aboutUsSection h1, #aboutUsSection a 
+		color: #61c531 
+
+	#whatWeDoSection .row .column 
+		width: calc(50% - 20px)
+		margin: 0 20px 40px 0
+		
+		&:first-child 
+			text-align: right
+			
+	#contactSection 
+		min-height: 100vh
+		display: flex
+		align-items: center
+		background: url("./images/contact-bg.jpg") center center no-repeat
+		background-size: cover
+		background-attachment: fixed 
+		
+		main 
+			max-width: 800px 
+		h1 
+			margin-bottom: 40px
+			
+	#footerContact 
+		overflow: hidden 
+		label 
+			display: block
+			width: calc(50% - 20px)
+			float: left
+			height: 88px
+			padding-top: 30px
+			position: relative
+			margin-bottom: 20px
+			transition: all 0.15s ease-out
+
+			&:after 
+				content: ''
+				display: block
+				width: 0
+				height: 2px
+				background: #fff
+				position: absolute
+				left: 0
+				bottom: 0
+				transition: all 0.3s ease-out 
+				
+			&.focus:after 
+				width: 100%
+					
+			&.focus.textarea 
+				height: 140px
+					
+			&.filled.textarea 
+				height: 140px
+					
+			&.filled span 
+				top: -5px !important
+				font-size: 20px !important
+				opacity: 0.5 !important 
+
+			&:nth-child(even) 
+				float: right 
+
+			&.textarea 
+				float: none
+				clear: both
+				width: 100% 
+
+			input[type=text], input[type=email], textarea 
+				border-width: 0 0 2px 0
+				border-color: rgba(255, 255, 255, 0.3)
+				display: block
+				width: 100%
+				outline-width: 0
+				padding: 10px 0
+				font-size: 30px
+				font-weight: 100
+				color: #fff
+				transition: all 0.15s ease-out
+				z-index: 1
+				position: relative
+				line-height: 1.2em 
+
+			input[type=text]:hover + span, input[type=email]:hover + span, textarea:hover + span 
+				opacity: 0.8 
+
+			input[type=text]:focus, input[type=email]:focus, textarea:focus 
+				color: #fff 
+
+			input[type=text]:focus + span, input[type=email]:focus + span, textarea:focus + span 
+				top: -5px
+				font-size: 20px
+				opacity: 0.5 
+
+			textarea 
+				height: 100%
+				resize: none 
+
+			span 
+				display: block
+				padding: 10px 0
+				font-size: 30px
+				font-weight: 100
+				line-height: 1.5em
+				position: absolute
+				top: 30px
+				left: 0
+				transition: all 0.15s ease-out
+				opacity: 0.5 
+
+		button 
+			margin-top: 40px 
+
+	#locationsSection 
+		min-height: 60
+		display: flex
+		align-items: center 
+
+		main 
+			display: flex
+			align-items: center 
+
+	#locations 
+		display: flex
+		justify-content: center
+		width: 100%
+		flex-wrap: wrap
+		
+		.location 
+			width: calc(25% - 40px)
+			margin: 20px  
+			
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1200px) 
+	section 
+		padding: 80px 40px 
+		
+	section#CTA 
+		padding: 50px 40px 
+
+	.stickyImage 
+		background-position: center center
+		background-repeat: no-repeat
+		background-size: cover
+		background-color: #212a34
+		position: absolute
+		top: 0
+		left: 0
+		height: 100%
+		width: 37% 
+		
+		main 
+			padding-left: 40% 
+		
+		&.right 
+			left: auto
+			right: 0 
+		
+		&.right + main 
+			padding-left: 0
+			padding-right: 40% 
+
+	#bannerLogo 
+		width: 400px 
+
+	#homeVideo 
+		position: absolute
+		top: 0
+		left: 50%
+		width: auto
+		height: 100%
+		transform: translateX(-50%)
+		display: block 
+
+	#videoBanner main 
+		width: 90% 
+
+	#intro #devices 
+		transform: translateY(90px)
+		margin-top: -90px 
+
+	#intro h2 
+		margin-bottom: 5px
+		font-size: 36px 
+
+	#intro p 
+		font-size: 24px
+		line-height: 32px
+		margin-bottom: 0 
+
+	#testimonials 
+		height: 350px 
+		.quoter 
+			width: 200px
+			height: 200px 
+
+		.quote 
+			width: calc(100% - 250px) 
+
+			h3 
+				font-size: 40px 
+
+			p 
+				font-size: 24px 
+
+	#features main 
+		flex-direction: row !important
+		justify-content: space-between !important
+			
+	.featureList 
+		width: 60%
+		
+		h1 
+			font-size: 40px
+			
+	#ipadRotator 
+		width: 40%
+		margin: 0 
+
+	#benefits main 
+		justify-content: flex-end !important
+		
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1500px) 
+	.stickyImage + main 
+		padding-left: calc(35% + 30px)  

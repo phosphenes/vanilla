@@ -4,3 +4,5 @@ dist/
 .idea/
 _local/
 .DS_Store
+vanilla src build/
+from IDF/

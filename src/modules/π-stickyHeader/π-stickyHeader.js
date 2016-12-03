@@ -2,7 +2,6 @@
 	var stickyHeader, thisY, previousY, topAnchorPoint, bottomAnchorPoint, THRESHOLD
 	thisY = previousY = topAnchorPoint = bottomAnchorPoint = 0
 
-	console.log("sticky")
 	function checkScrolling() {
 		if (stickyHeader.parentNode !== πbody) {
 			πbody.add(stickyHeader)

@@ -1225,12 +1225,340 @@ footer
 
 
 
-
-
-
-
-
-
 @media screen and (min-width: 1500px) 
 	.stickyImage + main 
 		padding-left: calc(35% + 30px)  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.row 
+	display: flex
+	justify-content: space-between
+	flex-direction: row 
+
+.row .column 
+	width: calc(50% - 40px)
+	margin: 0 40px 40px 0 
+
+
+.columnContent 
+	column-count: 2
+	column-gap: 40px 
+
+.columnContent p 
+	break-inside: avoid
+	display: inline-block
+
+#intro section main 
+	position: absolute
+	top: 100vh
+	left: 50%
+	transform: translate(-50%, -100%)
+	height: 100%
+	max-width: 1200px
+	padding: 70px 20px 
+
+#intro section#thinkBeyond h1 
+	color: #ffffff
+	font-size: 90px
+	position: absolute
+	top: 50%
+	left: 20px
+	transform: translateY(-50%)
+	display: inline-block
+
+#intro section#thinkBeyond h1:last-child 
+	transition-delay: 0.5s 
+
+#intro section#theWrapUp main 
+	flex-direction: column !important
+	justify-content: flex-start !important
+	align-items: flex-start
+	padding: 140px 20px 
+
+#intro section#theWrapUp main .connect 
+	position: absolute
+	left: calc(50% - 140px)
+	top: 160px 
+
+#intro section#theWrapUp main h1 
+	font-size: 90px
+	color: #fff
+	margin-bottom: 0 
+
+#intro section#theWrapUp main h4 
+	font-size: 30px
+	font-weight: 200
+	text-transform: none
+	color: #212a34 
+
+
+#introMobile 
+	display: none 
+
+
+section.dark 
+	color: #ffffff 
+
+
+p.big 
+	font-size: 24px
+	line-height: 1.5em 
+	
+#videoBanner 
+	min-height: 650px
+		
+#rfiTicker main 
+	display: flex
+	align-items: center
+	justify-content: space-around
+	flex-direction: row 
+
+#rfiTicker main h4 
+	margin-right: 20px
+	margin-bottom: 0 
+
+#rfiTicker main #ticker 
+	height: 40px
+	overflow: hidden
+	line-height: 40px 
+	
+#rfiTicker main #ticker p 
+	margin: 0 40px
+	line-height: 40px
+		
+#rfiTicker main button 
+	height: 40px
+		
+#aboutUsSection, #whatWeDoSection 
+	min-height: 100vh
+	display: flex
+	align-items: center 
+
+#aboutUsSection h1, #whatWeDoSection h1 
+	color: #f449aa 
+
+#aboutUsSection .buttonBox, #whatWeDoSection .buttonBox 
+	margin-top: 20px
+	padding: 10px 0 0 0
+	border-top: 1px solid #394652
+	width: 100%
+	text-align: left 
+
+#aboutUsSection .buttonBox a, #whatWeDoSection .buttonBox a 
+	margin: 0 12px
+	position: relative
+	font-size: 20px 
+
+#aboutUsSection .buttonBox a:before, #whatWeDoSection .buttonBox a:before 
+	content: ''
+	display: block
+	width: 4px
+	height: 4px
+	background: $dark-grey
+	position: absolute
+	left: -14px
+	top: 50%
+	transform: translateY(-50%) 
+
+#aboutUsSection .buttonBox a:first-child, #whatWeDoSection .buttonBox a:first-child 
+	margin-left: 0 
+
+#aboutUsSection .buttonBox a:first-child:before, #whatWeDoSection .buttonBox a:first-child:before 
+	display: none 
+
+#aboutUsSection .buttonBox a:last-child, #whatWeDoSection .buttonBox a:last-child 
+	margin-right: 0 
+
+#aboutUsSection h1, #aboutUsSection a 
+	color: #61c531 
+
+#whatWeDoSection .row .column 
+	width: calc(50% - 20px)
+	margin: 0 20px 40px 0 
+
+#whatWeDoSection .row .column:first-child 
+	text-align: right 
+
+#contactSection 
+	min-height: 100vh
+	font-family: "Averta", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif
+	display: flex
+	align-items: center
+	background: url("/wp-content/themes/uc/images/color-blotch.jpg") center center no-repeat
+	background-size: cover
+	background-attachment: fixed 
+
+#contactSection main 
+	max-width: 800px 
+
+#contactSection h1 
+	margin-bottom: 40px 
+
+#footerContact 
+	overflow: hidden
+	width: 100%
+
+#footerContact label 
+	display: block
+	width: calc(50% - 20px)
+	float: left
+	height: 88px
+	padding-top: 30px
+	position: relative
+	margin-bottom: 20px
+	font-weight: 400
+	transition: all 0.15s ease-out 
+
+#footerContact label:after 
+	content: ''
+	display: block
+	width: 0
+	height: 2px
+	background: #fff
+	position: absolute
+	left: 0
+	bottom: 0
+	transition: all 0.3s ease-out 
+
+#footerContact label.focus:after 
+	width: 100% 
+
+#footerContact label.focus.textarea 
+	height: 140px 
+
+#footerContact label.filled.textarea 
+	height: 140px 
+
+#footerContact label.filled span 
+	top: -5px !important
+	font-size: 20px !important
+	opacity: 0.5 !important 
+
+#footerContact label:nth-child(even) 
+	float: right 
+
+#footerContact label.textarea 
+	float: none
+	clear: both
+	width: 100% 
+
+#footerContact label input[type=text], #footerContact label input[type=email], #footerContact label textarea 
+	border-width: 0 0 2px 0
+	border-color: rgba(255, 255, 255, 0.3)
+	display: block
+	width: 100%
+	outline-width: 0
+	padding: 10px 0
+	font-size: 30px
+	font-weight: 400
+	color: #fff
+	transition: all 0.15s ease-out
+	z-index: 1
+	position: relative
+	line-height: 1.2em 
+
+#footerContact label input[type=text]:hover + span, #footerContact label input[type=email]:hover + span, #footerContact label textarea:hover + span 
+	opacity: 0.8 
+
+#footerContact label input[type=text]:focus, #footerContact label input[type=email]:focus, #footerContact label textarea:focus 
+	color: #fff 
+
+#footerContact label input[type=text]:focus + span, #footerContact label input[type=email]:focus + span, #footerContact label textarea:focus + span 
+	top: -5px
+	font-size: 20px
+	opacity: 0.5 
+
+#footerContact label textarea 
+	height: 100%
+	resize: none 
+
+#footerContact label span 
+	display: block
+	padding: 10px 0
+	font-size: 30px
+	font-weight: 300
+	line-height: 1.5em
+	position: absolute
+	top: 30px
+	left: 0
+	transition: all 0.15s ease-out
+	opacity: 0.5 
+
+#footerContact button 
+	margin-top: 40px 
+
+#locationsSection 
+	min-height: 60vh
+	font-family: "Averta", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif
+	display: flex
+	align-items: center 
+
+#locationsSection main 
+	display: flex
+	align-items: center
+		
+#locations 
+	display: flex
+	justify-content: center
+	width: 100%
+	flex-wrap: wrap 
+
+#locations .location 
+	width: calc(25% - 40px)
+	margin: 20px
+	font-size: 14px
+	line-height: 1.5em
+
+
+#videoSection 
+	height: 100vh
+	background: url('/wp-content/themes/uc/images/video-bg.jpg') center center
+	background-size: cover
+
+#videoSection main 
+	text-align: center
+	align-items: center
+
+#videoSection main button 
+	color: transparent
+	border-radius: 50%
+	display: block
+	height: 80px
+	width: 80px
+	//background: rgba(0,0,0,0.3)
+	background: transparent
+	border: 6px solid #fff
+	position: relative
+
+#videoSection main button:hover 
+	transform: scale(1.1)
+	background: rgba(0,0,0,0.6)
+
+#videoSection main button:before 
+	content: ''
+	display: block
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-38%, -50%)
+	width: 0
+	height: 0
+	border-style: solid
+	border-width: 20px 0 20px 34.6px
+	border-color: transparent transparent transparent #fff
+
+
+

@@ -29,6 +29,13 @@ $image = ($banner) ? $banner['sizes']['large']: '/wp-content/themes/uc/images/sa
 	</section>
 
 <?php
+
+
+
+
+
+
+
 include 'flex-content.php';
 
 get_footer();

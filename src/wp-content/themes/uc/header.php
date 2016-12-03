@@ -8,7 +8,8 @@ if(!$isBlog) {
 }
 
 $navExclusions = (get_field('nav_exclusions','options')) ? implode(',',get_field('nav_exclusions','options')): '';
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 
@@ -17,21 +18,18 @@ $navExclusions = (get_field('nav_exclusions','options')) ? implode(',',get_field
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="format-detection" content="telephone=no">
 	<meta name="google-site-verification" content="QiRO_4QS9RtZHo4ACKt9k-CRODDGZSzBO0LXItsNfyk" />
-
+	<link rel="shortcut icon" href="/favicon.ico" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-	<script
-			src="http://code.jquery.com/jquery-2.2.4.min.js"
-			integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-			crossorigin="anonymous"></script>
+
 	<?php wp_head(); ?>
 
-	<!--////////////////////////////
-	// UC STYLES 'N SHEET
-	/////////////////////////////-->
+
 	<script src="https://use.fontawesome.com/3b399369f9.js"></script>
 	<link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/1b31b2f6-825c-4585-a690-b6dfaa9c845e.css"/>
-	<link rel="stylesheet" href="/wp-content/themes/uc/overwrite.css">
-	<link rel="stylesheet" href="/wp-content/themes/uc/styles.css">
+	<script href="//code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script href="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/styles.css" />
+	<script href="<?php echo get_template_directory_uri(); ?>/script.js"></script>
 
 
 	<!-- Google Analytics -->
@@ -76,14 +74,7 @@ $navExclusions = (get_field('nav_exclusions','options')) ? implode(',',get_field
 		}
 		/* ]]> */
 	</script>
-	<script type="text/javascript"
-	        src="//www.googleadservices.com/pagead/conversion_async.js">
-	</script>
-
-
-	<!-- <?php echo get_the_ID(); ?> -->
-
-	<link rel="shortcut icon" href="/favicon.ico" />
+	<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion_async.js"></script>
 
 </head>
 <?php
@@ -101,7 +92,7 @@ $extraClasses = implode(' ', $extraClasses);
 		<div class="row">
 			<div class="column sitemap animate fromLeft">
 				<h4 style="margin-bottom: 5px">Sitemap</h4>
-				<?php wp_nav_menu(array('menu' => 'New Menu')); ?>
+				<?php wp_nav_menu(array('menu' => 'Main Menu')); ?>
 			</div>
 			<div class="column rfi">
 				<h4 class="animate fromRight" style="margin-bottom: 5px">Recent RFIs</h4>
@@ -155,7 +146,4 @@ $extraClasses = implode(' ', $extraClasses);
 
 
 
-<div class="bg-overlay">
-	<div class="container-wrapper">
-		<div class="hc-wrapper">
 

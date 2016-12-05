@@ -24,57 +24,61 @@ $navExclusions = (get_field('nav_exclusions','options')) ? implode(',',get_field
 	<?php wp_head(); ?>
 
 
-	<script src="https://use.fontawesome.com/3b399369f9.js"></script>
+	<script src="//use.fontawesome.com/3b399369f9.js"></script>
 	<link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/1b31b2f6-825c-4585-a690-b6dfaa9c845e.css"/>
-	<script href="//code.jquery.com/jquery-3.1.1.min.js"></script>
-	<script href="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+
+
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/styles.css" />
-	<script href="<?php echo get_template_directory_uri(); ?>/script.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/script.js"></script>
+
 
 
 	<!-- Google Analytics -->
-	<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-		ga('create', 'UA-85092950-1', 'auto');
-		ga('send', 'pageview');
-
-	</script>
+<!--	<script>-->
+<!--		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){-->
+<!--				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),-->
+<!--			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)-->
+<!--		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');-->
+<!---->
+<!--		ga('create', 'UA-85092950-1', 'auto');-->
+<!--		ga('send', 'pageview');-->
+<!---->
+<!--	</script>-->
 
 
 	<!-- Google Code for Xinova Contact Form Conversion Page
 	In your html page, add the snippet and call
 	goog_report_conversion when someone clicks on the
 	chosen link or button. -->
-	<script type="text/javascript">
-		/* <![CDATA[ */
-		goog_snippet_vars = function() {
-			var w = window;
-			w.google_conversion_id = 934803336;
-			w.google_conversion_label = "7dFXCIz7tWoQiO_fvQM";
-			w.google_remarketing_only = false;
-		}
-		// DO NOT CHANGE THE CODE BELOW.
-		goog_report_conversion = function(url) {
-			goog_snippet_vars();
-			window.google_conversion_format = "3";
-			var opt = new Object();
-			opt.onload_callback = function() {
-				if (typeof(url) != 'undefined') {
-					window.location = url;
-				}
-			}
-			var conv_handler = window['google_trackConversion'];
-			if (typeof(conv_handler) == 'function') {
-				conv_handler(opt);
-			}
-		}
-		/* ]]> */
-	</script>
-	<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion_async.js"></script>
+<!--	<script type="text/javascript">-->
+<!---->
+<!--		goog_snippet_vars = function() {-->
+<!--			var w = window;-->
+<!--			w.google_conversion_id = 934803336;-->
+<!--			w.google_conversion_label = "7dFXCIz7tWoQiO_fvQM";-->
+<!--			w.google_remarketing_only = false;-->
+<!--		}-->
+<!---->
+<!--		goog_report_conversion = function(url) {-->
+<!--			goog_snippet_vars();-->
+<!--			window.google_conversion_format = "3";-->
+<!--			var opt = new Object();-->
+<!--			opt.onload_callback = function() {-->
+<!--				if (typeof(url) != 'undefined') {-->
+<!--					window.location = url;-->
+<!--				}-->
+<!--			}-->
+<!--			var conv_handler = window['google_trackConversion'];-->
+<!--			if (typeof(conv_handler) == 'function') {-->
+<!--				conv_handler(opt);-->
+<!--			}-->
+<!--		}-->
+<!--		/* ]]> */-->
+<!--	</script>-->
+<!--	<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion_async.js"></script>-->
 
 </head>
 <?php

@@ -104,13 +104,13 @@
 
 <!---->
 <!---->
-<!--	<!-- Modal -->-->
+<!--	<!-- Modal -->
 <!--	<div class="modal fade" id="video1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">-->
 <!--		<div class="modal-dialog" role="document">-->
 <!--			<div class="modal-content">-->
 <!--				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
 <!--				<div class="modal-body">-->
-<!--					<!--<iframe width="100%" height="420" src="https://www.youtube.com/embed/l4tPrcePdGM" frameborder="0" allowfullscreen></iframe>-->-->
+<!--					<!--<iframe width="100%" height="420" src="https://www.youtube.com/embed/l4tPrcePdGM" frameborder="0" allowfullscreen></iframe>-->
 <!--					<iframe width="900" id="ytplayer1" height="506" src="https://www.youtube.com/embed/lsAL7rITEnQ?autoplay=0" frameborder="0" autostart="true" allowfullscreen></iframe>-->
 <!--				</div>-->
 <!--			</div>-->
@@ -119,20 +119,20 @@
 <!---->
 <!---->
 <!---->
-<!--	<!-- Modal -->-->
+<!--	<!-- Modal -->
 <!--	<div class="modal fade" id="video2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">-->
 <!--		<div class="modal-dialog" role="document">-->
 <!--			<div class="modal-content">-->
 <!--				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
 <!--				<div class="modal-body">-->
-<!--					<!--<iframe width="100%" height="420" src="https://www.youtube.com/embed/l4tPrcePdGM" frameborder="0" allowfullscreen></iframe>-->-->
+<!--					<!--<iframe width="100%" height="420" src="https://www.youtube.com/embed/l4tPrcePdGM" frameborder="0" allowfullscreen></iframe>-->
 <!--					<iframe width="900" id="ytplayer2" height="506" src="https://www.youtube.com/embed/ubT-G-wMbp4?autoplay=0" frameborder="0" autostart="true" allowfullscreen></iframe>-->
 <!--				</div>-->
 <!--			</div>-->
 <!--		</div>-->
 <!--	</div>-->
 <!---->
-<!--	<!-- Services Modal -->-->
+<!--	<!-- Services Modal -->
 <!--	<div class="modal fade" id="video4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">-->
 <!--		<div class="modal-dialog" role="document">-->
 <!--			<div class="modal-content">-->
@@ -145,20 +145,20 @@
 <!--		</div>-->
 <!--	</div>-->
 <!---->
-<!--	<!-- this is idf -->-->
+<!--	<!-- this is idf -->
 <!--	<div class="modal fade" id="video3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">-->
 <!--		<div class="modal-dialog" role="document">-->
 <!--			<div class="modal-content">-->
 <!--				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
 <!--				<div class="modal-body">-->
-<!--					<!--<iframe width="100%" height="420" src="https://www.youtube.com/embed/l4tPrcePdGM" frameborder="0" allowfullscreen></iframe>-->-->
+<!--					<!--<iframe width="100%" height="420" src="https://www.youtube.com/embed/l4tPrcePdGM" frameborder="0" allowfullscreen></iframe>-->
 <!--					<iframe width="900" id="ytplayer3" height="506" src="https://www.youtube.com/embed/BS8nKrIxGHQ?autoplay=0" frameborder="0" autostart="true" allowfullscreen></iframe>-->
 <!--				</div>-->
 <!--			</div>-->
 <!--		</div>-->
 <!--	</div>-->
 <!---->
-<!--	<!-- RFI Explainer Home - How to Join Network-->-->
+<!--	<!-- RFI Explainer Home - How to Join Network-->
 <!--	<div class="modal fade" id="video5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">-->
 <!--		<div class="modal-dialog" role="document">-->
 <!--			<div class="modal-content">-->
@@ -171,7 +171,7 @@
 <!--		</div>-->
 <!--	</div>-->
 <!---->
-<!--	<!-- RFI Explainer Home - Why Invent with IVIDF -->-->
+<!--	<!-- RFI Explainer Home - Why Invent with IVIDF -->
 <!---->
 <!--	<div class="modal fade" id="video6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">-->
 <!--		<div class="modal-dialog" role="document">-->

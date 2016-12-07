@@ -1,14 +1,16 @@
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
 body#tinymce {
 	padding:20px !important;
 	margin:0;
 	background-color:#fff;
-	font-family: 'Helvetica', 'Arial', sans-serif;
-	font-size:16px;
-	color: #222;
+	font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+	font-size: 16px;
+	color: #666;
 	line-height:1.5em;
-	font-weight:300;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-text-size-adjust: none;
@@ -31,25 +33,38 @@ hr {
 	margin: 10px 0 15px 0;
 }
 h1, h2, h3, h4, h5 {
-	font-family: 'Helvetica', 'Arial', sans-serif;
-	line-height: 1.2em;
+	font-family: 'Montserrat', 'Helvetica', 'Arial', sans-serif;
+	line-height: 1.3em;
+	margin-bottom: 10px;
+	margin-top: 0;
+	color: #1E2465;
+	letter-spacing: -0.03em;
 }
 h1 {
-	font-size: 2.5em;
-	margin: 0 0 20px 0;
+	font-size: 3.5em;
+	margin-bottom: 20px;
+	font-family: 'Playfair Display', Georgia, serif;
 }
 h2 {
-	font-size: 2em;
-	margin: 0 0 20px 0;
-	color: #035a9d;
+	font-size: 2.8em;
 }
 h3 {
-	font-size: 1.5em;
-	margin: 0 0 5px 0;
+	font-size: 2em;
+	text-transform: uppercase;
 }
 h4 {
-	font-size: 1.2em;
-	margin: 0 0 20px 0;
+	font-size: 1.6em;
+	margin-bottom: 5px;
+	color: #6199de;
+}
+h5 {
+	font-size: 26px;
+	line-height: 1.3em;
+	font-weight: 300;
+	font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+	color: #666;
+	margin-bottom: 20px;
+	letter-spacing: normal;
 }
 b, strong {
 	font-weight: 400;

@@ -19,8 +19,9 @@ if(have_rows('sections')) {
 
 		$sID = get_sub_field('id');
 		$sClasses = get_sub_field('classes');
+		$visible = get_sub_field('visible');
 
-		if(get_row_layout() == 'banner_rotator') {
+		if(get_row_layout() == 'banner_rotator' && $visible) {
 
 
 //			$type = get_sub_field('');
@@ -63,14 +64,10 @@ if(have_rows('sections')) {
 			</section>
 
 			<?php
-
-
-
-
 		}
 
 
-		else if(get_row_layout() == 'variable_content') {
+		else if(get_row_layout() == 'variable_content' && $visible) {
 
 			// START SECTION
 			echo '<section id="' . (($sID) ? $sID : '') . '" class="flexContent ' . (($sClasses) ? $sClasses : '') . '"><main>';

@@ -52,15 +52,14 @@ echo '</main></section>';
 /////////////////////////////
 if($post->post_content) {
 ?>
-
 	<section class="mainContent">
 		<main>
 			<div class="content content-basic">
 				<?php the_content(); ?>
+				<div style="clear: both"></div>
 			</div>
 		</main>
 	</section>
-
 <?php
 }
 

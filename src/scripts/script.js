@@ -7,7 +7,7 @@
 		// initMobileMenu();
 		initExhibits();
 		initCenterImages();
-
+		if(π1('.filterBox')) initDirectoryFilters();
 		if(π1('#backToTop')) initBackToTopButton();
 	})
 
@@ -129,6 +129,61 @@
 			}
 		});
 	}
+
+
+
+
+
+
+	////////////////////////////////////
+	// DIRECTORY STUFF
+	////////////////////////////////////
+	function initDirectoryFilters() {
+
+		π('.institution').addClass('show');
+
+		π('.filterBox a').forEach(function(e) {
+			e.onclick = function() {
+				(e.hasClass('active')) ? e.killClass('active'): e.addClass('active');
+				getTheFilters();
+			};
+		});
+
+		π('.show-more').forEach(function(e) {
+			e.onclick = function() {
+
+				var topParent = $(e).parent().parent();
+				console.log(topParent);
+				(topParent.hasClass('open')) ? topParent.removeClass('open'): topParent.addClass('open');
+
+			};
+		});
+	}
+
+	function getTheFilters() {
+		var stuff = [];
+		π('.filterBox a.active').forEach(function(e) {
+			stuff.push('filter-'+e.getAttribute('data-filter'));
+		});
+
+		if(stuff.length === 0) {
+			π('.institution').addClass('show');
+		}
+		else {
+			π('.institution').killClass('show');
+			stuff.forEach(function (e) {
+				π('.' + e).addClass('show');
+			});
+		}
+
+
+
+	}
+
+
+
+
+
 
 
 	////////////////////////////////////

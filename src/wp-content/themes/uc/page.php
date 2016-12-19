@@ -33,10 +33,8 @@ $image = ($banner) ? $banner['sizes']['large']: '/wp-content/themes/uc/images/he
 </section>
 
 <?php
-/////////////////////////////
 // BREADCRUMB
-/////////////////////////////
-echo '<section id="breadcrumb"><main>';
+echo '<section id="breadcrumb" class="white-text"><main>';
 echo '<a href="/">Home</a>';
 $parents = get_post_ancestors(get_the_ID());
 if($parents) {
@@ -47,9 +45,8 @@ echo '<b>'.get_the_title(get_the_ID()).'</b>';
 echo '</main></section>';
 
 
-/////////////////////////////
+
 // PAGE CONTENT
-/////////////////////////////
 if($post->post_content) {
 ?>
 	<section class="mainContent">
@@ -63,6 +60,12 @@ if($post->post_content) {
 <?php
 }
 
+
+// DIRECTORY
+if(get_the_slug(get_the_ID()) == 'directory') include 'directory.php';
+
+
+// FLEX CONTENT
 include 'flex-content.php';
 
 get_footer();

@@ -3,13 +3,141 @@
 
 
 
+// DIRECTORY STUFF
+.filterBox
+	padding: 5px 0 5px 60px
+	position: relative
+	line-height: 0
 
+	&:before
+		content: 'States'
+		display: block
+		width: 48px
+		position: absolute
+		top: 7px
+		left: 0
+		text-align: right
+		font-weight: 700
+		color: #000
+		line-height: 1.5em
 
+	&.tags:before
+		content: 'Tags'
 
+	a
+		margin: 1px
+		padding: 0 7px
+		background: #eee
+		color: #000
+		display: inline-block
+		cursor: pointer
+		user-select: none
+		transition: padding 0.15s ease-out
+		position: relative
+		overflow: hidden
+		line-height: 1.5em
 
+		&:before, &:after
+			content: ''
+			display: block
+			position: absolute
+			top: 50%
+			right: 12px
+			width: 1px
+			height: 12px
+			background: #fff
+			opacity: 0
+			transform: translateY(-50%) rotate(45deg)
 
+		&:after
+			transform: translateY(-50%) rotate(-45deg)
 
+		&:hover
+			text-decoration: none
+			background: #aaa
+			color: #fff
 
+		&.active, &.active:hover
+			background: $light-blue
+			color: #fff
+			padding-right: 24px
+
+			&:before, &:after
+				opacity: 1
+
+#directory
+	padding: 0
+	margin: 20px 0 20px 0
+	list-style: none
+	display: block
+	border-bottom: 1px solid #ccc
+
+	.institution
+		display: none
+		padding: 5px 0
+		margin: 0
+		border-top: 1px solid #ccc
+
+		&.show
+			display: flex
+
+		&.column-labels
+			//border-top: none
+			font-weight: 700
+			color: #000
+			display: none !important
+			align-items: flex-start
+
+			& > *
+				color: #000 !important
+
+		& > *
+			margin: 0 !important
+
+			&:nth-child(1)
+				font-weight: bold
+				color: $light-blue
+
+		.more
+			width: 100% !important
+			display: none
+			padding: 20px
+			justify-content: space-between
+
+			& > *
+				margin: 0 !important
+				width: calc(50% - 10px)
+
+				&:nth-child(odd)
+					text-align: right
+
+		.show-more
+			cursor: pointer
+			position: relative
+			padding-left: 15px
+			display: inline-block
+
+			&:before, &:after
+				content: ''
+				display: block
+				position: absolute
+				top: 11px
+				left: 0
+				width: 10px
+				height: 2px
+				background: $light-blue
+				transform: translateY(-50%);
+
+			&:after
+				left: 0
+				transform: translateY(-50%) rotate(90deg);
+
+		&.open
+			.show-more:after
+				left: 0
+				transform: translateY(-50%) rotate(0deg);
+			.more
+				display: flex
 
 
 // BACK TO TOP BUTTON
@@ -214,6 +342,19 @@
 			.image
 				width: 100%
 				height: 240px
+
+	#directory .institution
+		&.col-4 > *
+			&:nth-child(1), &:nth-child(2)
+				width: calc(30% - 20px) !important
+			&:nth-child(3), &:nth-child(4)
+				width: calc(20% - 20px) !important
+
+		&.column-labels
+			display: flex !important
+
+
+
 
 //@media (min-width: 900px)
 

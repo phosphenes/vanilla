@@ -27,25 +27,25 @@ var minifyCSS = require('gulp-cssnano');
 var uglify = require('gulp-uglify');
 var chmod = require('gulp-chmod');
 
-var buildScripts = ['src/scripts/alf.js', 'src/scripts/π.js', 'src/debug/*.js', 'src/scripts/globals.js', 'src/components/*.js', 'src/modules/**/*.js', 'src/scripts/script.js'];
-var distScripts = ['src/scripts/alf.js', 'src/scripts/π.js', 'src/scripts/globals.js', 'src/components/*.js', 'src/modules/**/*.js', 'src/scripts/script.js'];
+var buildScripts = ['src/scripts/alf.js', 'src/scripts/π.js', 'src/scripts/π-dom.js', 'src/debug/*.js', 'src/scripts/globals.js', 'src/components/*.js', 'src/modules/**/*.js', 'src/scripts/script.js'];
+var distScripts = ['src/scripts/alf.js', 'src/scripts/π.js', 'src/scripts/π-dom.js', 'src/scripts/globals.js', 'src/components/*.js', 'src/modules/**/*.js', 'src/scripts/script.js'];
 
 var buildFolder = './build/';
 var distFolder = './dist/';
 
 // id JS bugs
-gulp.task('jshint', function () {
-	gulp.src(buildScripts)
-		.pipe(jshint())
-		.pipe(jshint.reporter('default'));
-});
+// gulp.task('jshint', function () {
+// 	gulp.src(buildScripts)
+// 		.pipe(jshint())
+// 		.pipe(jshint.reporter('default'));
+// });
 
 // id workers bugs
-gulp.task('workerHint', function () {
-	gulp.src('src/workers/*.js')
-		.pipe(jshint())
-		.pipe(jshint.reporter('default'));
-});
+// gulp.task('workerHint', function () {
+// 	gulp.src('src/workers/*.js')
+// 		.pipe(jshint())
+// 		.pipe(jshint.reporter('default'));
+// });
 
 // minify new images
 gulp.task('imagemin', function() {
@@ -76,58 +76,58 @@ gulp.task('htmlpage', function() {
 		.pipe(gulp.dest(distFolder));
 });
 
-// unmolested passthrough files (php, css)
-gulp.task('passthrough', function() {
-	var passthroughSrc = ['src/*.php', 'src/**/*.php', 'src/*.css', 'src/**/*.css'];
+// pass php files unmolested
+gulp.task('phppage', function() {
+	var phpSrc = ['src/*.php', 'src/**/*.php'];
 
-	gulp.src(passthroughSrc)
+	gulp.src(phpSrc)
 		.pipe(changed(buildFolder))
 		.pipe(gulp.dest(buildFolder));
 
-	gulp.src(passthroughSrc)
+	gulp.src(phpSrc)
 		.pipe(changed(distFolder))
 		.pipe(gulp.dest(distFolder));
 });
 
 // concat, de-comment & log, minify scripts
-gulp.task('scripts', function() {
-	gulp.src(buildScripts)
-		.pipe(sourcemaps.init())
-		.pipe(concat('script.js'))
-		.pipe(sourcemaps.write())
-		.pipe(gulp.dest(WORDPRESS ? './build/wp-content/themes/uc/' : buildFolder));
-
-	gulp.src(distScripts)
-		.pipe(concat('script.js'))
-		.pipe(stripDebug())
-		.pipe(uglify())
-		// .pipe(replace(ProjectOptions.CUSTOM_OBJECT.build, ProjectOptions.CUSTOM_OBJECT.dist))
-		.pipe(gulp.dest(WORDPRESS ? './dist/wp-content/themes/uc/' : distFolder));
-});
+// gulp.task('scripts', function() {
+// 	gulp.src(buildScripts)
+// 		.pipe(sourcemaps.init())
+// 		.pipe(concat('script.js'))
+// 		.pipe(sourcemaps.write())
+// 		.pipe(gulp.dest(WORDPRESS ? './build/wp-content/themes/uc/' : buildFolder));
+//
+// 	gulp.src(distScripts)
+// 		.pipe(concat('script.js'))
+// 		.pipe(stripDebug())
+// 		.pipe(uglify())
+// 		// .pipe(replace(ProjectOptions.CUSTOM_OBJECT.build, ProjectOptions.CUSTOM_OBJECT.dist))
+// 		.pipe(gulp.dest(WORDPRESS ? './build/wp-content/themes/uc/' : distFolder));
+// });
 
 // do the same for workers
-gulp.task('workers', function() {
-	gulp.src('src/workers/*.js')
-	// .pipe(changed('src/workers/'))
-		.pipe(sourcemaps.init())
-		.pipe(sourcemaps.write())
-		.pipe(gulp.dest('./build/workers/'));
-
-	gulp.src('src/workers/*.js')
-	// .pipe(changed('src/workers/'))
-		.pipe(stripDebug())
-		.pipe(uglify())
-		.pipe(gulp.dest('./dist/workers/'));
-
-	gulp.src('src/workers/*.json')
-		.pipe(chmod(777))
-		.pipe(gulp.dest('./build/workers/'));
-
-	gulp.src('src/workers/*.json')
-		.pipe(chmod(777))
-		.pipe(gulp.dest('./dist/workers/'));
-
-});
+// gulp.task('workers', function() {
+// 	gulp.src('src/workers/*.js')
+// 	// .pipe(changed('src/workers/'))
+// 		.pipe(sourcemaps.init())
+// 		.pipe(sourcemaps.write())
+// 		.pipe(gulp.dest('./build/workers/'));
+//
+// 	gulp.src('src/workers/*.js')
+// 	// .pipe(changed('src/workers/'))
+// 		.pipe(stripDebug())
+// 		.pipe(uglify())
+// 		.pipe(gulp.dest('./dist/workers/'));
+//
+// 	gulp.src('src/workers/*.json')
+// 		.pipe(chmod(777))
+// 		.pipe(gulp.dest('./build/workers/'));
+//
+// 	gulp.src('src/workers/*.json')
+// 		.pipe(chmod(777))
+// 		.pipe(gulp.dest('./dist/workers/'));
+//
+// });
 
 // SASS
 gulp.task('sass', function () {
@@ -148,30 +148,27 @@ gulp.task('sass', function () {
 		.pipe(concat('styles.css'))
 		.pipe(minifyCSS())
 		.pipe(replace('../../images', './images'))
-		.pipe(gulp.dest(WORDPRESS ? './dist/wp-content/themes/uc/' : distFolder));
+		.pipe(gulp.dest(WORDPRESS ? './build/wp-content/themes/uc/' : distFolder));
 });
 
 // default gulp task
-gulp.task('default', ['jshint', 'workerHint', 'imagemin', 'htmlpage', 'passthrough', 'scripts', 'workers', 'sass'], function() {
+gulp.task('default', ['imagemin', 'htmlpage', 'phppage', 'sass'], function() {
 	// watch for image changes
 	gulp.watch(['src/**/*.jpg', 'src/**/*.png', 'src/**/*.gif','src/**/*.svg'], ['imagemin']);
-
-	// watch for HTML changes
 	gulp.watch(['src/**/*.html'], ['htmlpage']);
+	gulp.watch(['src/**/*.php'], ['phppage']);
 
-	// watch for HTML changes
-	gulp.watch(['src/**/*.php', 'src/**/*.css'], ['passthrough']);
-
-	// watch for JS changes
-	gulp.watch(buildScripts, ['jshint', 'scripts']);
-
-	// watch for worker changes
-	gulp.watch('src/workers/*.js', ['workerHint', 'workers']);
-
-	// watch for CSS changes
 	gulp.watch('src/baseComponents/*/*.sass', ['sass']);
 	gulp.watch('src/modules/*/*.sass', ['sass']);
 	gulp.watch('src/styles/partials/*.sass', ['sass']);
-	gulp.watch('src/styles/mediaQueries/*.sass', ['sass']);
 	gulp.watch('src/styles/*.sass', ['sass']);
+
+	// watch for JS changes
+	// gulp.watch(buildScripts, ['jshint', 'scripts']);
+
+	// watch for worker changes
+	// gulp.watch('src/workers/*.js', ['workerHint', 'workers']);
+
+	// watch for CSS changes
+
 });

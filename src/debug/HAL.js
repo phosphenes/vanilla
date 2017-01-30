@@ -1,4 +1,4 @@
-﻿;(function(){
+﻿(function(){
 	var messages = [
 		"I'm sorry, Frank, but I don't think I\n" +
 		"can answer that question without knowing\n" +
@@ -32,10 +32,8 @@
 	];
 
 	function say(error, message, innocuous) {
-		var n = 0
-		
 		if (!message) {
-			n = Math.floor(Math.random() * messages.length );
+			var n = Math.floor(Math.random() * messages.length );
 			message = messages[n];
 		}
 
@@ -53,4 +51,4 @@
 	π.HAL = {
 		say: say
 	};
-})()
+})();

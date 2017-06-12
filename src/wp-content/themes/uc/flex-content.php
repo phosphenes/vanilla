@@ -21,53 +21,7 @@ if(have_rows('sections')) {
 		$sClasses = get_sub_field('classes');
 		$visible = get_sub_field('visible');
 
-		if(get_row_layout() == 'banner_rotator' && $visible) {
-
-
-//			$type = get_sub_field('');
-//			$interface = get_sub_field('interface');
-//			$cycling = get_sub_field('cycling');
-//			$transition = get_sub_field('transition');
-//			$delay = get_sub_field('delay');
-
-			?>
-
-			<section id="hero" class="banner-rotator" style="background-image: url('<?php echo $image; ?>');">
-				<div class="pi-rotator" id="heroRotator"
-					 data-options='{
-						"inline": true,
-						"prevNext": true,
-						"carousel": false,
-						"autoPlay": 10000,
-						"crossfade": true
-					}'>
-
-					<?php
-					if(get_field('banners')) {
-						while(have_rows('banners')) {
-							the_row();
-
-							?>
-							<div class="item" style="background-image: url('');">
-								<main>
-									<div>
-
-									</div>
-								</main>
-							</div>
-							<?php
-						}
-					}
-					?>
-
-				</div>
-			</section>
-
-			<?php
-		}
-
-
-		else if(get_row_layout() == 'variable_content' && $visible) {
+		if(get_row_layout() == 'variable_content' && $visible) {
 
 			// START SECTION
 			echo '<section id="' . (($sID) ? $sID : '') . '" class="flexContent ' . (($sClasses) ? $sClasses : '') . '"><main>';
@@ -147,14 +101,21 @@ if(have_rows('sections')) {
 							// TEXT
 							if (get_sub_field($p . '_type') == 0) {
 								$content = get_sub_field('text_editor_' . $p);
-							} // IMAGE
-							else {
+								echo '<div class="' . $p . ' textContent">' . $content . '</div>';
+							}
+							// IMAGE
+							else if(get_sub_field($p . '_type') == 1) {
 								$image = get_sub_field('image_' . $p);
-								$content = '<img class="parentWidth" src="' . $image['sizes']['medium'] . '" />';
+								echo '<div class="' . $p . ' imageOnly"><img class="parentWidth" src="' . $image['sizes']['medium'] . '" /></div>';
+							}
+							// CODE
+							else {
+								$content = get_sub_field('code_editor_' . $p);
+								echo '<div class="' . $p . ' codeContent">';
+								eval($content);
+								echo '</div>';
 							}
 
-							$otherClasses = (get_sub_field($p . '_type') == 0) ? 'textContent' : 'imageOnly';
-							echo '<div class="' . $p . ' ' . $otherClasses . '">' . $content . '</div>';
 						}
 
 						echo '</div>';

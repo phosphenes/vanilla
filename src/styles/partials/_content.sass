@@ -1,9 +1,28 @@
 
 
+// HEADER STUFF
+body.header-transparent
+	padding-top: 0
+
+	header
+		background-color: transparent
+
+	section:first-of-type.flex-content-section
+		padding-top: 80px
+
+
+
+
 // SECTIONS
 section
 	position: relative
 	padding: 0 20px
+	font-size: 1em
+	line-height: 1.5em
+
+	p
+		font-size: 1em
+		line-height: 1.5em
 
 	ul, ol
 		margin: 10px 0 20px 0
@@ -40,35 +59,6 @@ main
 
 
 
-// BREADCRUMB
-#breadcrumb
-
-	main
-		padding: 10px 0
-		white-space: nowrap
-		text-overflow: ellipsis
-		overflow: hidden
-
-	a
-		margin-right: 20px
-		position: relative
-		display: inline-block
-
-
-		&:after
-			content: ''
-			display: block
-			width: 6px
-			height: 6px
-			border: solid $light-blue
-			border-width: 1px 1px 0 0
-			position: absolute
-			right: -9px
-			top: 45%
-			transform: rotate(45deg) translateY(-50%)
-
-	b, strong
-		color: #fff
 
 
 
@@ -130,6 +120,9 @@ main
 		margin: 0 0 20px 0
 		width: 100%
 
+		&:last-child
+			margin-bottom: 0
+
 		img
 			max-width: 100%
 
@@ -155,15 +148,42 @@ main
 		display: inline-block
 		break-inside: avoid
 
+
+
+// OTHER LITTLE THINGS
 .imageOnly
 	text-align: center
 	display: flex
 	justify-content: center
 	align-items: center
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
 
 .narrow
 	max-width: 600px
 	margin: 0 auto
+
+.has-bg-image
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+
+.white-text
+	background-color: #333
+
+	h1, h2, h3, h4, li, blockquote
+		color: #fff !important
+
+	blockquote p
+		color: #fff !important
+
+.justify-space-between
+	.columns
+		justify-content: space-between
+
+		& > div
+			margin: 0 0 20px 0
 
 
 
@@ -187,6 +207,7 @@ main
 				left: 0
 				font-weight: 800
 				font-size: 18px !important
+				color: #61c531
 
 		.answer:before
 			content: 'A:'
@@ -255,6 +276,45 @@ main
 		column-count: 2
 		column-gap: 30px
 
+	// BEGIN THE .min-height STUFF
+	.min-height main
+		display: flex !important
+		justify-content: center
+		align-items: center
+		flex-direction: column
+		height: 100%
+
+		.content
+			width: 100%
+
+	.min-height-40
+		height: 40vh
+
+	.min-height-50
+		height: 50vh
+
+	.min-height-60
+		height: 60vh
+
+	.min-height-70
+		height: 70vh
+
+	.min-height-80
+		height: 80vh
+
+	.min-height-90
+		height: 90vh
+
+	.min-height-100
+		height: 100vh
+
+
+
+
+
+
+
+
 
 @media (min-width: 1100px)
 
@@ -267,14 +327,14 @@ main
 	.columns
 		&.col-2
 			&.sizes-33-66
-				div:nth-child(1)
+				& > *:nth-child(1)
 					width: calc(33.33333% - 20px) !important
-				div:nth-child(2)
+				& > *:nth-child(2)
 					width: calc(66.66666% - 20px) !important
 			&.sizes-66-33
-				div:nth-child(1)
+				& > *:nth-child(1)
 					width: calc(66.66666% - 20px) !important
-				div:nth-child(2)
+				& > *:nth-child(2)
 					width: calc(33.33333% - 20px) !important
 		&.col-4 > *
 			width: calc(25% - 20px) !important

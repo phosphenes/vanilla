@@ -9,8 +9,22 @@
 		initCenterImages();
 		if(π1('.filterBox')) initDirectoryFilters();
 		if(π1('#backToTop')) initBackToTopButton();
+
+		initParallax();
 	})
 
+
+	function initParallax() {
+		var parallax = document.querySelectorAll(".parallax"),
+			speed = 0.5;
+		window.onscroll = function(){
+			[].slice.call(parallax).forEach(function(el,i){
+				var windowYOffset = window.pageYOffset,
+					elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
+				el.style.backgroundPosition = elBackgrounPos;
+			});
+		};
+	}
 
 
 	function initStickyHeader() {
@@ -53,17 +67,20 @@
 	////////////////////////////////////
 	function initExhibits() {
 		π('.exhibit').forEach(function(el) {
-			toggleExhibits(el);
+			requestAnimationFrame(function() {
+				toggleExhibits(el);
+			});
 		});
 	}
 
 	function toggleExhibits(el) {
-		var margin = (el.dataset.rangeMargin) ? parseInt(el.dataset.rangeMargin): 10;
+
+		var margin = (el.dataset.rangeMargin) ? parseInt(el.dataset.rangeMargin): 50;
 		var inRange = elementInRange(el, margin);
 
 		if(inRange && !el.hasClass('inRange')) {
 			el.addClass('inRange');
-			if(el.dataset.rangeFunction) processRangeFunction(el);
+			// if(el.dataset.rangeFunction) processRangeFunction(el);
 		}
 		else if(!inRange && el.hasClass('inRange') && !el.hasClass('exhibitOnOnly')) el.killClass('inRange');
 
@@ -175,9 +192,6 @@
 				π('.' + e).addClass('show');
 			});
 		}
-
-
-
 	}
 
 

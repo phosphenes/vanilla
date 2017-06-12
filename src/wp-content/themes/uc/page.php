@@ -19,36 +19,30 @@ $pageID = get_the_ID();
 $parentPageID = (wp_get_post_parent_id($pageID) != 0) ? wp_get_post_parent_id($pageID): NULL;
 $childPages = ($parentPageID) ? get_pages(array('child_of' => $parentPageID, 'parent' => $parentPageID, 'sort_column' => 'menu_order')): NULL;
 
-$banner = (get_field('featured_image')) ? get_field('featured_image'): null;
-$image = ($banner) ? $banner['sizes']['large']: '/wp-content/themes/uc/images/hero.jpg';
+$banner = (get_field('header_image')) ? get_field('header_image'): null;
+$image = ($banner) ? $banner['sizes']['large']: '/wp-content/uploads/2017/05/title-header.jpg';
 
-?>
+$hide_title = (get_field('title_visibility')) ? true: false;
+$the_title = (get_field('alternate_page_title')) ? get_field('alternate_page_title'): get_the_title();
 
-<section id="hero" style="background-image: url('<?php echo $image; ?>');">
-	<main class="flex-text-align flex-align-center flex-align-middle">
-		<div>
-			<h1><?php the_title(); ?></h1>
-		</div>
-	</main>
-</section>
+// DEFAULT TITLE
+if(!$hide_title) { ?>
 
-<?php
-// BREADCRUMB
-echo '<section id="breadcrumb" class="white-text"><main>';
-echo '<a href="/">Home</a>';
-$parents = get_post_ancestors(get_the_ID());
-if($parents) {
-	$parents = array_reverse($parents);
-	foreach ($parents as $p) echo '<a href="'.get_permalink($p).'">'.get_the_title($p).'</a>';
+	<section id="defaultPageTitle" class="flex-content-section has-bg-image white-text cs-section" style="background-image: url(<?php echo $image; ?>);">
+		<main>
+			<div class="content content-basic flex-text-align flex-align-left flex-align-middle">
+				<h1><?php echo $the_title; ?></h1>
+			</div>
+		</main>
+	</section>
+
+	<?php
 }
-echo '<b>'.get_the_title(get_the_ID()).'</b>';
-echo '</main></section>';
-
 
 
 // PAGE CONTENT
 if($post->post_content) {
-?>
+	?>
 	<section class="mainContent">
 		<main>
 			<div class="content content-basic">
@@ -57,16 +51,16 @@ if($post->post_content) {
 			</div>
 		</main>
 	</section>
-<?php
+	<?php
 }
 
 
-// DIRECTORY
-if(get_the_slug(get_the_ID()) == 'directory') include 'directory.php';
-
-
 // FLEX CONTENT
-include 'flex-content.php';
+include 'flex-fields.php';
+
+// EXTRA FOOTER CONTENT
+$isFooter = true;
+include 'flex-fields.php';
 
 get_footer();
 ?>

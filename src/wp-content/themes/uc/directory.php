@@ -73,6 +73,8 @@ $stuff = new WP_Query($arr);
 				$status = get_field('status', get_the_ID());
 				$status_year = get_field('status_year', get_the_ID());
 				$institutional_control = get_field('institutional_control', get_the_ID());
+				$profit_status = ($institutional_control == 'Private') ? ' <i>('.get_field('profit_status', get_the_ID()).')</i>': '';
+
 				$most_recent_evaluation = get_field('most_recent_evaluation', get_the_ID());
 				$next_evaluation = get_field('next_evaluation', get_the_ID());
 				$degree_levels = get_field('degree_levels', get_the_ID());
@@ -80,7 +82,7 @@ $stuff = new WP_Query($arr);
 				$statement_regarding_sanction = get_field('statement_regarding_sanction', get_the_ID());
 
 				echo '<li class="institution columns col-4 '.$classes.'">';
-				echo '<div><a class="show-more" title="Show more details">'.get_the_title().'</a></div><div>'.$website.'</div><div>'.$status.' <i>('.$status_year.')</i></div><div>'.$institutional_control.'</div>';
+				echo '<div><a class="show-more" title="Show more details">'.get_the_title().'</a></div><div>'.$website.'</div><div>'.$status.' <i>('.$status_year.')</i></div><div>'.$institutional_control.$profit_status.'</div>';
 
 				// MORE DETAILS
 				echo '<div class="more columns col-2">';
@@ -90,11 +92,6 @@ $stuff = new WP_Query($arr);
 				echo '<div><b>Public sanction</b></div><div>'.$public_sanction.'</div>';
 				echo '<div><b>Statement regarding sanction</b></div><div>'.$statement_regarding_sanction.'</div>';
 				echo '</div>';
-
-
-
-
-
 				echo '</li>';
 			}
 			echo '</ul>';

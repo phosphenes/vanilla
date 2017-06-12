@@ -45,10 +45,15 @@ $extraClasses = implode(' ', $extraClasses);
 	<header class="pi-sticky-header">
 
 		<main>
-			<a id="logo" href="/"><img id="logo" src="<?php echo get_template_directory_uri(); ?>/images/logo.svg"></a>
+			<a id="logo" href="/"></a>
 
-			<nav class="pi-unimenu">
-				<main>
+			<nav class="pi-unimenu exhibit">
+				<main class="animate fromBottom">
+					<p id="navButtons" style="text-align: center;">
+						<a class="button fa fa-sitemap" href="http://ncu.unitedcreations.xyz/accreditation/accreditation-process/">Know the Process</a>
+						<a class="button fa fa-wrench" href="http://ncu.unitedcreations.xyz/evaluator-toolkit/">Tools and Resources</a>
+						<a class="button fa fa-search" href="http://ncu.unitedcreations.xyz/member-institutions/directory/">Search Institutions</a>
+					</p>
 					<ul class="menu">
 						<?php wp_list_pages('sort_column=menu_order&title_li=&depth=3&exclude='.$navExclusions); ?>
 					</ul>

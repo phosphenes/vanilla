@@ -17,6 +17,15 @@ $main-nav-font: 'Roboto', Arial, Helvetica, sans-serif
 $center-transform: translate(-50%, -50%)
 $hot-spot-border: 2px solid $deep-blue
 
+
+
+$headerHeightPhone: 60px
+$headerHeightTablet: 60px
+$headerHeightDesktop: 80px
+
+
+
+
 *
 	box-sizing: border-box
 
@@ -53,6 +62,9 @@ h1, h2, h3, h4, h5
 	color: $dark-blue
 	letter-spacing: -0.03em
 
+	&:last-child
+		margin-bottom: 0
+
 h1
 	font-size: 3em
 	margin-bottom: 20px
@@ -85,6 +97,15 @@ p
 	&:last-child
 		margin-bottom: 0
 
+
+
+
+
+
+
+
+
+
 strong, b
 	font-weight: bold
 	color: #000
@@ -92,11 +113,11 @@ strong, b
 blockquote
 	padding: 0 0 0 20px
 	margin: 0 0 20px 0
-	border-left: 5px solid
-	font-style: italic
+	border-left: 5px solid $light-blue
 	font-size: 20px
 	line-height: 1.5em
-	font-family: 'Georgia', serif
+	font-family: $baseFont
+	font-weight: 300
 
 hr
 	clear: both
@@ -177,13 +198,13 @@ table
 		font-size: 3em
 
 	h2
-		font-size: 2.5em
+		font-size: 2.2em
 
 	h3
-		font-size: 2em
+		font-size: 1.8em
 
 	h4
-		font-size: 1.6em
+		font-size: 1.4em
 
 	h5
 		font-size: 1.8em
@@ -198,13 +219,13 @@ table
 		font-size: 3.5em
 
 	h2
-		font-size: 2.8em
+		font-size: 2.2em
 
 	h3
-		font-size: 2em
+		font-size: 1.8em
 
 	h4
-		font-size: 1.6em
+		font-size: 1.4em
 
 	h5
 		font-size: 1.8em

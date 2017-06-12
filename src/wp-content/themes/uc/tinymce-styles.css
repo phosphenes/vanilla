@@ -34,7 +34,7 @@ hr {
 }
 h1, h2, h3, h4, h5 {
 	font-family: 'Montserrat', 'Helvetica', 'Arial', sans-serif;
-	line-height: 1.3em;
+	line-height: 1.3em !important;
 	margin-bottom: 10px;
 	margin-top: 0;
 	color: #1E2465;

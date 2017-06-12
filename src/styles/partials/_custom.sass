@@ -14,13 +14,13 @@
 		left: 0
 		width: 100%
 		height: 100%
-		background-color: rgba(0, 0, 0, 0.35)
+		background-color: rgba(0, 0, 0, 0.2)
 		
 	main
 		color: white
 		text-align: center
 		margin: auto
-		min-height: 50vh
+		min-height: 70vh
 		position: relative
 		z-index: 2
 
@@ -129,7 +129,6 @@ body.inside-page #hero
 
 .white-text
 	color: rgba(255,255,255,0.6)
-	background: #a3ade7 url('/wp-content/themes/uc/images/dark-angle-bg.gif')
 
 	h1, h2, h4
 		color: #fff
@@ -143,93 +142,6 @@ body.inside-page #hero
 	padding: 40px 0
 	font-family: $heading
 	font-size: 1em
-
-
-
-/////////////////////////////
-// NEWS AND QUICK LINKS
-/////////////////////////////
-//#newsAndLinks
-//	background-color: transparent
-//
-//	main
-//		padding: 0
-//
-//#recentNews
-//	padding: 20px 0
-//
-//	h4
-//		color: $dark-blue
-//
-//	article
-//		display: block
-//
-//		a
-//			position: relative
-//			display: inline-block
-//			color: $medium-blue
-//			font-size: 1.25em
-//
-//			&:after
-//				content: ''
-//				top: 50%
-//				transform: translateY(-50%)
-//				left: calc(100% + 8px)
-//				@include pointy(right, 6px, $medium-blue)
-//
-//	article + article
-//		margin-top: 30px
-		
-
-//#quickLinks
-//
-//	a
-//		color: #fff
-//
-//	ul
-//		margin: 0
-//		padding: 0
-//		list-style: none
-//		font-weight: 600
-//		color: white
-//		text-align: center
-//
-//	li:nth-child(1)
-//		position: relative
-//		background-color: $light-blue
-//		text-transform: uppercase
-//		font-size: 1.5em
-//		padding-bottom: 14px
-//
-//		&:after
-//			content: ''
-//			display: block
-//			position: absolute
-//			bottom: 10px
-//			left: 50%
-//			transform: translateX(-50%)
-//			@include pointy(down, 8px, white)
-//			width: 0
-//			height: 0
-//			border-style: solid
-//			border-width: 8px 8px 0 8px
-//			border-color: #ffffff transparent transparent transparent
-//
-//
-//		a:hover
-//			text-decoration: none
-//
-//
-//	@for $i from 2 through 6
-//		li:nth-child(#{$i})
-//			background-color: darken($light-blue, ($i * 5))
-//
-//	li + li
-//		border-top: 1px solid transparentize(lighten($light-blue, 3), 0.5)
-//
-//	a
-//		display: block
-//		padding: 10px
 
 
 @media (min-width: 768px)
@@ -258,3 +170,7 @@ body.inside-page #hero
 			border-left: 1px solid $dark-blue
 
 
+@media screen and (orientation: landscape)
+
+	body.inside-page #hero main
+		min-height: 30vh
